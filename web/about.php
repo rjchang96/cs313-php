@@ -26,7 +26,7 @@
 </div>
 
 <div class = "white">
-<div class = "menu">
+<div class = "menu" style="background-color: white">
     <!--<div class = "sidenav">-->
     <div><a href = "about.php">About</a></div>
     <br>
@@ -54,7 +54,7 @@
 
 <div class = "main" style=" font-size: 20px;">
  <p>
-  <div style = "font-size: 20px;">
+  <div style = "font-size: 20px; background-color: white">
    Are you tired of your mountain? With our enviromentally unconscious materials, we promise a quick and loud removal of all mole hills.
    Those mountains will leave your life in a bang!
   <!-- <b>Happiness</b> can be found in the
