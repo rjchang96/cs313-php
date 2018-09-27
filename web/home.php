@@ -20,19 +20,14 @@
   <header id = "head"> <!-- <img src = "images/07pics/HogwartsCrest.png" alt= "Hogwarts logo"
     class = "logo" style="float:left" > -->
 
-    <h1 style ="font-size: 45;">Destory your own Mountain</h1>
+    <h1 style ="font-size: 45;background-color: white">Destory your own Mountain</h1>
 
   </header>
 </div>
 
 <div class = "top nav">
     <!--<div class = "sidenav">-->
-    <div><a href = "about.php">About</a></div>
-    <br>
-   <div> <a href= "home.php">Home </a></div>
-   <br>
-  <div> <a href="login.php">Login</a></div>
-  <br>
+    <?php include 'nav.php'?>
 
 </div>
 

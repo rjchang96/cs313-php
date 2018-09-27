@@ -20,7 +20,7 @@
   <header id = "head"> <!-- <img src = "images/07pics/HogwartsCrest.png" alt= "Hogwarts logo"
     class = "logo" style="float:left" > -->
 
-    <h1 style ="font-size: 45;">Destory your own Mountain</h1>
+    <h1 style ="font-size: 45;background-color: white">Destory your own Mountain</h1>
 
   </header>
 </div>
@@ -37,9 +37,7 @@
 
 </div> -->
 <div class="topnav">
-  <a class="active" href="home.php">Home</a>
-  <a href="about.php">About</a>
-  <a href="login.php">Login</a>
+ <?php include 'nav.php'?>
 </div>
 
 <div class = "main" style=" font-size: 20px;">
