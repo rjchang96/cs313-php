@@ -43,8 +43,8 @@
 <div class = "main" style=" font-size: 20px;">
  <p>
   <div style = "font-size: 20px; background-color: white">
-   Are you tired of your mountain? With our enviromentally unconscious materials, we promise a quick and loud removal of all mole hills.
-   Those mountains will leave your life in a bang!
+   <a href="login"> Login as Admin</a>
+   <a href="tester">Login as Tester</a>
 </div>
 </div>
 
