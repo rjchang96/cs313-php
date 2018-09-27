@@ -1,5 +1,5 @@
 <?php
-$file = $_SERVER['PHP_SELF'];
+$file = basename($_SERVER['PHP_SELF']);
 
 if($file == "about")
    echo "<div><a href = 'about.php' class = 'active'>About</a></div>";
