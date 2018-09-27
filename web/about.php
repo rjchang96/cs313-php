@@ -33,7 +33,8 @@
    <br>
   <div> <a href="login.php">Login</a></div>
   <br> -->
-  <?php include 'nav.php';?>
+  <?php echo basename($_SERVER['PHP_SELF']);
+  include 'nav.php';?>
 
 </div>
 
