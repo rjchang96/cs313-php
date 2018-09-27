@@ -1,0 +1,92 @@
+header,footer
+{
+    padding: 3em;
+    color: black;
+    background-color: #004d00;
+    clear: left;
+    text-align: center;
+    color:white;
+}
+body
+{
+   background-color: #cc7a00;
+   background-image: url("sand.jpg");
+
+}
+b
+{
+   color:darkblue;
+}
+#back
+{
+   background-color: brown;
+}
+#quote
+{
+  text-align: center;
+  font-size: 15px;
+  background-color: #663300;
+}
+#middleimg
+{
+   margin-left:150px;
+   height:300px;
+}
+#leftimg
+{
+  margin:auto;
+  float:left;
+  height:300px;
+}
+#rightimg
+{
+   margin:auto;
+   float:right;
+   height:300px;
+}
+
+h1
+{
+   text-align: center;
+   margin:auto;
+   font-family: 'Times New Roman';
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 5px;
+  background-color: #c68c53;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: #ffb84d;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+
+.main {
+    margin-left: 20px; /* Same width as the sidebar + left position in px */
+
+    font-size: 5px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 300px) {
+    .sidenav {padding-top: 5px;}
+    .sidenav a {font-size: 18px;}
+}
+.head { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.right { grid-area: right; }
+.footer { grid-area: footer; }
+
+.white {
+   background-color: white;
+   width: 100%;
+}

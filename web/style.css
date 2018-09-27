@@ -1,0 +1,22 @@
+header,footer
+{
+    padding: 10em;
+    color: black;
+    background-color: #00001a;
+    clear: left;
+    text-align: center;
+    text-decoration-color: white;
+}
+body
+{
+   background-color:powderblue;
+   text-align: center;
+}
+ul
+{
+   text-align: center;
+}
+li
+{
+   text-align: center;
+}
