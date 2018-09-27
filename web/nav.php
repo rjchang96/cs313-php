@@ -1,7 +1,7 @@
 <?php
 $file = basename($_SERVER['PHP_SELF']);
 
-if($file == "about")
+if($file == "about.php")
    echo "<div><a href = 'about.php' class = 'active'>About</a></div>";
 else
     echo "<div><a href = 'about.php'>About</a></div>";
