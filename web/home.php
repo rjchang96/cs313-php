@@ -27,7 +27,7 @@
 
 <div class = "top nav">
     <!--<div class = "sidenav">-->
-    <?php include 'nav.php'?>
+    <?php include 'nav.php';?>
 
 </div>
 
@@ -39,7 +39,7 @@
 </div>
 </div>
 
-</div>
+<!-- //</div> -->
 
 </body>
 </html>

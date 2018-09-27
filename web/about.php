@@ -33,8 +33,7 @@
    <br>
   <div> <a href="login.php">Login</a></div>
   <br> -->
-  <?php include 'nav.php'
-  ?>
+  <?php include 'nav.php';?>
 
 </div>
 

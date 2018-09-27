@@ -37,7 +37,7 @@
 
 </div> -->
 <div class="topnav">
- <?php include 'nav.php'?>
+ <?php include 'nav.php';?>
 </div>
 
 <div class = "main" style=" font-size: 20px;">
@@ -48,7 +48,7 @@
 </div>
 </div>
 
-<!-- </div> -->
+</div>
 
 </body>
 </html>
