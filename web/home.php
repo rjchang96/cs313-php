@@ -25,8 +25,7 @@
   </header>
 </div>
 
-<div class = "white">
-<div class = "menu" style="background-color: white">
+<div class = "top nav">
     <!--<div class = "sidenav">-->
     <div><a href = "about.php">About</a></div>
     <br>
