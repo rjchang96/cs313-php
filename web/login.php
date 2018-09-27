@@ -26,8 +26,8 @@
 </div>
 
 <!-- //<div class = "white"> -->
-<div class = "top nav">
-    <!--<div class = "sidenav">-->
+ <!-- <div class = "top nav"> -->
+    <!--<div class = "sidenav">
     <div><a href = "about.php">About</a></div>
     <br>
    <div> <a href= "home.php">Home </a></div>
@@ -35,7 +35,7 @@
   <div> <a href="login.php">Login</a></div>
   <br>
 
-</div>
+</div> -->
 <div class="topnav">
   <a class="active" href="home.php">Home</a>
   <a href="about.php">About</a>
