@@ -44,6 +44,7 @@
  <p>
   <div style = "font-size: 20px; background-color: white">
    <a href="login"> Login as Admin</a>
+   <br>
    <a href="tester">Login as Tester</a>
 </div>
 </div>
