@@ -25,6 +25,7 @@
   </header>
 </div>
 
+<div class = "white">
 <div class = "menu">
     <!--<div class = "sidenav">-->
     <div><a href = "about.php">About</a></div>
@@ -71,6 +72,7 @@
   and what majors they are best suited for. We hope that in all of your education concerning
   magical needs you choose to attend Hogwarts University.
  </p> -->
+</div>
 </div>
 
  <!-- <div class = "footer">
