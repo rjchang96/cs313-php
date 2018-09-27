@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <title>About us</title>
+   <title>Login</title>
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  --><link rel = "style" href= "homeStyle.css">
 <style type="text/css">
@@ -25,8 +25,8 @@
   </header>
 </div>
 
-<div class = "white">
-<div class = "menu" style="background-color: white">
+<!-- //<div class = "white"> -->
+<div class = "top nav">
     <!--<div class = "sidenav">-->
     <div><a href = "about.php">About</a></div>
     <br>
@@ -35,6 +35,11 @@
   <div> <a href="login.php">Login</a></div>
   <br>
 
+</div>
+<div class="topnav">
+  <a class="active" href="home.php">Home</a>
+  <a href="about.php">About</a>
+  <a href="login.php">Login</a>
 </div>
 
 <div class = "main" style=" font-size: 20px;">
@@ -45,7 +50,7 @@
 </div>
 </div>
 
-</div>
+<!-- </div> -->
 
 </body>
 </html>
