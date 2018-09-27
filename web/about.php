@@ -9,13 +9,15 @@
    body
    {
       background-image: url("blowup.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
    }
 </style>
 </head>
 <body>
 <div class = "grid-container">
     <div class = "head">
-  <header> <!-- <img src = "images/07pics/HogwartsCrest.png" alt= "Hogwarts logo"
+  <header id = "head"> <!-- <img src = "images/07pics/HogwartsCrest.png" alt= "Hogwarts logo"
     class = "logo" style="float:left" > -->
 
     <h1 style ="font-size: 45;">Destory your own Mountain</h1>
@@ -71,13 +73,13 @@
  </p> -->
 </div>
 
- <div class = "footer">
+ <!-- <div class = "footer">
  <footer >
    <p style = "font-size: 15px"><b>Like what you see? Like us on Facebook or Twitter</b></p>
   <a href="https://www.facebook.com/"> <img src = "images/facebook.png" alt = "facebook" class = "icons"></a>
   <a href= "https://twitter.com/?lang=en" ><img src = "images/Twitter.png" alt = "Twitter" class = "icons"></a>
  </footer>
-</div>
+</div> -->
 </div>
 
 </body>
