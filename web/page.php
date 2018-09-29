@@ -70,7 +70,7 @@ function normalImg(x) {
   </div>
   <?php
 
-      //for($x = 0; $x < 4; $x++)
+      for($x = 0; $x < 4; $x++)
             echo "Roar!";
    ?>
 
