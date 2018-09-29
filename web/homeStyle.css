@@ -17,6 +17,11 @@ b
 {
    color:darkblue;
 }
+
+h1
+{
+   font-size: 45;
+}
 #back
 {
    background-color: brown;
@@ -44,7 +49,17 @@ b
    float:right;
    height:300px;
 }
-
+#sideimg
+{
+  text-align: center;
+   width:200px;
+   height:auto;
+   max-width: 100%;
+}
+.smallText
+{
+  font-size: 20px;
+}
 h1
 {
    text-align: center;
@@ -82,13 +97,15 @@ h1
 }
 .head { grid-area: header; }
 .menu { grid-area: menu; }
-.main { grid-area: main; }
+.main { grid-area: main; font-size: 20px;}
 .right { grid-area: right; }
-.footer { grid-area: footer; }
+.footer { grid-area: footer;
+   color: white;
+   font-size: 15px;}
 
 .white {
-   background-color: white;
-   width: 100%;
+   color: white;
+  /* width: 100%;*/
 }
 
 /* Add a black background color to the top navigation */
@@ -122,8 +139,37 @@ h1
 
 .active
 {
-   font-size: large;
+   font-size:70px;
    color:red;
 
+}
+
+ .icons
+    {
+        width:42px;
+        height:42px;
+    }
+     .logo
+    {
+        max-width:100%;
+        height:auto;
+        /*//width:200px;
+        float = left;*/
+        float:left;
+        width: 150px;
+        border = "0";
+    }
+    /* a:link, a:visited {
+    background-color: maroon;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}*/
+
+
+a:hover, a:active {
+    background-color: darkblue;
 }
 
