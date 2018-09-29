@@ -60,12 +60,11 @@ function normalImg(x) {
     under the night sky.
    </p>
 
-   <?php
-     <!--  echo "Please enter how many times you want to
-      hear a lion Roar: "; -->
-      for($x = 0; $x < 4; $x++)
-            echo "Roar!";
-   ?>
+  <!--  <?php
+
+      // for($x = 0; $x < 4; $x++)
+      //       echo "Roar!";
+   ?> -->
    <img src = "giraffeBreakfast.jpg" alt = "giraffe"
    id= "sideimg" >
    <p class ="smallText">
