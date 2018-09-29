@@ -34,6 +34,9 @@ function normalImg(x) {
     <h1>African Safari adventures</h1>
 
   </header>
+  <?php
+  include 'nav.php';
+  ?>
 </div>
 
 <!--  <div class = "menu"> -->
@@ -68,11 +71,11 @@ function normalImg(x) {
     hotel and enjoy the company of giraffes.
    </p>
   </div>
-  <?php
+  <!-- <?php
 
-      for($x = 0; $x < 4; $x++)
-            echo "Roar!";
-   ?>
+     // for($x = 0; $x < 4; $x++)
+       //     echo "Roar!";
+   ?> -->
 
 <div class = "main">
  <p>
