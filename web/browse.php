@@ -83,32 +83,94 @@
 </div>
 
       <!-- <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
-    <div class="col-lg-3">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <img class = "small-img img-responsive" src="lobster.jpg">
-                        </div>
-                        <div class="col-lg-12">
-                            <img class = "btm-sml-img img-responsive" src="shrimp.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="col-lg-12">
-                    <img class = "img-responsive" src="eggplant.jpg">
-                </div>
-                </div>
-                <div class="col-lg-3">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <img class = "small-img img-responsive" src="spinach.jpg">
-                    </div>
-                    <div class="col-lg-12">
-                        <img class = "btm-sml-img img-responsive" src="cabbage.jpg">
-                    </div>
-                </div>
-                </div>
-                </div>
+    <br/>
+    <div>
+    <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
+    <img src = "spinach.jpg" alt = "spinach" class = "imgMid">
+    <img src = "cabbage.jpg" alt = "cabbage" class = "imgLast">
+    <b class = "underFirst">Eggplant</b>
+    <b class = "underMid">Spinach</b>
+    <b class = "underLast">Cabbage</b>
+    <br/>
+    <span class = "underFirst" style = "background-color: white;">Price: $1.23</span>
+    <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $2.00</span>
+    <span style = "margin-left:29%; position: relative; margin-top: 10%;">Price: $1.00</span>
+    </div>
+    <br/>
+    <br/>
+    <div>
+    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" class = "imgFirst">
+    <img src = "carrots.jpg" alt = "Carrots" class = "imgMid">
+    <img src = "potatoes.jpg" alt = "Potatoes" class = "imgLast">
+    <b class = "underFirst">Brussel Sprouts</b>
+    <b class = "underMid">Carrots</b>
+    <b class = "underLast">Potatoes</b>
+    <br/>
+    <span class = "underFirst" style = "background-color: white;">Price: $0.50</span>
+    <span style = "margin-left:36%; position: relative; margin-top: 10%;">Price: $2.00</span>
+    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.50</span>
+    </div>
+    <br/>
+    <br/>
+    <div>
+    <img src = "sprouts.jpg" alt = "sprouts" class = "imgFirst">
+    <img src = "apple.jpg" alt = "Apple" class = "imgMid">
+    <img src = "strawberries.jpg" alt = "strawberries" class = "imgLast">
+    <b class = "underFirst">Sprouts</b>
+    <b class = "underMid">Apple</b>
+    <b class = "underLast">Strawberries</b>
+    <br/>
+    <span class = "underFirst">Price: $0.75</span>
+    <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $0.50</span>
+    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.99</span>
+    </div>
+
+
+<br/>
+<!-- <h3>Treat Your Buddy</h3>
+ <br/>
+    <div>
+    <img src = "images/03pics/biscuits.jpg" alt = "biscuits" class = "imgFirst">
+    <img src = "images/03pics/chickenjerky.jpg" alt = "chicken jerky" class = "imgMid">
+    <img src = "images/03pics/Dentastix.jpg" alt = "Dentastix" class = "imgLast">
+    <b class = "underFirst">Tasty Biscuits</b>
+    <b class = "underMid">Chicken jerky</b>
+    <b class = "underLast">Dentastix</b>
+    <br/>
+    <span class = "underFirst" style = "background-color: white;">Price: $5.99</span>
+    <span style = "margin-left:35%; position: relative; margin-top: 10%;">Price: $7.99</span>
+    <span style = "margin-left:28%; position: relative; margin-top: 10%;">Price: $8.99</span>
+    </div>
+    <br/>
+    <br/>
+     <div>
+    <img src = "images/03pics/grandebones.jpg" alt = "grande bones" class = "imgFirst">
+    <img src = "images/03pics/milkbone.jpg" alt = "milk bone" class = "imgMid">
+    <img src = "images/03pics/pumpkinTreat.jpg" alt = "pumpkin Treat" class = "imgLast">
+    <b class = "underFirst">Grande Bones</b>
+    <b class = "underMid">Milk Bones</b>
+    <b class = "underLast">Pumpkin Treat</b>
+    <br/>
+    <span class = "underFirst" style = "background-color: white;">Price: $5.99</span>
+    <span style = "margin-left:35%; position: relative; margin-top: 10%;">Price: $7.99</span>
+    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $4.99</span>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+     <div>
+    <img src = "images/03pics/pup-peroni.jpg" alt = "Pup-peroni" class = "imgFirst">
+    <img src = "images/03pics/smokehouseBone.jpg" alt = "Smokehouse Bone" class = "imgMid" style = "height:150px;">
+    <img src = "images/03pics/pigear.jpg" alt = "Pig Ear" class = "imgLast">
+    <b class = "underFirst">Pup-peroni</b>
+    <b class = "underMid">SmokeHouse Bone</b>
+    <b class = "underLast">Pig Ear</b>
+    <br/>
+    <span class = "underFirst" style = "background-color: white;">Price: $8.99</span>
+    <span style = "margin-left:33%; position: relative; margin-top: 10%;">Price: $9.99</span>
+    <span style = "margin-left:31%; position: relative; margin-top: 10%;">Price: $5.99</span>
+    </div> -->
+<br/>
 
     </div> <!-- /container -->
 
