@@ -87,7 +87,7 @@
     <div>
     <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
     <img src = "spinach.jpg" alt = "spinach" class = "imgMid">
-    <img src = "cabbage.jpg" alt = "cabbage" class = "imgLast">
+    <img src = "cabbage.jpg" alt = "cabbage" class = "imgLast" class = "imgLast">
     <b class = "underFirst">Eggplant</b>
     <b class = "underMid">Spinach</b>
     <b class = "underLast">Cabbage</b>
@@ -99,9 +99,11 @@
     <br/>
     <br/>
     <div>
-    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" class = "imgFirst">
-    <img src = "carrots.jpg" alt = "Carrots" class = "imgMid">
-    <img src = "potatoes.jpg" alt = "Potatoes" class = "imgLast">
+    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" style = "margin-left: 25%; position:relative; margin: auto; width: 250px">
+    <img src = "carrots.jpg" alt = "Carrots" style = "position:relative;
+        margin-left:22%; width: 250px">
+    <img src = "potatoes.jpg" alt = "Potatoes" style=" position:relative;
+        margin-left:15%; width: 250px">
     <b class = "underFirst">Brussel Sprouts</b>
     <b class = "underMid">Carrots</b>
     <b class = "underLast">Potatoes</b>
@@ -114,8 +116,8 @@
     <br/>
     <div>
     <img src = "sprouts.jpg" alt = "sprouts" class = "imgFirst">
-    <img src = "apple.jpg" alt = "Apple" class = "imgMid">
-    <img src = "strawberries.jpg" alt = "strawberries" class = "imgLast">
+    <img src = "apples.jpg" alt = "Apple" class = "imgMid">
+    <img src = "strawberries.jpg" alt = "strawberries" class = "imgLast" class = "imgLast">
     <b class = "underFirst">Sprouts</b>
     <b class = "underMid">Apple</b>
     <b class = "underLast">Strawberries</b>
@@ -124,7 +126,6 @@
     <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $0.50</span>
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.99</span>
     </div>
-
 
 <br/>
 <!-- <h3>Treat Your Buddy</h3>

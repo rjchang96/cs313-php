@@ -7,21 +7,21 @@ body
         margin-left: 25%;
         position:relative;
         margin: auto;
-        width: 250px
+        width: 250px;
 
     }
     .imgMid
     {
         position:relative;
         margin-left:22%;
-        width: 250px
+        width: 250px;
     }
 
     .imgLast
     {
         position:relative;
         margin-left:15%;
-        width: 250px
+        width: 250px;
     }
     div > span
     {
