@@ -1,6 +1,8 @@
 <?php
-setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
-$favorite = $_COOKIE["fav-text"];
+//setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
+//$favorite = $_COOKIE["fav-text"];
+session_start();
+$_SESSION["count"] = 0;
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,9 +10,14 @@ $favorite = $_COOKIE["fav-text"];
    <title></title>
 </head>
 <body>
-   <p>This is a page </p>
+   <p>Hello user you have visted  </p>
 <?php
-echo "Your favorite " + $favorite;
+if(!isset($_SESSION))
+$_SESSION = 1;
+else
+$_SESSION +=1;
+
+echo $_SESSION;
 ?>
 </body>
 </html>
