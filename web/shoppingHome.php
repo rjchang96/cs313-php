@@ -45,7 +45,6 @@
       <h1>Cha Chang Foods</h1>
 
       <div class="container">
-  <h2>Carousel Example</h2>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -57,15 +56,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="blueberries.jpg" alt="Blueberries" style="width:100%;">
+        <img src="blueberries.jpg" alt="Blueberries" style="width:50%;">
       </div>
 
       <div class="item">
-        <img src="steak.jpg" alt="Steak" style="width:100%;">
+        <img src="steak.jpg" alt="Steak" style="width:50%;">
       </div>
 
       <div class="item">
-        <img src="frenchBread.jpg" alt="French Bread" style="width:100%;">
+        <img src="frenchBread.jpg" alt="French Bread" style="width:50%;">
       </div>
     </div>
 
