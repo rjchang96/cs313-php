@@ -56,15 +56,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="blueberries.jpg" alt="Blueberries" style="width:50%;">
+        <img src="blueberries.jpg" alt="Blueberries" style="width:250px;">
       </div>
 
       <div class="item">
-        <img src="steak.jpg" alt="Steak" style="width:50%;">
+        <img src="steak.jpg" alt="Steak" style="width:250px;">
       </div>
 
       <div class="item">
-        <img src="frenchBread.jpg" alt="French Bread" style="width:50%;">
+        <img src="frenchBread.jpg" alt="French Bread" style="width:250px;">
       </div>
     </div>
 
