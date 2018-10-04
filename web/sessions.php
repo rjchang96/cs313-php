@@ -16,11 +16,11 @@ $visits = $_SESSION["visits"];
    <title></title>
 </head>
 <body>
-   <p>Hello user you have visted  </p>
+   <h1><b>Welcome user</b></h1>
 <?php
 
 
-echo $visits;
+echo "Hello user you have visted $visits times";
 ?>
 </body>
 </html>
