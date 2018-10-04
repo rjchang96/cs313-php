@@ -99,11 +99,11 @@
     <br/> -->
     <br/>
     <div>
-    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" style = "margin-left: 25%; position:relative; margin: auto; width: 250px;">
+    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" style = "margin-left: 20%; position:relative; margin: auto; width: 250px; height:150px;">
     <img src = "carrots.jpg" alt = "Carrots" style = "position:relative;
-        margin-left:22%; width: 250px; height: ">
+        margin-left:15%; width: 250px; height: 150px;">
     <img src = "potatoes.jpg" alt = "Potatoes" style=" position:relative;
-        margin-left:15%; width: 250px;">
+        margin-left:10%; width: 250px; height: 150px;">
     <b class = "underFirst">Brussel Sprouts</b>
     <b class = "underMid">Carrots</b>
     <b class = "underLast">Potatoes</b>
