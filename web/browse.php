@@ -30,9 +30,10 @@
           <a class="brand">Cha Chang Foods</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active"><a href="shoppingHome.php">Home</a></li>
+              <li><a href="browse.php">Browse</a></li>
+              <li><a href="cart.php">Cart</a></li>
+               <li><a href="checkout.php">Checkout</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -82,21 +83,32 @@
 </div>
 
       <!-- <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
-      <br/>
-    <div>
-    <img src = "images/03pics/duckToy.jpg" alt = "duck Toy" class = "imgFirst">
-    <img src = "images/03pics/Kong.jpg" alt = "kong" class = "imgMid">
-    <img src = "images/03pics/emojiToy.jpg" alt = "emoji Toy" class = "imgLast">
-    <b class = "underFirst">Quacky Duck Toy</b>
-    <b class = "underMid">Kong Treat Toy</b>
-    <b class = "underLast">Emoji Toy</b>
-    <br/>
-    <span class = "underFirst" style = "background-color: white;">Price: $4.99</span>
-    <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $6.99</span>
-    <span style = "margin-left:29%; position: relative; margin-top: 10%;">Price: $3.99</span>
-    </div>
-    <br/>
-    <br/>
+    <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img class = "small-img img-responsive" src="lobster.jpg">
+                        </div>
+                        <div class="col-lg-12">
+                            <img class = "btm-sml-img img-responsive" src="shrimp.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="col-lg-12">
+                    <img class = "img-responsive" src="eggplant.jpg">
+                </div>
+                </div>
+                <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class = "small-img img-responsive" src="spinach.jpg">
+                    </div>
+                    <div class="col-lg-12">
+                        <img class = "btm-sml-img img-responsive" src="cabbage.jpg">
+                    </div>
+                </div>
+                </div>
+                </div>
 
     </div> <!-- /container -->
 
