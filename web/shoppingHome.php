@@ -16,7 +16,7 @@
 
    <title>Shopping for foods</title>
 </head>
-<body>
+<body style="background-image: url('chineseMarket.jpg');">
    <h1>Cha Chang Foods</h1>
 
 
