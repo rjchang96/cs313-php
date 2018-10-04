@@ -2,3 +2,57 @@ body
 {
    background-image: url("chineseMarket.jpg");
 }
+.imgFirst
+    {
+        margin-left: 25%;
+        position:relative;
+        margin: auto;
+        width: 250px
+
+    }
+    .imgMid
+    {
+        position:relative;
+        margin-left:22%;
+        width: 250px
+    }
+
+    .imgLast
+    {
+        position:relative;
+        margin-left:15%;
+        width: 250px
+    }
+    div > span
+    {
+        background-color: white;
+    }
+    .icons
+    {
+      width:42px;
+      height:42px;
+    }
+
+    .underFirst
+   {
+      background-color: #b3ffb3;
+      margin-top: 10%;
+
+      margin-left:5%;
+
+
+   }
+   .underMid
+   {
+      background-color: #b3ffb3;
+      margin-top: 10%;
+      position: relative;
+      margin-left: 33%;
+   }
+   .underLast
+   {
+      background-color: #b3ffb3;
+      margin-top: 10%;
+      position: relative;
+      margin-left: 27%;
+   }
