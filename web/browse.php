@@ -85,7 +85,7 @@
       <!-- <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
     <br/>
     <div>
-    <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
+    <!-- <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
     <img src = "spinach.jpg" alt = "spinach" class = "imgMid">
     <img src = "cabbage.jpg" alt = "cabbage" class = "imgLast" class = "imgLast">
     <b class = "underFirst">Eggplant</b>
@@ -96,14 +96,14 @@
     <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $2.00</span>
     <span style = "margin-left:29%; position: relative; margin-top: 10%;">Price: $1.00</span>
     </div>
-    <br/>
+    <br/> -->
     <br/>
     <div>
-    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" style = "margin-left: 25%; position:relative; margin: auto; width: 250px">
+    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" style = "margin-left: 25%; position:relative; margin: auto; width: 250px;">
     <img src = "carrots.jpg" alt = "Carrots" style = "position:relative;
-        margin-left:22%; width: 250px">
+        margin-left:22%; width: 250px; height: ">
     <img src = "potatoes.jpg" alt = "Potatoes" style=" position:relative;
-        margin-left:15%; width: 250px">
+        margin-left:15%; width: 250px;">
     <b class = "underFirst">Brussel Sprouts</b>
     <b class = "underMid">Carrots</b>
     <b class = "underLast">Potatoes</b>
