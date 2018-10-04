@@ -30,9 +30,10 @@
           <a class="brand">Cha Chang Foods</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active"><a href="shoppingHome.php">Home</a></li>
+              <li><a href="browse.php">Browse</a></li>
+              <li><a href="cart.php">Cart</a></li>
+               <li><a href="checkout.php">Checkout</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -57,15 +58,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="blueberries.jpg" alt="Blueberries" style="width:300px; height:300px">
+        <img src="blueberries.jpg" alt="Blueberries" style="width:100%">
+      </div>
+     <!--width:300px; height:300px-->
+      <div class="item">
+        <img src="steak.jpg" alt="Steak" style="width:100%">
       </div>
 
       <div class="item">
-        <img src="steak.jpg" alt="Steak" style="width:300px; height:300px">
-      </div>
-
-      <div class="item">
-        <img src="frenchBread.jpg" alt="French Bread" style="width:300px; height:300px">
+        <img src="frenchBread.jpg" alt="French Bread" style="width:100%">
       </div>
     </div>
 

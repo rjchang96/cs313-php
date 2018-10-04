@@ -3,12 +3,23 @@
 //$favorite = $_COOKIE["fav-text"];
 session_start();
 //$_SESSION["count"] = 0;
-if(isset($_SESSION["visits"]))
-$_SESSION["visits"]++;
-else
-$_SESSION["visits"] = 1;
+class Food
+{
+   public $amount;
+   public $item;
+   public $price;
+};
 
-$visits = $_SESSION["visits"];
+$cart = array();
+if(!isset($_SESSION["cart"]))
+   $_SESSION["cart"];
+
+// if(isset($_SESSION["visits"]))
+// $_SESSION["visits"]++;
+// else
+// $_SESSION["visits"] = 1;
+
+// $visits = $_SESSION["visits"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +31,7 @@ $visits = $_SESSION["visits"];
 <?php
 
 
-echo "Hello user you have visted $visits times";
+//echo "Hello user you have visted $visits times";
 ?>
 </body>
 </html>
