@@ -10,6 +10,7 @@ session_start();
 
 $cart = array();
 if(!isset($_SESSION["cart"]))
+{
    $_SESSION["cart"] = [
       '000' => 0,
       '001' => 0,
@@ -25,7 +26,9 @@ if(!isset($_SESSION["cart"]))
       '011' => 0,
       '012' => 0
    ]
-   else
+
+}
+else
    {
       foreach ($cart as $key => $value) {
 
