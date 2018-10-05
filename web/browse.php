@@ -174,7 +174,7 @@ if(!isset($_SESSION["cart"]))
     <img src = "spinach.jpg" alt = "spinach" class = "imgMid">
     <img src = "cabbage.jpg" alt = "cabbage" class = "imgLast" class = "imgLast">
     <b style = "margin-top: 10%; margin-left:8%;">Eggplant</b>
-    <b style = " margin-top: 10%; position: relative; margin-left: 30%;">Spinach</b>
+    <b style = " margin-top: 10%; position: relative; margin-left: 34%;">Spinach</b>
     <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Cabbage</b>
     <br/>
     <span  style = " margin-top: 10%; margin-left:8%;">Price: $1.23</span>
@@ -224,7 +224,7 @@ if(!isset($_SESSION["cart"]))
     <img src = "apples.jpg" alt = "Apple" class = "imgMid">
     <img src = "strawberries.jpg" alt = "strawberries" class = "imgLast" class = "imgLast">
     <b style = "margin-top: 10%; margin-left:8%;">Sprouts</b>
-    <b style = " margin-top: 10%; position: relative; margin-left: 34%;">Apple</b>
+    <b style = " margin-top: 10%; position: relative; margin-left: 40%;">Apple</b>
     <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Strawberries</b>
     <br/>
     <span style = " margin-top: 10%; margin-left:8%;">Price: $0.75</span>
