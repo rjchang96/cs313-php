@@ -106,7 +106,7 @@
         margin-left:10%; width: 250px; height: 200px;">
 
     <b style = "margin-top: 10%; margin-left:8%;">Brussels</b>
-    <b style = " margin-top: 10%; position: relative; margin-left: 33%;">Carrots</b>
+    <b style = " margin-top: 10%; position: relative; margin-left: 29%;">Carrots</b>
     <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Potatoes</b>
     <br/>
     <span style = " margin-top: 10%; margin-left:8%;">Price: $0.50</span>
