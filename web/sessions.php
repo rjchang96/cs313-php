@@ -2,24 +2,24 @@
 //setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
 //$favorite = $_COOKIE["fav-text"];
 session_start();
-//$_SESSION["count"] = 0;
-class Food
-{
-   public $amount;
-   public $item;
-   public $price;
-};
+$_SESSION["count"] = 0;
+// class Food
+// {
+//    public $amount;
+//    public $item;
+//    public $price;
+// };
 
-$cart = array();
-if(!isset($_SESSION["cart"]))
-   $_SESSION["cart"];
+// $cart = array();
+// if(!isset($_SESSION["cart"]))
+//    $_SESSION["cart"];
 
-// if(isset($_SESSION["visits"]))
-// $_SESSION["visits"]++;
-// else
-// $_SESSION["visits"] = 1;
+if(isset($_SESSION["visits"]))
+$_SESSION["visits"]++;
+else
+$_SESSION["visits"] = 1;
 
-// $visits = $_SESSION["visits"];
+$visits = $_SESSION["visits"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +31,7 @@ if(!isset($_SESSION["cart"]))
 <?php
 
 
-//echo "Hello user you have visted $visits times";
+echo "Hello user you have visted $visits times";
 ?>
 </body>
 </html>

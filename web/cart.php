@@ -1,6 +1,8 @@
 <?php
 session_start();
+ //if(isset($_SESSION["cart"]))
 
+   $cart = $_SESSION["cart"];
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +91,7 @@ session_start();
 
      <!--  <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
      <?php
-     if(isset($_SESSION["cart"]))
+    // if(isset($_SESSION["cart"]))
       foreach ($cart as $key => $value)
          echo "$key has this many $value items";
 
