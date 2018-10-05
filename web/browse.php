@@ -143,15 +143,15 @@ if(!isset($_SESSION["cart"]))
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="blueberries.jpg" alt="Blueberries" style="width:300px; height:300px">
+        <img src="sugarGlass.jpg" alt="sugarGlass" style="width:100%">
       </div>
 
       <div class="item">
-        <img src="steak.jpg" alt="Steak" style="width:300px; height:300px">
+        <img src="foodPresentation.jpg" alt="Food" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="frenchBread.jpg" alt="French Bread" style="width:300px; height:300px">
+        <img src="cookingFire.jpg" alt="Cooking Fire" style="width:100%;">
       </div>
     </div>
 
