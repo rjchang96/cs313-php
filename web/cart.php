@@ -62,10 +62,10 @@ session_start();
          {
             switch ($key) {
                case 000:
-                  echo "<img src = 'eggplant.jpg' alt = 'eggplant'>";
-                  echo "Eggplant: " + $value + " Cost: " + $value*1.23;
+                  echo "<img src = 'eggplant.jpg' alt = 'eggplant'><br><br>";
                   echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>";
-                   echo "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
+                  echo "Eggplant: " + $value + " Cost: " + $value*1.23;
+                   echo "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
 
                   break;
                   // case 001:
@@ -110,7 +110,7 @@ session_start();
                   break;
             }
          }
-         echo "$key has this many $value items<br>";
+        // echo "$key has this many $value items<br>";
       }
 
          # code...
