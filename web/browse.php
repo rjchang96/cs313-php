@@ -187,9 +187,9 @@ if(!isset($_SESSION["cart"]))
 
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.50</span>
     <!-- <button onclick = "fillCart();" name = "brusselSprouts">Buy</button> -->
-    <form action = "addFood.php" method = "POST"> <input type="submit" >Buy<input type="hidden" name="item" value = "004"></form>
-     <form action = "addFood.php" method = "POST"> <input type="submit" > Buy<input type="hidden" name="item" value = "005"></form>
-    <form action = "addFood.php" method = "POST"> <input type="submit" >Buy<input type="hidden" name="item" value = "006"></form>
+    <form action = "addFood.php" method = "POST"> <input type="submit" value= "Buy"><input type="hidden" name="item" value = "004"></form>
+     <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "005"></form>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "006"></form>
     </div>
     <br/>
     <br/>
