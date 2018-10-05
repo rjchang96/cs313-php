@@ -25,6 +25,14 @@ if(!isset($_SESSION["cart"]))
       '011' => 0,
       '012' => 0
    ]
+   else
+   {
+      foreach ($cart as $key => $value) {
+
+         # code...
+         echo "$key has this many $value items";
+      }
+   }
 ?>
 
 <!DOCTYPE html>
