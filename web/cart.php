@@ -93,7 +93,7 @@ session_start();
      <?php
     // if(isset($_SESSION["cart"]))
       foreach ($cart as $key => $value)
-         echo "$key has this many $value items";
+         echo "$key has this many $value items<br>";
 
          # code...
      ?>

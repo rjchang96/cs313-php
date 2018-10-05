@@ -37,17 +37,6 @@ if(!isset($_SESSION["cart"]))
 // }
 
 ?>
-<?php
-
-if(isset($_SESSION["cart"]))
-{
-      foreach ($cart as $key => $value) {
-
-         # code...
-         echo "$key has this many $value items";
-      }
-}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -213,11 +202,13 @@ if(isset($_SESSION["cart"]))
 
     <input type="submit" value= "Buy Brussels Sprouts"><input type="hidden" name="item" value = "004">
 
-     <form action = "addFood.php" method = "POST"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
+     <!-- <form action = "addFood.php" method = "POST"> --> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
+     <!-- </form> -->
 
-    <form action = "addFood.php" method = "POST"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
+   <!--  <form action = "addFood.php" method = "POST"> --> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
+    <!-- </form> -->
     </div>
-    </form>
+ </form>
 
     </div>
     <br/>
