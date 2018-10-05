@@ -183,7 +183,7 @@ if(!isset($_SESSION["cart"]))
 
 <div display ="inline-block">
     <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;"> <input type="submit" value="Buy Eggplant"><input type="hidden" name="item" value = "001"></form>
-    <form action = "addFood.php" method = "POST" style =" margin-left: 20%; position: relative;"> <input type="submit" value ="Buy Spinach"><input type="hidden" name="item" value = "002"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 24%; position: relative;"> <input type="submit" value ="Buy Spinach"><input type="hidden" name="item" value = "002"></form>
     <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value ="Buy Cabbage"><input type="hidden" name="item" value = "003"></form>
  </div>
     </div>
