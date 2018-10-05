@@ -27,6 +27,18 @@ if(!isset($_SESSION["cart"]))
    ]
 
 
+// if(isset($_SESSION["cart"]))
+// {
+//       foreach ($cart as $key => $value) {
+
+//          # code...
+//          echo "$key has this many $value items";
+//       }
+// }
+
+?>
+<?php
+
 if(isset($_SESSION["cart"]))
 {
       foreach ($cart as $key => $value) {
@@ -35,7 +47,6 @@ if(isset($_SESSION["cart"]))
          echo "$key has this many $value items";
       }
 }
-
 ?>
 
 <!DOCTYPE html>
