@@ -64,7 +64,8 @@ session_start();
                case 000:
                   // echo "<br><img src = 'eggplant.jpg' alt = 'eggplant'><br><br>";
                   echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
-                  echo "You have purchase $value Eggplants. The Cost is: " + $value*1.23;
+
+                  echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
 
                   break;
                   // case 001:
