@@ -1,12 +1,12 @@
 <?php
 session_start();
 //$_SESSION["count"] = 0;
-class Food
-{
-   public $amount;
-   public $item;
-   public $price;
-};
+// class Food
+// {
+//    public $amount;
+//    public $item;
+//    public $price;
+// };
 
 $cart = array();
 if(!isset($_SESSION["cart"]))
@@ -24,7 +24,6 @@ if(!isset($_SESSION["cart"]))
       '010' => 0,
       '011' => 0,
       '012' => 0
-
    ]
 ?>
 
@@ -187,9 +186,11 @@ if(!isset($_SESSION["cart"]))
 
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.50</span>
     <!-- <button onclick = "fillCart();" name = "brusselSprouts">Buy</button> -->
-    <form action = "addFood.php" method = "POST"> <input type="submit" value= "Buy" style = "margin-top: 10%; margin-left:8%;"><input type="hidden" name="item" value = "004"></form>
-     <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "005"></form>
-    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "006"></form>
+    <form action = "addFood.php" method = "POST"> <input type="submit" value= "Buy Brussels Sprouts" display ="inline-block"><input type="hidden" name="item" value = "004"></form>
+
+     <form action = "addFood.php" method = "POST"> <input type="submit" value = "Buy Carrots" display ="inline-block"><input type="hidden" name="item" value = "005"></form>
+
+    <form action = "addFood.php" method = "POST"> <input type="submit" value="Buy Potatoes" display ="inline-block"><input type="hidden" name="item" value = "006"></form>
     </div>
     <br/>
     <br/>
