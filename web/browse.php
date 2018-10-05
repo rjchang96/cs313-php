@@ -105,7 +105,7 @@
     <img src = "potatoes.jpg" alt = "Potatoes" style=" position:relative;
         margin-left:10%; width: 250px; height: 200px;">
 
-    <b style = "margin-top: 10%; margin-left:5%;">Brussel Sprouts</b>
+    <b style = "margin-top: 10%; margin-left:10%;">Brussel Sprouts</b>
     <b style = " margin-top: 10%; position: relative; margin-left: 33%;">Carrots</b>
     <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Potatoes</b>
     <br/>
