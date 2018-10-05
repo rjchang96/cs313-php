@@ -130,7 +130,7 @@ if(!isset($_SESSION["cart"]))
       <!-- <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
     <br/>
     <div>
-    <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
+   <!--  <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
     <img src = "spinach.jpg" alt = "spinach" class = "imgMid">
     <img src = "cabbage.jpg" alt = "cabbage" class = "imgLast" class = "imgLast">
     <b class = "underFirst">Eggplant</b>
@@ -143,7 +143,7 @@ if(!isset($_SESSION["cart"]))
     <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "002"></form>
     <span style = "margin-left:29%; position: relative; margin-top: 10%;">Price: $1.00</span>
     <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "003"></form>
-    </div>
+    </div> -->
     <br/>
     <br/>
     <div>
