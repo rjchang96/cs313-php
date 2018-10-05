@@ -182,9 +182,9 @@ if(!isset($_SESSION["cart"]))
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $1.00</span>
 
 <div display ="inline-block">
-    <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;"> <input type="submit" value="Buy Eggplant"><input type="hidden" name="item" value = "001"></form>
-    <form action = "addFood.php" method = "POST" style =" margin-left: 24%; position: relative;"> <input type="submit" value ="Buy Spinach"><input type="hidden" name="item" value = "002"></form>
-    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value ="Buy Cabbage"><input type="hidden" name="item" value = "003"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;"> <input type="submit" value="Buy Eggplant"><input type="hidden" name="item" value = "000"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 24%; position: relative;"> <input type="submit" value ="Buy Spinach"><input type="hidden" name="item" value = "001"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value ="Buy Cabbage"><input type="hidden" name="item" value = "002"></form>
  </div>
     </div>
     <br/>
@@ -207,12 +207,12 @@ if(!isset($_SESSION["cart"]))
     <div display ="inline-block">
 
      <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;">
-    <input type="submit" value= "Buy Brussels Sprouts"><input type="hidden" name="item" value = "004"></form>
+    <input type="submit" value= "Buy Brussels Sprouts"><input type="hidden" name="item" value = "003"></form>
 
-     <form action = "addFood.php" method = "POST" style =" margin-left: 20%; position: relative;"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
+     <form action = "addFood.php" method = "POST" style =" margin-left: 20%; position: relative;"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "004">
      </form>
 
-    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
+    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "005">
     </form>
     </div>
 
@@ -232,9 +232,9 @@ if(!isset($_SESSION["cart"]))
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.99</span>
 
 <div display ="inline-block">
-    <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;"> <input type="submit" value = "Buy Sprouts"><input type="hidden" name="item" value = "007"></form>
-    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value="Buy Apples"><input type="hidden" name="item" value = "008"></form>
-    <form action = "addFood.php" method = "POST" style =" margin-left: 27%; position: relative;"> <input type="submit" value="Buy Strawberries"><input type="hidden" name="item" value = "009"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;"> <input type="submit" value = "Buy Sprouts"><input type="hidden" name="item" value = "006"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value="Buy Apples"><input type="hidden" name="item" value = "007"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 27%; position: relative;"> <input type="submit" value="Buy Strawberries"><input type="hidden" name="item" value = "008"></form>
  </div>
     </div>
 
