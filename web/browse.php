@@ -92,6 +92,10 @@ if(!isset($_SESSION["cart"]))
         width: 250px;
         height: 200px;
     }
+    form
+    {
+      float:left;
+    }
  </style>
 
    <title>Shopping for foods</title>
