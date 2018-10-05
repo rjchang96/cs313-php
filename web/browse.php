@@ -209,7 +209,7 @@ if(!isset($_SESSION["cart"]))
      <form action = "addFood.php" method = "POST" style =" margin-left: 20%; position: relative;"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
      </form>
 
-    <form action = "addFood.php" method = "POST" style =" margin-left: 20%; position: relative;"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
+    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
     </form>
     </div>
 
