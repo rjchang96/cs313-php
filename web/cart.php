@@ -53,47 +53,64 @@ session_start();
 
       <h1>Cha Chang Foods</h1>
 
-     <!--  <div class="container">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    Indicators -->
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-     Wrapper for slides -->
-   <!--  <div class="carousel-inner">
-      <div class="item active">
-        <img src="blueberries.jpg" alt="Blueberries" style="width:300px; height:300px">
-      </div>
-
-      <div class="item">
-        <img src="steak.jpg" alt="Steak" style="width:300px; height:300px">
-      </div>
-
-      <div class="item">
-        <img src="frenchBread.jpg" alt="French Bread" style="width:300px; height:300px">
-      </div>
-    </div>
-
-     Left and right controls -->
-   <!--  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div> -->
-
-     <!--  <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
      <?php
     // if(isset($_SESSION["cart"]))
       foreach ($cart as $key => $value)
+      {
+         if($value > 0)
+         {
+            switch ($key) {
+               case 000:
+                  echo "<img src = 'eggplant.jpg' alt = 'eggplant'>";
+                  echo "Eggplant: " + $value + " Cost: " + $value*1.23;
+                  echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>";
+                   echo "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
+
+                  break;
+                  case 001:
+                  # code...
+                  break;
+                  case 002:
+                  # code...
+                  break;
+                  case 003:
+                  # code...
+                  break;
+                  case 004:
+                  # code...
+                  break;
+                  case 005:
+                  # code...
+                  break;
+                  case 006:
+                  # code...
+                  break;
+                  case 007:
+                  # code...
+                  break;
+                  case 008:
+                  # code...
+                  break;
+                  case 009:
+                  # code...
+                  break;
+                  case 010:
+                  # code...
+                  break;
+                  case 011:
+                  # code...
+                  break;
+                   case 012:
+                  # code...
+                  break;
+
+               default:
+                  # code...
+                  break;
+            }
+         }
          echo "$key has this many $value items<br>";
+      }
 
          # code...
      ?>
