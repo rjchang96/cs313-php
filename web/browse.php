@@ -203,7 +203,7 @@ if(!isset($_SESSION["cart"]))
     <!-- <button onclick = "fillCart();" name = "brusselSprouts">Buy</button> -->
     <div display ="inline-block">
 
-     <form action = "addFood.php" method = "POST" style =" margin-left: 8%; position: relative;">
+     <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;">
     <input type="submit" value= "Buy Brussels Sprouts"><input type="hidden" name="item" value = "004"></form>
 
      <form action = "addFood.php" method = "POST" style =" margin-left: 20%; position: relative;"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
