@@ -203,13 +203,13 @@ if(!isset($_SESSION["cart"]))
     <!-- <button onclick = "fillCart();" name = "brusselSprouts">Buy</button> -->
     <div display ="inline-block">
 
-     <form action = "addFood.php" method = "POST">
+     <form action = "addFood.php" method = "POST" style =" margin-left: 8%; position: relative; margin-top:10%;">
     <input type="submit" value= "Buy Brussels Sprouts"><input type="hidden" name="item" value = "004"></form>
 
-     <form action = "addFood.php" method = "POST"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
+     <form action = "addFood.php" method = "POST" style =" margin-left: 27%; position: relative; margin-top:10%;"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
      </form>
 
-    <form action = "addFood.php" method = "POST"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
+    <form action = "addFood.php" method = "POST" style =" margin-left: 27%; position: relative; margin-top:10%;"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
     </form>
     </div>
 
