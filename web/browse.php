@@ -1,3 +1,33 @@
+<?php
+session_start();
+//$_SESSION["count"] = 0;
+class Food
+{
+   public $amount;
+   public $item;
+   public $price;
+};
+
+$cart = array();
+if(!isset($_SESSION["cart"]))
+   $_SESSION["cart"] = [
+      '000' => 0,
+      '001' => 0,
+      '002' => 0,
+      '003' => 0,
+      '004' => 0,
+      '005' => 0,
+      '006' => 0,
+      '007' => 0,
+      '008' => 0,
+      '009' => 0,
+      '010' => 0,
+      '011' => 0,
+      '012' => 0
+
+   ]
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +43,26 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript">
+   // class Foods
+   // {
+   //    var item = "";
+   //    var amount = 0;
+   //    var price = 0;
+
+   // };
+
+   function fillCart()
+   {
+
+   }
+</script> -->
 
    <title>Shopping for foods</title>
 </head>
 <body>
 <!-- <body style="background-image: url('chineseMarket.jpg');"> -->
+  <!--  <form action = "addFood.php"> -->
    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -85,7 +130,7 @@
       <!-- <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
     <br/>
     <div>
-    <!-- <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
+    <img src = "eggplant.jpg" alt = "eggplant" class = "imgFirst">
     <img src = "spinach.jpg" alt = "spinach" class = "imgMid">
     <img src = "cabbage.jpg" alt = "cabbage" class = "imgLast" class = "imgLast">
     <b class = "underFirst">Eggplant</b>
@@ -93,25 +138,30 @@
     <b class = "underLast">Cabbage</b>
     <br/>
     <span class = "underFirst" style = "background-color: white;">Price: $1.23</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "001"></form>
     <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $2.00</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "002"></form>
     <span style = "margin-left:29%; position: relative; margin-top: 10%;">Price: $1.00</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "003"></form>
     </div>
-    <br/> -->
+    <br/>
     <br/>
     <div>
-    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" style = "margin-left: 20%; position:relative; margin: auto; width: 200px; height:150px;">
-    <img src = "carrots.jpg" alt = "Carrots" style = "position:relative;
-        margin-left:15%; width: 250px; height: 200px;">
-    <img src = "potatoes.jpg" alt = "Potatoes" style=" position:relative;
-        margin-left:10%; width: 250px; height: 200px;">
+    <img src = "brusselSprouts.jpg" alt = "Brussel Sprouts" class = "imgFirst">
+    <img src = "carrots.jpg" alt = "Carrots" class = "imgMid">
+    <img src = "potatoes.jpg" alt = "Potatoes" class = "imgLast">
 
     <b style = "margin-top: 10%; margin-left:8%;">Brussels</b>
     <b style = " margin-top: 10%; position: relative; margin-left: 29%;">Carrots</b>
     <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Potatoes</b>
     <br/>
     <span style = " margin-top: 10%; margin-left:8%;">Price: $0.50</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "004"></form>
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $2.00</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "005"></form>
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.50</span>
+    <!-- <button onclick = "fillCart();" name = "brusselSprouts">Buy</button> -->
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "006"></form>
     </div>
     <br/>
     <br/>
@@ -124,8 +174,11 @@
     <b class = "underLast">Strawberries</b>
     <br/>
     <span class = "underFirst">Price: $0.75</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "007"></form>
     <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $0.50</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "008"></form>
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.99</span>
+    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "009"></form>
     </div>
 
 <br/>
@@ -192,6 +245,6 @@
     <script src="../assets/js/bootstrap-collapse.js"></script>
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
-
+<!-- </form> -->
 </body>
 </html>
