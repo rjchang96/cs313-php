@@ -64,8 +64,8 @@ session_start();
                case 000:
                   echo "<img src = 'eggplant.jpg' alt = 'eggplant'><br><br>";
                   echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>";
-                  echo "Eggplant: " + $value + " Cost: " + $value*1.23;
                    echo "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
+                  echo "<br><br>Eggplant: " + $value + " Cost: " + $value*1.23;
 
                   break;
                   // case 001:
