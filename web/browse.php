@@ -96,6 +96,56 @@ if(!isset($_SESSION["cart"]))
     {
       float:left;
     }
+    .firstText
+    {
+      margin-top: 10%;
+      margin-left:8%;
+
+    }
+    .secondText
+    {
+      margin-top: 10%;
+      position: relative;
+      margin-left: 29%;
+
+    }
+    .thirdText
+    {
+      margin-top: 10%;
+      position: relative;
+      margin-left: 27%;
+
+    }
+    .cost1
+    {
+       margin-top: 10%;
+       margin-left:8%;
+    }
+    .costAfter
+    {
+      margin-left:27%;
+      position: relative;
+      margin-top: 10%;
+
+    }
+    .button1
+    {
+      margin-left: 7%;
+      position: relative;
+
+    }
+    .button2
+    {
+      margin-left: 20%;
+      position: relative;
+
+    }
+    .button3
+    {
+      margin-left: 25%;
+      position: relative;
+
+    }
  </style>
 
    <title>Shopping for foods</title>
@@ -191,25 +241,25 @@ if(!isset($_SESSION["cart"]))
     <img src = "carrots.jpg" alt = "Carrots" class = "imgMid">
     <img src = "potatoes.jpg" alt = "Potatoes" class = "imgLast">
 
-    <b style = "margin-top: 10%; margin-left:8%;">Brussels</b>
-    <b style = " margin-top: 10%; position: relative; margin-left: 29%;">Carrots</b>
-    <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Potatoes</b>
+    <b id = "firstText">Brussels</b>
+    <b id = "secondText">Carrots</b>
+    <b id = "thirdText">Potatoes</b>
     <br/>
-    <span style = " margin-top: 10%; margin-left:8%;">Price: $0.50</span>
+    <span id = "cost1">Price: $0.50</span>
 
-    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $2.00</span>
+    <span id ="costAfter">Price: $2.00</span>
 
-    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.50</span>
+    <span id ="costAfter">Price: $3.50</span>
     <!-- <button onclick = "fillCart();" name = "brusselSprouts">Buy</button> -->
     <div display ="inline-block">
 
-     <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;">
+     <form action = "addFood.php" method = "POST" id = "button1">
     <input type="submit" value= "Buy Brussels Sprouts"><input type="hidden" name="item" value = "004"></form>
 
-     <form action = "addFood.php" method = "POST" style =" margin-left: 20%; position: relative;"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
+     <form action = "addFood.php" method = "POST" id = "button2"> <input type="submit" value = "Buy Carrots"><input type="hidden" name="item" value = "005">
      </form>
 
-    <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
+    <form action = "addFood.php" method = "POST" id = "button3"> <input type="submit" value="Buy Potatoes"><input type="hidden" name="item" value = "006">
     </form>
     </div>
 
@@ -220,16 +270,17 @@ if(!isset($_SESSION["cart"]))
     <img src = "sprouts.jpg" alt = "sprouts" class = "imgFirst">
     <img src = "apples.jpg" alt = "Apple" class = "imgMid">
     <img src = "strawberries.jpg" alt = "strawberries" class = "imgLast" class = "imgLast">
-    <b class = "underFirst">Sprouts</b>
-    <b class = "underMid">Apple</b>
-    <b class = "underLast">Strawberries</b>
+    <b class = "firstText">Sprouts</b>
+    <b class = "secondText">Apple</b>
+    <b class = "thirdText">Strawberries</b>
     <br/>
-    <span class = "underFirst">Price: $0.75</span>
-    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "007"></form>
-    <span style = "margin-left:37%; position: relative; margin-top: 10%;">Price: $0.50</span>
-    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "008"></form>
-    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.99</span>
-    <form action = "addFood.php" method = "POST"> <input type="submit" ><input type="hidden" name="item" value = "009"></form>
+    <span id = "cost1">Price: $0.75</span>
+    <span id= "costAfter">Price: $0.50</span>
+    <span id = "costAfter">Price: $3.99</span>
+
+    <form action = "addFood.php" method = "POST" id="button1"> <input type="submit" ><input type="hidden" name="item" value = "007"></form>
+    <form action = "addFood.php" method = "POST" id = "button2"> <input type="submit" ><input type="hidden" name="item" value = "008"></form>
+    <form action = "addFood.php" method = "POST" id ="button3"> <input type="submit" ><input type="hidden" name="item" value = "009"></form>
     </div>
 
 <br/>
