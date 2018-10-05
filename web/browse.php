@@ -57,6 +57,32 @@ if(!isset($_SESSION["cart"]))
 
    }
 </script> -->
+<style type="text/css">
+.imgFirst
+    {
+        margin-left: 20%;
+        position:relative;
+        margin: auto;
+        width: 200px;
+        height:150px;
+
+    }
+    .imgMid
+    {
+      position:relative;
+      margin-left:15%;
+      width: 250px;
+      height: 200px;
+    }
+
+    .imgLast
+    {
+        position:relative;
+        margin-left:10%;
+        width: 250px;
+        height: 200px;
+    }
+ </style>
 
    <title>Shopping for foods</title>
 </head>
