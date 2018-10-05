@@ -1,3 +1,4 @@
+
 <?php
 session_start();
  //if(isset($_SESSION["cart"]))
@@ -67,42 +68,42 @@ session_start();
                    echo "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
 
                   break;
-                  case 001:
-                  # code...
-                  break;
-                  case 002:
-                  # code...
-                  break;
-                  case 003:
-                  # code...
-                  break;
-                  case 004:
-                  # code...
-                  break;
-                  case 005:
-                  # code...
-                  break;
-                  case 006:
-                  # code...
-                  break;
-                  case 007:
-                  # code...
-                  break;
-                  case 008:
-                  # code...
-                  break;
-                  case 009:
-                  # code...
-                  break;
-                  case 010:
-                  # code...
-                  break;
-                  case 011:
-                  # code...
-                  break;
-                   case 012:
-                  # code...
-                  break;
+                  // case 001:
+                  // # code...
+                  // break;
+                  // case 002:
+                  // # code...
+                  // break;
+                  // case 003:
+                  // # code...
+                  // break;
+                  // case 004:
+                  // # code...
+                  // break;
+                  // case 005:
+                  // # code...
+                  // break;
+                  // case 006:
+                  // # code...
+                  // break;
+                  // case 007:
+                  // # code...
+                  // break;
+                  // case 008:
+                  // # code...
+                  // break;
+                  // case 009:
+                  // # code...
+                  // break;
+                  // case 010:
+                  // # code...
+                  // break;
+                  // case 011:
+                  // # code...
+                  // break;
+                  //  case 012:
+                  // # code...
+                  // break;
 
                default:
                   # code...
