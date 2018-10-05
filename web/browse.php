@@ -104,9 +104,10 @@
         margin-left:15%; width: 250px; height: 200px;">
     <img src = "potatoes.jpg" alt = "Potatoes" style=" position:relative;
         margin-left:10%; width: 250px; height: 200px;">
-    <b class = "underFirst">Brussel Sprouts</b>
-    <b class = "underMid">Carrots</b>
-    <b class = "underLast">Potatoes</b>
+
+    <b style = "margin-top: 10%; margin-left:5%;">Brussel Sprouts</b>
+    <b style = " margin-top: 10%; position: relative; margin-left: 33%;">Carrots</b>
+    <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Potatoes</b>
     <br/>
     <span class = "underFirst" style = "background-color: white;">Price: $0.50</span>
     <span style = "margin-left:36%; position: relative; margin-top: 10%;">Price: $2.00</span>
