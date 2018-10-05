@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,17 +51,17 @@
 
       <h1>Cha Chang Foods</h1>
 
-      <div class="container">
+     <!--  <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
+    Indicators -->
+    <!-- <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
+     Wrapper for slides -->
+   <!--  <div class="carousel-inner">
       <div class="item active">
         <img src="blueberries.jpg" alt="Blueberries" style="width:300px; height:300px">
       </div>
@@ -70,8 +75,8 @@
       </div>
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+     Left and right controls -->
+   <!--  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Previous</span>
     </a>
@@ -80,16 +85,23 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
+</div> -->
 
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+     <!--  <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
+     <?php
+     if(isset($_SESSION["cart"]))
+      foreach ($cart as $key => $value)
+         echo "$key has this many $value items";
 
-    </div> <!-- /container -->
+         # code...
+     ?>
 
-    <!-- Le javascript
+    </div>  <!-- /container
+
+     Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
+    <!-- <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap-transition.js"></script>
     <script src="../assets/js/bootstrap-alert.js"></script>
     <script src="../assets/js/bootstrap-modal.js"></script>
@@ -101,7 +113,7 @@
     <script src="../assets/js/bootstrap-button.js"></script>
     <script src="../assets/js/bootstrap-collapse.js"></script>
     <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
-
+    <script src="../assets/js/bootstrap-typeahead.js"></script> -->
+ --> -->
 </body>
 </html>
