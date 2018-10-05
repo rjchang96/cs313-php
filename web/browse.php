@@ -178,7 +178,7 @@ if(!isset($_SESSION["cart"]))
     <b style = "margin-top: 10%; position: relative; margin-left: 27%;">Cabbage</b>
     <br/>
     <span  style = " margin-top: 10%; margin-left:8%;">Price: $1.23</span>
-    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $2.00</span>
+    <span style = "margin-left:20%; position: relative; margin-top: 10%;">Price: $2.00</span>
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $1.00</span>
 
 <div display ="inline-block">
@@ -200,9 +200,9 @@ if(!isset($_SESSION["cart"]))
     <br/>
     <span style = " margin-top: 10%; margin-left:8%;">Price: $0.50</span>
 
-    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $2.00</span>
+    <span style = "margin-left:20%; position: relative; margin-top: 10%;">Price: $2.00</span>
 
-    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.50</span>
+    <span style = "margin-left:23%; position: relative; margin-top: 10%;">Price: $3.50</span>
     <!-- <button onclick = "fillCart();" name = "brusselSprouts">Buy</button> -->
     <div display ="inline-block">
 
@@ -229,7 +229,7 @@ if(!isset($_SESSION["cart"]))
     <br/>
     <span style = " margin-top: 10%; margin-left:8%;">Price: $0.75</span>
     <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $0.50</span>
-    <span style = "margin-left:27%; position: relative; margin-top: 10%;">Price: $3.99</span>
+    <span style = "margin-left:23%; position: relative; margin-top: 10%;">Price: $3.99</span>
 
 <div display ="inline-block">
     <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;"> <input type="submit" value = "Buy Sprouts"><input type="hidden" name="item" value = "007"></form>
