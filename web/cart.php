@@ -58,19 +58,23 @@ session_start();
     // if(isset($_SESSION["cart"]))
       foreach ($cart as $key => $value)
       {
-         // if($value > 0)
-         // {
+         if($value != 0)
+         {
             if($key == 000)
             {
-                // echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
-
-                  // echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
-               if($value != 0)
+               $cost = 1.23 * $value;
+               if($value > 1)
                {
-                  $cost = 1.23 * $value;
                    echo "<br><img src = 'eggplant.jpg' alt = 'eggplant' style = 'width: 200px; height:150px;'><br><br>";
                   echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '000'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '000'></form>";
                    echo "You have purchased $value Eggplants. The Cost is: $cost";
+               }
+               else
+               {
+                   echo "<br><img src = 'eggplant.jpg' alt = 'eggplant' style = 'width: 200px; height:150px;'><br><br>";
+                  echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '000'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '000'></form>";
+                   echo "You have purchased $value Eggplant. The Cost is: $ $cost";
+
                }
             }
            //  switch ($key) {
