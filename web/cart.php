@@ -114,7 +114,7 @@ session_start();
                // default:
                //    # code...
                //    break;
-            }
+           // }
          }
         // echo "$key has this many $value items<br>";
       }
