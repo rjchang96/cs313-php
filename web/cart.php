@@ -60,14 +60,20 @@ session_start();
       {
          if($value > 0)
          {
-            switch ($key) {
-               case 000:
-                  // echo "<br><img src = 'eggplant.jpg' alt = 'eggplant'><br><br>";
-                  echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
+            if($key == 000)
+            {
+                echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
 
                   echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
+            }
+            // switch ($key) {
+            //    case 000:
+            //       // echo "<br><img src = 'eggplant.jpg' alt = 'eggplant'><br><br>";
+            //       echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
 
-                  break;
+            //       echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
+
+            //       break;
                   // case 001:
                   // # code...
                   // break;
@@ -105,9 +111,9 @@ session_start();
                   // # code...
                   // break;
 
-               default:
-                  # code...
-                  break;
+               // default:
+               //    # code...
+               //    break;
             }
          }
         // echo "$key has this many $value items<br>";
