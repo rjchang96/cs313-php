@@ -60,7 +60,7 @@ session_start();
       {
          if($value > 0)
          {
-            if($key == 000)
+            if($key == '000')
             {
                 echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
 
