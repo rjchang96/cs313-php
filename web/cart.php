@@ -69,8 +69,8 @@ session_start();
                {
                   $cost = 1.23 * $value;
                    echo "<br><img src = 'eggplant.jpg' alt = 'eggplant'><br><br>";
-                  echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>";
-                  echo "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
+                  echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '000'></form>";
+                  echo "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '000'></form>";
                    echo "You have purchased $value Eggplants. The Cost is: $cost";
                }
             }
