@@ -67,7 +67,7 @@ session_start();
                   // echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
                if(getValue($value) != 0)
                {
-                  var $cost = getValue($value) * 1.23;
+                  $cost = getValue($value) * 1.23;
                    echo "You have purchased $value Eggplants. The Cost is: $cost";
                }
             }
