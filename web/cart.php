@@ -65,9 +65,9 @@ session_start();
                 // echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
 
                   // echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
-               if(getValue($value) != 0)
+               if($value != 0)
                {
-                  $cost = $value * 1.23;
+                  $cost = 1.23 * $value;
                    echo "You have purchased $value Eggplants. The Cost is: $cost";
                }
             }
