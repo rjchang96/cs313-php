@@ -58,13 +58,18 @@ session_start();
     // if(isset($_SESSION["cart"]))
       foreach ($cart as $key => $value)
       {
-         if($value > 0)
-         {
+         // if($value > 0)
+         // {
             if($key == 000)
             {
                 // echo "<form action = 'addFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '001'></form>" + "<form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '001'></form>";
 
-                  echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
+                  // echo "You have purchased $value Eggplants. The Cost is: " + $value*1.23;
+               if(getValue($value) != 0)
+               {
+                  var $cost = getValue($value) * 1.23;
+                   echo "You have purchased $value Eggplants. The Cost is: $cost";
+               }
             }
            //  switch ($key) {
            //     case 000:
