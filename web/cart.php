@@ -182,23 +182,24 @@ session_start();
 
                }
             }
-            if($key == 008)
-            {
-               $cost = 1.23 * $value;
-               if($value > 1)
-               {
-                  echo "<br><img src = 'strawberries.jpg' alt = 'strawberries' style = 'width: 200px; height:150px;'><br><br>";
-                  echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '008'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '008'></form>";
-                   echo "You have purchased $value boxes of Strawberries. The Cost is: $cost";
-               }
-               else
-               {
-                  echo "<br><img src = 'strawberries.jpg' alt = 'strawberries' style = 'width: 200px; height:150px;'><br><br>";
-                  echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '008'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '008'></form>";
-                   echo "You have purchased $value box of Strawberries. The Cost is: $ $cost";
 
-               }
-            }
+            // if($key == 008)
+            // {
+            //    $cost = 1.23 * $value;
+            //    if($value > 1)
+            //    {
+            //       echo "<br><img src = 'strawberries.jpg' alt = 'strawberries' style = 'width: 200px; height:150px;'><br><br>";
+            //       echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '008'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '008'></form>";
+            //        echo "You have purchased $value boxes of Strawberries. The Cost is: $cost";
+            //    }
+            //    else
+            //    {
+            //       echo "<br><img src = 'strawberries.jpg' alt = 'strawberries' style = 'width: 200px; height:150px;'><br><br>";
+            //       echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '008'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '008'></form>";
+            //        echo "You have purchased $value box of Strawberries. The Cost is: $ $cost";
+
+            //    }
+            // }
             // if($key == 009)
             // {
             //    $cost = 1.23 * $value;
