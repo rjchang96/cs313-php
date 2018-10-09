@@ -56,8 +56,8 @@ session_start();
 
 <?php
 //specialcharacters()
- echo "<pre>";
- print_r($_POST);
+//echo "<pre>";
+ //print_r($_POST);
  echo "<pre>";
  echo "City: {$_POST['city']}" ."<br/>";
  echo "Street address: {$_POST['street']}" ."<br/>";
@@ -69,7 +69,7 @@ session_start();
 <br>
 <h2>Your Order summary</h2>
 <?php
-foreach ($cart as $key => $value)
+foreach ($_SESSION["cart"] as $key => $value)
       {
         if($value != 0)
          {
@@ -259,7 +259,7 @@ foreach ($cart as $key => $value)
   </div>
 </div> -->
 
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+     <!--  <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p> -->
 
     </div> <!-- /container -->
 

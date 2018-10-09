@@ -234,7 +234,7 @@ if(!isset($_SESSION["cart"]))
 <div display ="inline-block">
     <form action = "addFood.php" method = "POST" style =" margin-left: 7%; position: relative;"> <input type="submit" value = "Buy Sprouts"><input type="hidden" name="item" value = "006"></form>
     <form action = "addFood.php" method = "POST" style =" margin-left: 25%; position: relative;"> <input type="submit" value="Buy Apples"><input type="hidden" name="item" value = "007"></form>
-    <form action = "addFood.php" method = "POST" style =" margin-left: 27%; position: relative;"> <input type="submit" value="Buy Strawberries"><input type="hidden" name="item" value = "008"></form>
+    <form action = "addFood.php" method = "POST" style =" margin-left: 27%; position: relative;"> <input type="submit" value="Buy Strawberries"><input type="hidden" name="item" value = "010"></form>
  </div>
     </div>
 
