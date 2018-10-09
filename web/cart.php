@@ -187,15 +187,15 @@ session_start();
                $cost = 3.99 * $value;
                if($value > 1)
                {
-                  echo "<br><img src = 'apple.jpg' alt = 'apple' style = 'width: 200px; height:150px;'><br><br>";
-                  echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '007'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '007'></form>";
-                   echo "You have purchased $value apples. The Cost is: $cost";
+                  echo "<br><img src = 'strawberries.jpg' alt = 'strawberries' style = 'width: 200px; height:150px;'><br><br>";
+                  echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '010'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '010'></form>";
+                   echo "You have purchased $value boxes of strawberries. The Cost is: $cost";
                }
                else
                {
-                  echo "<br><img src = 'apples.jpg' alt = 'apples' style = 'width: 200px; height:150px;'><br><br>";
-                  echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '007'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '007'></form>";
-                   echo "You have purchased $value apples. The Cost is: $ $cost";
+                  echo "<br><img src = 'strawberries.jpg' alt = 'strawberries' style = 'width: 200px; height:150px;'><br><br>";
+                  echo "<form action = 'caddFood.php' method = 'POST' style =' margin-left: 7%; position: relative;'> <input type='submit' value='+'><input type='hidden' name='item' value = '010'></form> <form action = 'minusFood.php' method = 'POST' style =' margin-left: 10%; position: relative;'> <input type='submit' value='-'><input type='hidden' name='item' value = '010'></form>";
+                   echo "You have purchased $value box of strawberries. The Cost is: $ $cost";
 
                }
             }
