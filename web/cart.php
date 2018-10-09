@@ -182,7 +182,7 @@ session_start();
 
                }
             }
-            if($key == 008)
+            if($key == 009)
             {
                $cost = 3.99 * $value;
                if($value > 1)
