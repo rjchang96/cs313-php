@@ -73,10 +73,10 @@ session_start();
          <input type="submit" value="Return to Cart">
          </form>
 
-         <?php
-            header("location: cart.php");
+        <!--  <?php
+            // header("location: cart.php");
 
-         ?>
+         ?> -->
   <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
     Indicators -->
    <!--  <ol class="carousel-indicators">
