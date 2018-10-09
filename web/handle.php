@@ -1,5 +1,5 @@
 <?php
 session_start();
-$text =
+header("location: cart.php");
 
 ?>
