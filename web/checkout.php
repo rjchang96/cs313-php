@@ -1,14 +1,14 @@
 <?php
 session_start();
-$address = array();
-if(!isset($_SESSION["address"]))
-   $_SESSION["address"] = [
-      '000' => "",
-      '001' => "",
-      '002' => "",
-      '003' => "",
-      '004' => ""
-   ]
+// $address = array();
+// if(!isset($_SESSION["address"]))
+//    $_SESSION["address"] = [
+//       '000' => "",
+//       '001' => "",
+//       '002' => "",
+//       '003' => "",
+//       '004' => ""
+//    ]
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ if(!isset($_SESSION["address"]))
                <li class="active"><a href="shoppingHome.php">Home</a></li>
               <li><a href="browse.php">Browse</a></li>
               <li><a href="cart.php">Cart</a></li>
-               <li><a href="checkout.php">Checkout</a></li>
+               <li><a href="checkout.php">Checkout here</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
