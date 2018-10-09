@@ -46,7 +46,7 @@ session_start();
                <li class="active"><a href="shoppingHome.php">Home</a></li>
               <li><a href="browse.php">Browse</a></li>
               <li><a href="cart.php">Cart</a></li>
-               <li><a href="checkout.php">Checkout here</a></li>
+               <li><a href="checkout.php">Checkout</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
