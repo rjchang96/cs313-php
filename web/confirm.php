@@ -55,14 +55,15 @@ session_start();
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 <?php
+//specialcharacters()
  echo "<pre>";
  print_r($_POST);
  echo "<pre>";
- echo "City: {$_POST['city']}" ."<br/>";
- echo "Street address: {$_POST['street']}" ."<br/>";
- echo "Zip Code: {$_POST['zip']}" ."<br/>";
- echo "State: {$_POST['state']}" ."<br/>";
- echo "Country: {$_POST['country']}" ."<br/>";
+ echo "City: {specialcharacters($_POST['city'])}" ."<br/>";
+ echo "Street address: {specialcharacters($_POST['street'])}" ."<br/>";
+ echo "Zip Code: {specialcharacters($_POST['zip'])}" ."<br/>";
+ echo "State: {specialcharacters($_POST['state'])}" ."<br/>";
+ echo "Country: {specialcharacters($_POST['country'])}" ."<br/>";
 
 ?>
 <br>
