@@ -3,15 +3,13 @@ CREATE TABLE breeds
    id SERIAL PRIMARY KEY
    , name VARCHAR(50) UNIQUE NOT NULL
    , description VARCHAR(50) NOT NULL
-   , temperment VARCHAR(50) NOT NULL
+   , P_temperment VARCHAR(50) NOT NULL
    , hyperAllergenic BOOLEAN NOT NULL
-   , foodCost  INT NOT NULL
+   , P_cost  INT NOT NULL
    , size VARCHAR(50) NOT NULL
-   , exercise INT NOT NULL
+   , P_exercise INT NOT NULL
    , professionalRating INT NOT NULL
-   , userRating INT NOT NULL
-
-
+   , overallUserRating INT NOT NULL
 );
 
 CREATE TABLE users
@@ -25,8 +23,18 @@ CREATE TABLE comments
 (
    id SERIAL PRIMARY KEY
    , content TEXT
-   , dog_id INT NOT NULL REFERENCES dog(id)
+   , breeds_id INT NOT NULL REFERENCES breeds(id)
    , user_id INT NOT NULL REFERENCES users(id)
 
+);
+
+CREATE TABLE userRating
+(
+   id SERIAL PRIMARY KEY
+   , breeds_id INT NOT NULL REFERENCES breeds(id)
+   , user_id INT NOT NULL REFERENCES users(id)
+   , temperment INT NOT NULL
+   , exercise INT NOT NULL
+   , cost INT NOT NULL
 );
 
