@@ -62,11 +62,12 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
    <ul>
 <?php
 foreach ($dogs as $breeds) {
+   var_dump($breeds);
    $name = $breeds['name'];
    $hyperallergenic = $breeds['hyperAllergenic'];
    $description = $breeds['description'];
    echo "<li><p>$name <br> HyperAllergenic: ";
-   if($hyperallergenic == 0)
+   if($hyperallergenic == false)
       echo "No <br>";
    else
       echo "Yes<br>";
