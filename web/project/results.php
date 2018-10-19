@@ -8,7 +8,7 @@ $db = get_db();
 // $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 // $stmt->execute();
 // $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$stmt = $db->prepare('SELECT id, name, description, P_temperment FROM breeds');
+$stmt = $db->prepare('SELECT id, name, description, hyperAllergenic FROM breeds');
 $stmt->execute();
 $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // go through each movie in the result and display it
@@ -63,10 +63,14 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
 foreach ($dogs as $breeds) {
    $name = $breeds['name'];
-   $temperment = $breeds['P_temperment'];
+   $hyperallergenic = $breeds['hyperAllergenic'];
    $description = $breeds['description'];
-   echo "<li><p>$name temperment score:" . $temperment. "</p></li>";
-   echo "Description <br> $description <br>";
+   echo "<li><p>$name <br> HyperAllergenic: ";
+   if($hyperallergenic == false)
+      echo "No <br>";
+   else
+      echo "Yes<br>";
+   echo "Description <br> $description <br></p></li>";
 }
 ?>
    </ul>
