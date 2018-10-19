@@ -56,8 +56,8 @@ session_start();
 
 <?php
 //specialcharacters()
-//echo "<pre>";
- //print_r($_POST);
+ //echo "<pre>";
+// print_r($_POST);
  echo "<pre>";
  echo "City: {$_POST['city']}" ."<br/>";
  echo "Street address: {$_POST['street']}" ."<br/>";
