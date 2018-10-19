@@ -2,14 +2,16 @@ CREATE TABLE breeds
 (
    id SERIAL PRIMARY KEY
    , name VARCHAR(50) UNIQUE NOT NULL
-   , description VARCHAR(50) NOT NULL
-   , P_temperment VARCHAR(50) NOT NULL
+   , description TEXT NOT NULL
+   , P_temperment INT NOT NULL
    , hyperAllergenic BOOLEAN NOT NULL
-   , P_cost  INT NOT NULL
+   , minCost  INT NOT NULL
+   , maxCost  INT NOT NULL
    , size VARCHAR(50) NOT NULL
    , P_exercise INT NOT NULL
+   , P_hair INT NOT NULL
    , professionalRating INT NOT NULL
-   , overallUserRating INT NOT NULL
+   , overallUserRating INT
 );
 
 CREATE TABLE users
@@ -36,5 +38,30 @@ CREATE TABLE userRating
    , temperment INT NOT NULL
    , exercise INT NOT NULL
    , cost INT NOT NULL
+   , hair INT NOT NULL
+
 );
 
+INSERT INTO breeds (name, description, P_temperment,
+   hyperAllergenic, minCost, maxCost, size, P_exercise, P_hair,
+   professionalRating) VALUES ('Bichon Frise',
+   'The small but sturdy and resilient Bichon Frise stands
+   among the world’s great “personality dogs.”
+   Since antiquity, these irresistible canine
+   comedians have relied on charm, beauty, and
+   intelligence to weather history’s ups
+   and downs.', 9, true, 650, 1500,'9.5-11.5 inches, 12-18 pounds',
+    3, 2, 8);
+
+   INSERT INTO breeds (name, description, P_temperment,
+   hyperAllergenic, minCost, maxCost, size, P_exercise, P_hair,
+   professionalRating) VALUES ('Siberian Husky',
+   'TThe Siberian Husky, a thickly coated, compact sled dog of medium
+   size and great endurance, was developed to work in packs, pulling
+   light loads at moderate speeds over vast frozen expanses.
+   Sibes are friendly, fastidious, and dignified.',
+    8, false, 450, 1500,'9.5-11.5 inches, 12-18 pounds',
+    8, 9, 8);
+
+   SELECT name, P_temperment, professionalRating FROM breeds
+   WHERE hyperAllergenic = true;
