@@ -65,7 +65,7 @@ foreach ($dogs as $breeds) {
    $name = $breeds['name'];
    $temperment = $breeds['P_temperment'];
    $description = $breeds['description'];
-   echo "<li><p>$name temperment score: $temperment </p></li>";
+   echo "<li><p>$name temperment score:" . $temperment. "</p></li>";
    echo "Description <br> $description <br>";
 }
 ?>
