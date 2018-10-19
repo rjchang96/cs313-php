@@ -37,7 +37,7 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href = "homepage.html">Home</a>
 
       <a href= "form.html" style="margin-left: 10px;">Search </a>
-      <a href = "result.php"  style="margin-left: 10px;">Doggos</a>
+      <a href = "results.php"  style="margin-left: 10px;">Doggos</a>
 
     </div>
      <!--  <br>
