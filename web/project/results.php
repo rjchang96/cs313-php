@@ -75,8 +75,8 @@ foreach ($dogs as $breeds) {
       echo "No <br>";
    else
       echo "Yes<br>";
-   echo "Scoring on a scale of 1-10, 1 being the tougher
-   temperment to easiest temperment<br>"
+   echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
+   temperment<br>";
    echo "Temperment: $temper<br>";
    echo "Description <br> $description <br></p></li>";
 }
