@@ -8,7 +8,7 @@ $db = get_db();
 // $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 // $stmt->execute();
 // $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$stmt = $db->prepare('SELECT id, name, description, hyperAllergenic FROM breeds');
+$stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment FROM breeds');
 $stmt->execute();
 $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // go through each movie in the result and display it
@@ -61,16 +61,21 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
    <ul>
 <?php
+//psql changes everythings to lowercase when stored so
+//when trying to access in php have to change it to all
+//lower case
 foreach ($dogs as $breeds) {
    // var_dump($breeds);
    $name = $breeds['name'];
    $hyperallergenic = $breeds['hyperallergenic'];
    $description = $breeds['description'];
+   $temper = $breeds['p_temperment'];
    echo "<li><p>$name <br> HyperAllergenic: ";
    if($hyperallergenic == false)
       echo "No <br>";
    else
       echo "Yes<br>";
+   echo "Temperment: $temper<br>";
    echo "Description <br> $description <br></p></li>";
 }
 ?>
