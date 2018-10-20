@@ -62,7 +62,7 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
    <ul>
 <?php
 foreach ($dogs as $breeds) {
-   var_dump($breeds);
+   // var_dump($breeds);
    $name = $breeds['name'];
    $hyperallergenic = $breeds['hyperallergenic'];
    $description = $breeds['description'];
