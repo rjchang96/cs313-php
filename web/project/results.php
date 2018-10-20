@@ -67,7 +67,7 @@ foreach ($dogs as $breeds) {
    $hyperallergenic = $breeds['hyperAllergenic'];
    $description = $breeds['description'];
    echo "<li><p>$name <br> HyperAllergenic: ";
-   if($hyperallergenic == false)
+   if($hyperallergenic === false)
       echo "No <br>";
    else
       echo "Yes<br>";
