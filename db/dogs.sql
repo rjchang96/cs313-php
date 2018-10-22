@@ -56,7 +56,7 @@ INSERT INTO breeds (name, description, P_temperment,
    INSERT INTO breeds (name, description, P_temperment,
    hyperAllergenic, minCost, maxCost, size, P_exercise, P_hair,
    professionalRating) VALUES ('Siberian Husky',
-   'TThe Siberian Husky, a thickly coated, compact sled dog of medium
+   'The Siberian Husky, a thickly coated, compact sled dog of medium
    size and great endurance, was developed to work in packs, pulling
    light loads at moderate speeds over vast frozen expanses.
    Sibes are friendly, fastidious, and dignified.',
