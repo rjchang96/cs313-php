@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@
       <div style="background-color: skyblue;">
         <a href = "homepage.html">Home</a>
 
-      <a href= "form.html" style="margin-left: 10px;">Search </a>
+      <a href= "form.php" style="margin-left: 10px;">Search </a>
        <a href = "results.php"  style="margin-left: 10px;">Doggos</a>
 
     </div>
@@ -82,26 +83,27 @@ Please fill out the following to help our search for the perfect
          <br>
          <br>
           Cost:
-         <input type="number" name="cost" min = "1" max = "10">
+         <input type="number" name="cost" min = "1" max = "5">
          <br>
          Exercise:
-         <input type="number" name="exercise"  min = "1" max = "10">
+         <input type="number" name="exercise"  min = "1" max = "5">
          <br>
           Shedding:
-         <input type="number" name="hair"  min = "1" max = "10">
+         <input type="number" name="hair"  min = "1" max = "5">
 
          <br>
          Size:
          <br>
-         <input type="radio" name="size" value = "small">Small<br>
-         <input type="radio" name="size" value = "medium">Medium<br>
-         <input type="radio" name="size" value = "large">Large<br>
+         <input type="radio" name="size" value = "1">Small<br>
+         <input type="radio" name="size" value = "2">Medium<br>
+         <input type="radio" name="size" value = "3">Large<br>
           <br>
          Hyperallergenic:
          <br>
-         <input type="radio" name="size" value = "yes">yes<br>
-         <input type="radio" name="size" value = "no">no<br>
+         <input type="radio" name="Hyperallergenic" value = "yes">yes<br>
+         <input type="radio" name="Hyperallergenic" value = "no">no<br>
           <br>
+
 
          <input type="submit" value="Submit">
        </p>
