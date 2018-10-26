@@ -96,6 +96,7 @@ function evaluate($list)
          # code...
       }
       echo "after first foreach<br>";
+      var_dump($dogs);
 
    foreach ($dogs as $breeds) {
       echo "in the foreach loop<br>";
