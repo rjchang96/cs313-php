@@ -95,6 +95,7 @@ function evaluate($list)
          echo "first for each Name: $name<br>";
          # code...
       }
+      echo "after first foreach<br>";
 
    foreach ($dogs as $breeds) {
       echo "in the foreach loop<br>";
