@@ -185,7 +185,8 @@ function evaluate($list)
 <?php
 //psql changes everythings to lowercase when stored so
 //when trying to access in php have to change it to all
-//lower case
+//lower
+echo "in this block of php\n";
 function cmp($a, $b)
 {
    if($a.$pDiff == $b.$pDiff)
