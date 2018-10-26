@@ -108,8 +108,8 @@ function evaluate($list, $dogs)
       echo "in for each $dname";
 
       $data = new compare();
-      $data.setName($dname);
-      echo "assignment of compare obj: " . $data.getName() ."<br>";
+      $data->setName($dname);
+      echo "assignment of compare obj: " . $data->getName() ."<br>";
       $data->$allergy = $dallergy;
       $data->$description = $ddescription;
       $data->$temperment = $dtemperment;
