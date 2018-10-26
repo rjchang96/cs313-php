@@ -86,10 +86,11 @@ function costEvaluate($mincost, $maxcost)
 
 function evaluate($list, $dogs)
 {
-      $s_wieght = 4;
-      $t_weight = 5;
-      $h_weight = 2;
-      $e_weight = 3;
+      $s_wieght = 5;
+      $t_weight = 6;
+      $h_weight = 3;
+      $e_weight = 2;
+      $c_weight = 4
       echo "in the begining of evaluate<br>";
 
 
@@ -124,13 +125,20 @@ function evaluate($list, $dogs)
          if($uhyperallergenic.value == 'yes')
          {
             $costVal = costEvaluate($dmin, $dmax);
-            $cresult = (1-(($ucost - $costVal)/$ucost))*$s_weight;
+            // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
+            // echo "the cost result: " . $cresult . "<br>";
+            // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
+            // $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
+            // $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
+            // $sresult = (1-(($usize - $size)/$usize))*$s_weight;
+            // $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
+            $cresult = (($ucost - $costVal)/$ucost)*$c_weight;
             echo "the cost result: " . $cresult . "<br>";
-            $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
-            $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
-            $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
-            $sresult = (1-(($usize - $size)/$usize))*$s_weight;
-            $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
+            $hresult = (($uhair - $hair)/$uhair)*$h_weight;
+            $tresult = (($utemperment - $temperment)/$utemperment) *$t_weight;
+            $eresult = (($uexercise - $exercise)/$uexercise)*$e_weight;
+            $sresult = ($usize - $size)/$usize)*$s_weight;
+            $tot = ($sresult+$cresult+$hresult+$tresult+$eresult) * 100;
             echo "the percent difference: $tot <br>";
             $data->setPercentDifference($tot);
 
@@ -143,17 +151,30 @@ function evaluate($list, $dogs)
       }
       else
       {
-        $costVal = costEvaluate($dmin, $dmax);
-         echo "in else the cost result: " . $cresult . "<br>";
-        $cresult = (1-(($ucost - $costVal)/$ucost))*$s_weight;
-        $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
-        $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
-        $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
-        $sresult = (1-(($usize - $size)/$usize))*$s_weight;
-        $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
-        $data->setPercentDifference($tot);
-        echo "else the percent difference: $tot <br>";
-        array_push($list, $data);
+        // $costVal = costEvaluate($dmin, $dmax);
+        //  echo "in else the cost result: " . $cresult . "<br>";
+        // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
+        // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
+        // $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
+        // $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
+        // $sresult = (1-(($usize - $size)/$usize))*$s_weight;
+        // $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
+        // $data->setPercentDifference($tot);
+        // echo "else the percent difference: $tot <br>";
+        // array_push($list, $data);
+          $cresult = (($ucost - $costVal)/$ucost)*$c_weight;
+            echo "else the cost result: " . $cresult . "<br>";
+            $hresult = (($uhair - $hair)/$uhair)*$h_weight;
+            $tresult = (($utemperment - $temperment)/$utemperment) *$t_weight;
+            $eresult = (($uexercise - $exercise)/$uexercise)*$e_weight;
+            $sresult = ($usize - $size)/$usize)*$s_weight;
+            $tot = ($sresult+$cresult+$hresult+$tresult+$eresult) * 100;
+            echo "else the percent difference: $tot <br>";
+            $data->setPercentDifference($tot);
+
+
+
+            array_push($list, $data);
       }
 
    }
