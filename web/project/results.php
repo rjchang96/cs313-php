@@ -105,11 +105,11 @@ function evaluate($list, $dogs)
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalRating'];
-      echo "in for each $dname";
+      echo "in for each $dname<br>";
 
       $data = new compare();
       $data->setName($dname);
-      echo "assignment of compare obj: " . $data->getName() ."<br>";
+      echo "assignment of compare obj: " . $data->$name ."<br>";
       $data->$allergy = $dallergy;
       $data->$description = $ddescription;
       $data->$temperment = $dtemperment;
