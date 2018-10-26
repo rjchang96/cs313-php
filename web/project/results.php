@@ -91,6 +91,10 @@ function evaluate($list)
       $h_weight = 2;
       $e_weight = 3;
       echo "in the begining of evaluate<br>";
+      foreach ($dogs as $key => $name) {
+         echo "first for each Name: $name<br>";
+         # code...
+      }
 
    foreach ($dogs as $breeds) {
       echo "in the foreach loop<br>";
