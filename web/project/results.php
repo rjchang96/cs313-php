@@ -9,6 +9,7 @@ $db = get_db();
 // $stmt->execute();
 // $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $uhyperallergenic = $_POST['Hyperallergenic'];
+echo "user input of hyperallergenic: $uhyperallergenic \n";
 $ucost = $_POST['cost'];
 $uexercise = $_POST['exercise'];
 $size = $_POST['size'];
