@@ -91,15 +91,10 @@ function evaluate($list, $dogs)
       $h_weight = 2;
       $e_weight = 3;
       echo "in the begining of evaluate<br>";
-      foreach ($dogs as $key => $name) {
-         echo "first for each Name: $name<br>";
-         # code...
-      }
-      echo "after first foreach<br>";
-      var_dump($dogs);
+
 
    foreach ($dogs as $breeds) {
-      echo "in the foreach loop<br>";
+
       $dallergy = $breeds['hyperallergenic'];
       $dtemperment = $breeds['p_temperment'];
       $dexercise = $breeds['p_exercise'];
@@ -110,18 +105,17 @@ function evaluate($list, $dogs)
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalRating'];
-      echo "in the for each:  name: $dname description : $ddescription exercise: $dexercise temperment: $dtemperment Allergy: $allergy\n";
+
       $data = new compare();
       $data.setName($dname);
-            // $data->$allergy = $dallergy;
-            // $data->$description = $ddescription;
-            // $data->$temperment = $dtemperment;
-            // $data->$size = $dsize;
-            // $data->$hair = $dhair;
-            // $data->$exercise = $dexercise;
-            // $data->$maxcost = $dmax;
-            // $data->$mincost = $dmin;
-            echo "comparision obj: "  . $data.getName() .  "<br>";
+      $data->$allergy = $dallergy;
+      $data->$description = $ddescription;
+      $data->$temperment = $dtemperment;
+      $data->$size = $dsize;
+      $data->$hair = $dhair;
+      $data->$exercise = $dexercise;
+      $data->$maxcost = $dmax;
+      $data->$mincost = $dmin;
 
       if($allergy == true)
       {
@@ -148,6 +142,7 @@ function evaluate($list, $dogs)
       else
       {
         $costVal = costEvaluate($dmin, $dmax);
+         echo "in else the cost result: " . $cresult . "<br>";
         $cresult = (1-(($ucost - $costVal)/$ucost))*$s_weight;
         $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
         $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
@@ -155,6 +150,7 @@ function evaluate($list, $dogs)
         $sresult = (1-(($usize - $size)/$usize))*$s_weight;
         $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
         $data->setPercentDifference($tot);
+        echo "else the percent difference: $tot <br>";
         array_push($list, $data);
       }
 
