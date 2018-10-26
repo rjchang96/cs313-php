@@ -84,7 +84,7 @@ function costEvaluate($mincost, $maxcost)
 }
 
 
-function evaluate($list, $dogs, $ucost)
+function evaluate($list, $dogs)
 {
       $s_wieght = 5;
       $t_weight = 6;
@@ -134,12 +134,12 @@ function evaluate($list, $dogs, $ucost)
             // $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
             // $sresult = (1-(($usize - $size)/$usize))*$s_weight;
             // $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
-            $cresult = (($ucost - $costVal)/$ucost)*$c_weight;
+            $cresult = $costVal*$c_weight;
             echo "the cost result: " . $cresult . "<br>";
-            $hresult = (($uhair - $hair)/$uhair)*$h_weight;
-            $tresult = (($utemperment - $temperment)/$utemperment) *$t_weight;
-            $eresult = (($uexercise - $exercise)/$uexercise)*$e_weight;
-            $sresult = (($usize - $size)/$usize)*$s_weight;
+            $hresult = $hair*$h_weight;
+            $tresult = $temperment*$t_weight;
+            $eresult = $exercise*$e_weight;
+            $sresult = $size*$s_weight;
             $tot = ($sresult+$cresult+$hresult+$tresult+$eresult) * 100;
             echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
