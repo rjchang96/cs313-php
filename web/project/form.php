@@ -78,7 +78,7 @@ Please fill out the following to help our search for the perfect
   </p>
     <br>
     <p style="margin-left: 350px;">
-    Temperment (1-10 on mellow to hyper):<br>
+    Temperment (1-10 on hyper to mellow):<br>
          <input type="number" name="temperment" min = "1" max = "10">
          <br>
          <br>
