@@ -73,6 +73,7 @@ function evaluate($list)
       $ddescription = $breeds['description'];
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
+      echo "$dname $ddescription exercise: $dexercise temperment: $dtemperment Allergy: $allergy\n";
 
       if($allergy == true)
       {
@@ -80,12 +81,15 @@ function evaluate($list)
          {
             $costVal = costEvaluate($dmin, $dmax);
             $cresult = (1-(($ucost - $costVal)/$ucost))*$s_weight;
+            echo "the cost result: " . $cresult . "<br>";
             $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
             $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
             $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
             $sresult = (1-(($usize - $size)/$usize))*$s_weight;
             $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
+            echo "the percent difference: $tot <br>";
             $data->setPercentDifference($tot);
+
             $data->$name = $dname;
             $data->$allergy = $dallergy;
             $data->$description = $ddescription;
