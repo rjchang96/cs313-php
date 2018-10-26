@@ -120,13 +120,13 @@ function evaluate($list, $dogs)
       $data->$maxcost = $dmax;
       $data->$mincost = $dmin;
 
+            echo "User cost: $ucost<br>";
       if($allergy == true)
       {
          if($uhyperallergenic.value == 'yes')
          {
             $costVal = costEvaluate($dmin, $dmax);
             echo "cost evaluate result $costVal <br>";
-            echo "User cost: $ucost<br>";
             // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
             // echo "the cost result: " . $cresult . "<br>";
             // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
