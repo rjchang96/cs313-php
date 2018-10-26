@@ -90,7 +90,7 @@ function evaluate($list, $dogs)
       $t_weight = 6;
       $h_weight = 3;
       $e_weight = 2;
-      $c_weight = 4
+      $c_weight = 4;
       echo "in the begining of evaluate<br>";
 
 
