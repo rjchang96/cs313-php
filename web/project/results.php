@@ -125,6 +125,7 @@ function evaluate($list, $dogs)
          if($uhyperallergenic.value == 'yes')
          {
             $costVal = costEvaluate($dmin, $dmax);
+            echo "cost evaluate result $costVal <br>";
             // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
             // echo "the cost result: " . $cresult . "<br>";
             // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
@@ -151,7 +152,7 @@ function evaluate($list, $dogs)
       }
       else
       {
-        // $costVal = costEvaluate($dmin, $dmax);
+         $costVal = costEvaluate($dmin, $dmax);
         //  echo "in else the cost result: " . $cresult . "<br>";
         // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
         // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
@@ -162,6 +163,7 @@ function evaluate($list, $dogs)
         // $data->setPercentDifference($tot);
         // echo "else the percent difference: $tot <br>";
         // array_push($list, $data);
+            echo "cost evaluate result $costVal <br>";
           $cresult = (($ucost - $costVal)/$ucost)*$c_weight;
             echo "else the cost result: " . $cresult . "<br>";
             $hresult = (($uhair - $hair)/$uhair)*$h_weight;
