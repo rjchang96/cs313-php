@@ -86,6 +86,75 @@ function costEvaluate($mincost, $maxcost)
 
 function evaluate($list, $dogs)
 {
+
+
+}
+
+
+// go through each movie in the result and display it
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose your pet</title>
+   <link rel = "styleSheet" type="text/css" href="dogStyleSheet.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Results</title>
+</head>
+<body>
+
+
+   <div id = "grid-container">
+
+      <div class="head">
+         <img src = "logo1.png" alt= "pet logo"
+    class = "logo" style="float:left" >
+      <header><h1>Perfect Dog 4 U</h1></header>
+      </div>
+
+    <div class="menu">
+      <div style="background-color: skyblue;">
+        <a href = "homepage.html">Home</a>
+
+      <a href= "form.php" style="margin-left: 10px;">Search </a>
+      <a href = "results.php"  style="margin-left: 10px;">Doggos</a>
+
+    </div>
+     <!--  <br>
+      <div> <a href="academics.html">Academics</a></div>
+      <br>
+      <br>
+      <div><a href = "athletics.html">Athletics</a></div>
+      <br>
+      <br>
+      <div><a href = "campusMap.html">Campus Map</a></div> -->
+
+    <div class = "right">
+  </div>
+
+<div class = "main" style=" font-size: 20px;">
+ <p>
+  <div style = "font-size: 20px;">
+ </div> <br>
+ <h2 style="margin:auto;text-align:center;">
+ Results</h2>
+
+   <ul>
+<?php
+//psql changes everythings to lowercase when stored so
+//when trying to access in php have to change it to all
+//lower
+echo "in this block of php\n";
+function cmp($a, $b)
+{
+   if($a.$pDiff == $b.$pDiff)
+      return 0;
+   return ($a.$pDiff < $b.$pDiff) ? -1 : 1;
+}
+
+$list = array();
+//evaluate($list, $dogs, $ucost);
+////////////////////////////////////////////////////////////////////
       $s_wieght = 5;
       $t_weight = 6;
       $h_weight = 3;
@@ -183,72 +252,8 @@ function evaluate($list, $dogs)
    }
 
 
-}
+///////////////////////////////////////////////////////////////////
 
-
-// go through each movie in the result and display it
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Choose your pet</title>
-   <link rel = "styleSheet" type="text/css" href="dogStyleSheet.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Results</title>
-</head>
-<body>
-
-
-   <div id = "grid-container">
-
-      <div class="head">
-         <img src = "logo1.png" alt= "pet logo"
-    class = "logo" style="float:left" >
-      <header><h1>Perfect Dog 4 U</h1></header>
-      </div>
-
-    <div class="menu">
-      <div style="background-color: skyblue;">
-        <a href = "homepage.html">Home</a>
-
-      <a href= "form.php" style="margin-left: 10px;">Search </a>
-      <a href = "results.php"  style="margin-left: 10px;">Doggos</a>
-
-    </div>
-     <!--  <br>
-      <div> <a href="academics.html">Academics</a></div>
-      <br>
-      <br>
-      <div><a href = "athletics.html">Athletics</a></div>
-      <br>
-      <br>
-      <div><a href = "campusMap.html">Campus Map</a></div> -->
-
-    <div class = "right">
-  </div>
-
-<div class = "main" style=" font-size: 20px;">
- <p>
-  <div style = "font-size: 20px;">
- </div> <br>
- <h2 style="margin:auto;text-align:center;">
- Results</h2>
-
-   <ul>
-<?php
-//psql changes everythings to lowercase when stored so
-//when trying to access in php have to change it to all
-//lower
-echo "in this block of php\n";
-function cmp($a, $b)
-{
-   if($a.$pDiff == $b.$pDiff)
-      return 0;
-   return ($a.$pDiff < $b.$pDiff) ? -1 : 1;
-}
-
-$list = array();
-evaluate($list, $dogs, $ucost);
 usort($list, "cmp");
 
 foreach ($list as $key) {
