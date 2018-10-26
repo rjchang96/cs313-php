@@ -134,7 +134,7 @@ function evaluate($list, $dogs, $ucost)
             // $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
             // $sresult = (1-(($usize - $size)/$usize))*$s_weight;
             // $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
-            $cresult = (int)(($ucost - $costVal)/$ucost)*$c_weight;
+            $cresult = (($ucost - $costVal)/$ucost)*$c_weight;
             echo "the cost result: " . $cresult . "<br>";
             $hresult = (($uhair - $hair)/$uhair)*$h_weight;
             $tresult = (($utemperment - $temperment)/$utemperment) *$t_weight;
