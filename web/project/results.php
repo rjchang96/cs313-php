@@ -137,10 +137,10 @@ function evaluate($list, $dogs)
             $hresult = (($uhair - $hair)/$uhair)*$h_weight;
             $tresult = (($utemperment - $temperment)/$utemperment) *$t_weight;
             $eresult = (($uexercise - $exercise)/$uexercise)*$e_weight;
-            $sresult = ($usize - $size)/$usize)*$s_weight;
+            $sresult = (($usize - $size)/$usize)*$s_weight;
             $tot = ($sresult+$cresult+$hresult+$tresult+$eresult) * 100;
             echo "the percent difference: $tot <br>";
-            $data->setPercentDifference($tot);
+            $data->$pDiff = $tot;
 
 
 
@@ -167,10 +167,10 @@ function evaluate($list, $dogs)
             $hresult = (($uhair - $hair)/$uhair)*$h_weight;
             $tresult = (($utemperment - $temperment)/$utemperment) *$t_weight;
             $eresult = (($uexercise - $exercise)/$uexercise)*$e_weight;
-            $sresult = ($usize - $size)/$usize)*$s_weight;
+            $sresult = (($usize - $size)/$usize)*$s_weight;
             $tot = ($sresult+$cresult+$hresult+$tresult+$eresult) * 100;
             echo "else the percent difference: $tot <br>";
-            $data->setPercentDifference($tot);
+            $data->$pDiff = $tot;
 
 
 
