@@ -51,6 +51,15 @@ class compare{
    public $allergy;
    public $mincost;
    public $maxcost;
+   function setName($nName)
+   {
+      $name = $nName;
+   }
+   function getName()
+   {
+      return $name;
+   }
+
 
    function setPercentDifference($pDifference)
    {
@@ -94,17 +103,17 @@ function evaluate($list)
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalRating'];
       $data = new compare();
-      $data->$name = $dname;
-            $data->$allergy = $dallergy;
-            $data->$description = $ddescription;
-            $data->$temperment = $dtemperment;
-            $data->$size = $dsize;
-            $data->$hair = $dhair;
-            $data->$exercise = $dexercise;
-            $data->$maxcost = $dmax;
-            $data->$mincost = $dmin;
-            echo "comparision obj: $data->$name <br>";
       echo "$dname $ddescription exercise: $dexercise temperment: $dtemperment Allergy: $allergy\n";
+      $data.setName($dname);
+            // $data->$allergy = $dallergy;
+            // $data->$description = $ddescription;
+            // $data->$temperment = $dtemperment;
+            // $data->$size = $dsize;
+            // $data->$hair = $dhair;
+            // $data->$exercise = $dexercise;
+            // $data->$maxcost = $dmax;
+            // $data->$mincost = $dmin;
+            echo "comparision obj: $data.getName() <br>";
 
       if($allergy == true)
       {
