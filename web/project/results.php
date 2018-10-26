@@ -26,20 +26,20 @@ $stmt->execute();
 $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 class compare{
-   compare($nName, $nDescript, $nSize, $nH, $nT, $nA,
-      $nMinCost, $nMaxCost, $nE, $nPR)
-   {
-      $name = $nName;
-      $description = $nDescript;
-      $professionalRating = $nPR;
-      $size = $nSize;
-      $hair = $nH;
-      $exercise = $nE;
-      $temperment = $nT;
-      $allergy = $nA;
-      $mincost = $nMinCost;
-      $maxcost = $nMaxCost;
-   }
+   // compare($nName, $nDescript, $nSize, $nH, $nT, $nA,
+   //    $nMinCost, $nMaxCost, $nE, $nPR)
+   // {
+   //    $name = $nName;
+   //    $description = $nDescript;
+   //    $professionalRating = $nPR;
+   //    $size = $nSize;
+   //    $hair = $nH;
+   //    $exercise = $nE;
+   //    $temperment = $nT;
+   //    $allergy = $nA;
+   //    $mincost = $nMinCost;
+   //    $maxcost = $nMaxCost;
+   // }
    public $pDiff;
    public $description;
    public $professionalRating;
@@ -93,9 +93,18 @@ function evaluate($list)
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalRating'];
-      $data = new compare($dname, $ddescription, $dsize, $dhair, $dtemperment, $dallergy, $dmin, $dmax, $dexercise, $dPR);
+      $data = new compare();
+      $data->$name = $dname;
+            $data->$allergy = $dallergy;
+            $data->$description = $ddescription;
+            $data->$temperment = $dtemperment;
+            $data->$size = $dsize;
+            $data->$hair = $dhair;
+            $data->$exercise = $dexercise;
+            $data->$maxcost = $dmax;
+            $data->$mincost = $dmin;
+            echo "comparision obj: $data->$name <br>";
       echo "$dname $ddescription exercise: $dexercise temperment: $dtemperment Allergy: $allergy\n";
-      echo "compare obj: $data.$name <br>";
 
       if($allergy == true)
       {
@@ -113,6 +122,7 @@ function evaluate($list)
             $data->setPercentDifference($tot);
 
 
+
             array_push($list, $data);
 
          }
@@ -128,7 +138,6 @@ function evaluate($list)
         $sresult = (1-(($usize - $size)/$usize))*$s_weight;
         $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
         $data->setPercentDifference($tot);
-
         array_push($list, $data);
       }
 
