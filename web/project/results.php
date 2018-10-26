@@ -84,7 +84,7 @@ function costEvaluate($mincost, $maxcost)
 }
 
 
-function evaluate($list)
+function evaluate($list, $dogs)
 {
       $s_wieght = 4;
       $t_weight = 5;
@@ -226,7 +226,7 @@ function cmp($a, $b)
 }
 
 $list = array();
-evaluate($list);
+evaluate($list, $dogs);
 usort($list, "cmp");
 
 foreach ($list as $key) {
