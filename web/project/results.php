@@ -161,6 +161,7 @@ $list = array();
       $e_weight = 2;
       $c_weight = 4;
       echo "in the begining of evaluate<br>";
+      $uTot = $uhair + $usize + $uexercise + $utemperment + $ucost;
 
 
    foreach ($dogs as $breeds) {
@@ -209,7 +210,7 @@ $list = array();
             $tresult = $temperment*$t_weight;
             $eresult = $exercise*$e_weight;
             $sresult = $size*$s_weight;
-            $tot = ($sresult+$cresult+$hresult+$tresult+$eresult) * 100;
+            $tot = (($uTot - ($sresult+$cresult+$hresult+$tresult+$eresult))/$uTot) * 100;
             echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
 
@@ -233,15 +234,14 @@ $list = array();
         // $data->setPercentDifference($tot);
         // echo "else the percent difference: $tot <br>";
         // array_push($list, $data);
-            echo "cost evaluate result $costVal <br>";
-          $cresult = (($ucost - $costVal)/$ucost)*$c_weight;
-            echo "else the cost result: " . $cresult . "<br>";
-            $hresult = (($uhair - $hair)/$uhair)*$h_weight;
-            $tresult = (($utemperment - $temperment)/$utemperment) *$t_weight;
-            $eresult = (($uexercise - $exercise)/$uexercise)*$e_weight;
-            $sresult = (($usize - $size)/$usize)*$s_weight;
-            $tot = ($sresult+$cresult+$hresult+$tresult+$eresult) * 100;
-            echo "else the percent difference: $tot <br>";
+            $cresult = $costVal*$c_weight;
+            echo "the cost result: " . $cresult . "<br>";
+            $hresult = $hair*$h_weight;
+            $tresult = $temperment*$t_weight;
+            $eresult = $exercise*$e_weight;
+            $sresult = $size*$s_weight;
+            $tot = (($uTot - ($sresult+$cresult+$hresult+$tresult+$eresult))/$uTot) * 100;
+            echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
 
 
