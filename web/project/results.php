@@ -73,9 +73,9 @@ function costEvaluate($mincost, $maxcost)
     $costVal = 0;
    if($mincost <= 200 && $maxcost < 350)
       $costVal = 1;
-   else if($maxcost <= 650)
+   else if($mincost >= 350 && $maxcost <= 650)
       $costVal = 3;
-   else if($maxcost <= 850)
+   else if($mincost >= 650 && $maxcost <= 850)
       $costVal = 4;
    else
       $costVal = 5;
