@@ -14,7 +14,7 @@ $ucost = $_POST['cost'];
 echo "user input of cost: $ucost \n";
 $uexercise = $_POST['exercise'];
 echo "user input of exercise: $uexercise \n";
-$size = $_POST['size'];
+$usize = $_POST['size'].value;
 echo "user input of size: $usize \n";
 $utemperment = $_POST['temperment'];
 echo "user input of temperment: $utemperment \n";
