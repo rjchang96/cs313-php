@@ -24,7 +24,7 @@ echo "user input of hair: $uhair \n";
 $stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating, sizeRange FROM breeds');
 $stmt->execute();
 $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
-var_dump($dogs);
+//var_dump($dogs);
 
 class compare{
    // compare($nName, $nDescript, $nSize, $nH, $nT, $nA,
@@ -108,7 +108,7 @@ function evaluate($list, $dogs)
       echo "in for each $dname<br>";
 
       $data = new compare();
-      $data->setName($dname);
+      $data->$name = $dname;
       echo "assignment of compare obj: " . $data->$name ."<br>";
       $data->$allergy = $dallergy;
       $data->$description = $ddescription;
