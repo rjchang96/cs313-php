@@ -92,6 +92,7 @@ function evaluate($list)
       echo "in the begining of evaluate<br>";
 
    foreach ($dogs as $breeds) {
+      echo "in the foreach loop<br>";
       $dallergy = $breeds['hyperallergenic'];
       $dtemperment = $breeds['p_temperment'];
       $dexercise = $breeds['p_exercise'];
@@ -102,8 +103,8 @@ function evaluate($list)
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalRating'];
+      echo "in the for each:  name: $dname description : $ddescription exercise: $dexercise temperment: $dtemperment Allergy: $allergy\n";
       $data = new compare();
-      echo "$dname $ddescription exercise: $dexercise temperment: $dtemperment Allergy: $allergy\n";
       $data.setName($dname);
             // $data->$allergy = $dallergy;
             // $data->$description = $ddescription;
