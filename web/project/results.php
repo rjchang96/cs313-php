@@ -126,6 +126,7 @@ function evaluate($list, $dogs)
          {
             $costVal = costEvaluate($dmin, $dmax);
             echo "cost evaluate result $costVal <br>";
+            echo "user cost: $ucost<br>";
             // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
             // echo "the cost result: " . $cresult . "<br>";
             // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
