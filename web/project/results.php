@@ -11,13 +11,17 @@ $db = get_db();
 $uhyperallergenic = $_POST['Hyperallergenic'];
 echo "user input of hyperallergenic: $uhyperallergenic \n";
 $ucost = $_POST['cost'];
+echo "user input of cost: $ucost \n";
 $uexercise = $_POST['exercise'];
+echo "user input of exercise: $uexercise \n";
 $size = $_POST['size'];
+echo "user input of size: $usize \n";
 $utemperment = $_POST['temperment'];
-$dname = $_POST['dname'];
+echo "user input of temperment: $utemperment \n";
 $uhair = $_POST['hair'];
+echo "user input of hair: $uhyperallergenic \n";
 
-$stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating FROM breeds');
+$stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating, sizeRange FROM breeds');
 $stmt->execute();
 $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -69,7 +73,7 @@ function evaluate($list)
       $dtemperment = $breeds['p_temperment'];
       $dexercise = $breeds['p_exercise'];
       $dhair = $breeds['p_hair'];
-      $dsize = $breeds['size'];
+      $dsize = $breeds['sizeRange'];
       $dname = $breeds['name'];
       $ddescription = $breeds['description'];
       $dmax = $breeds['mincost'];
