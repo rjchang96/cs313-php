@@ -27,20 +27,21 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($dogs);
 
 class compare{
-   // compare($nName, $nDescript, $nSize, $nH, $nT, $nA,
-   //    $nMinCost, $nMaxCost, $nE, $nPR)
-   // {
-   //    $name = $nName;
-   //    $description = $nDescript;
-   //    $professionalRating = $nPR;
-   //    $size = $nSize;
-   //    $hair = $nH;
-   //    $exercise = $nE;
-   //    $temperment = $nT;
-   //    $allergy = $nA;
-   //    $mincost = $nMinCost;
-   //    $maxcost = $nMaxCost;
-   // }
+   compare($nName, $nDescript, $nSize, $nH, $nT, $nA,
+      $nMinCost, $nMaxCost, $nE, $nPR, $diff)
+   {
+      $name = $nName;
+      $description = $nDescript;
+      $professionalRating = $nPR;
+      $size = $nSize;
+      $hair = $nH;
+      $exercise = $nE;
+      $temperment = $nT;
+      $allergy = $nA;
+      $mincost = $nMinCost;
+      $maxcost = $nMaxCost;
+      $pDiff = $diff;
+   }
    public $pDiff;
    public $description;
    public $professionalRating;
@@ -210,18 +211,21 @@ $list = array();
             //echo "the percent difference: $tot <br>";
 
 
-             $data = new compare;
-            $data->$name = $dname;
-            // echo "assignment of compare obj: " . $data->$name ."<br>";
-            $data->$allergy = $dallergy;
-            $data->$description = $ddescription;
-            $data->$temperment = $dtemperment;
-            $data->$size = $dsize;
-            $data->$hair = $dhair;
-            $data->$exercise = $dexercise;
-            $data->$maxcost = $dmax;
-            $data->$mincost = $dmin;
-            $data->$pDiff = $tot;
+            //  $data = new compare;
+            // $data->$name = $dname;
+            // // echo "assignment of compare obj: " . $data->$name ."<br>";
+            // $data->$allergy = $dallergy;
+            // $data->$description = $ddescription;
+            // $data->$temperment = $dtemperment;
+            // $data->$size = $dsize;
+            // $data->$hair = $dhair;
+            // $data->$exercise = $dexercise;
+            // $data->$maxcost = $dmax;
+            // $data->$mincost = $dmin;
+            // $data->$pDiff = $tot;
+             $data = new compare($dname, $ddescription,
+               $dsize, $dhair, $dtemperment, $dallergy,
+               $dmin, $dmax, $dexercise, $PR, $tot);
 
 
 
@@ -257,18 +261,20 @@ $list = array();
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
             //echo "the percent difference: $tot <br>";
-             $data = new compare;
-            $data->$pDiff = $tot;
-      $data->$name = $dname;
-     // echo "assignment of compare obj: " . $data->$name ."<br>";
-      $data->$allergy = $dallergy;
-      $data->$description = $ddescription;
-      $data->$temperment = $dtemperment;
-      $data->$size = $dsize;
-      $data->$hair = $dhair;
-      $data->$exercise = $dexercise;
-      $data->$maxcost = $dmax;
-      $data->$mincost = $dmin;
+             $data = new compare($dname, $ddescription,
+               $dsize, $dhair, $dtemperment, $dallergy,
+               $dmin, $dmax, $dexercise, $PR, $tot);
+           // $data->$pDiff = $tot;
+     //  $data->$name = $dname;
+     // // echo "assignment of compare obj: " . $data->$name ."<br>";
+     //  $data->$allergy = $dallergy;
+     //  $data->$description = $ddescription;
+     //  $data->$temperment = $dtemperment;
+     //  $data->$size = $dsize;
+     //  $data->$hair = $dhair;
+     //  $data->$exercise = $dexercise;
+     //  $data->$maxcost = $dmax;
+     //  $data->$mincost = $dmin;
 
 
 
