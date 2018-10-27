@@ -6,10 +6,31 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Audience Reviews</title>
+   <title>Choose your pet</title>
+   <link rel = "styleSheet" type="text/css" href="dogStyleSheet.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style type="text/css">
+   </style>
+
+
 </head>
 <body>
-   <h1>Audience Reviews</h1>
+   <div id = "grid-container">
+
+      <div class="head">
+         <img src = "logo1.png" alt= "pet logo"
+    class = "logo" style="float:left" >
+      <header><h1>Perfect Dog 4 U</h1></header>
+      </div>
+
+ <div class="menu">
+      <div style="background-color: skyblue;">
+        <a href = "homepage.html">Home</a>
+
+      <a href= "form.php" style="margin-left: 10px;">Search </a>
+      <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
+
+    </div>
 
  <div id = "grid-container">
 
@@ -28,6 +49,7 @@ $db = get_db();
 
     </div>
 <p style="text-align: center;">
+  <h2>Audience Reviews</h2>
   <?php
 try
 {

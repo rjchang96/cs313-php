@@ -12,14 +12,7 @@ $size = $_POST['size'];
 $temperment = $_POST['temperment'];
 //echo "user input of temperment: $utemperment \n";
 $hair = $_POST['hair'];
-//echo "user input of hair: $uhair \n";
-// For debugging purposes, you might include some echo statements like this
-// and then not automatically redirect until you have everything working.
-// echo "book=$book\n";
-// echo "chapter=$chapter\n";
-// echo "verse=$verse\n";
-// echo "content=$content\n";
-// we could (and should!) put additional checks here to verify that all this data is actually provided
+
 require("dbConnect.php");
 $db = get_db();
 try
