@@ -277,7 +277,8 @@ $list = array();
 
 
 
-            array_push($list, $data);
+            // array_push($list, $data);
+             $list[] = $data;
             $counter++;
             echo "name in the list: " . $list[$counter]->$name . "<br>";
       }
