@@ -27,7 +27,7 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($dogs);
 
 class compare{
-   function __contruct($nName, $nDescript, $nSize, $nH, $nT, $nA,
+   function __construct($nName, $nDescript, $nSize, $nH, $nT, $nA,
       $nMinCost, $nMaxCost, $nE, $nPR, $diff)
    {
       $name = $nName;
@@ -42,6 +42,7 @@ class compare{
       $maxcost = $nMaxCost;
       $pDiff = $diff;
    }
+   //function __constr
    // public $pDiff;
    // public $description;
    // public $professionalRating;
@@ -85,11 +86,11 @@ function costEvaluate($mincost, $maxcost)
 }
 
 
-function evaluate($list, $dogs)
-{
+// function evaluate($list, $dogs)
+// {
 
 
-}
+// }
 
 
 // go through each movie in the result and display it
