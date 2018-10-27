@@ -177,7 +177,7 @@ $list = array();
       $PR = $breeds['professionalRating'];
       //echo "in for each $dname<br>";
 
-      $data = new compare();
+      $data = new compare;
       $data->$name = $dname;
      // echo "assignment of compare obj: " . $data->$name ."<br>";
       $data->$allergy = $dallergy;
@@ -266,8 +266,8 @@ $list = array();
 
 ///////////////////////////////////////////////////////////////////
 
-foreach ($list as $key) {
-   echo "stuff in list: " . $key->name. "<br>";
+foreach ($list as $data) {
+   echo "stuff in list: " . $data->name. "<br>";
    # code...
 }
 usort($list, "cmp");
