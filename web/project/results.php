@@ -210,7 +210,9 @@ $list = array();
             $tresult = $temperment*$t_weight;
             $eresult = $exercise*$e_weight;
             $sresult = $size*$s_weight;
-            $tot = (($uTot - ($sresult+$cresult+$hresult+$tresult+$eresult))/$uTot) * 100;
+            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
+            echo "overall dog result: $result <br>";
+            $tot = (($uTot - $result)/$uTot) * 100;
             echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
 
@@ -240,7 +242,9 @@ $list = array();
             $tresult = $temperment*$t_weight;
             $eresult = $exercise*$e_weight;
             $sresult = $size*$s_weight;
-            $tot = (($uTot - ($sresult+$cresult+$hresult+$tresult+$eresult))/$uTot) * 100;
+            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
+            echo "else overall dog result: $result <br>";
+            $tot = (($uTot - $result)/$uTot) * 100;
             echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
 
