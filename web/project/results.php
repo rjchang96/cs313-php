@@ -175,6 +175,7 @@ $list = array();
       $h_weight = 3;
       $e_weight = 2;
       $c_weight = 4;
+      $counter = 0;
       //echo "in the begining of evaluate<br>";
       $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
 
@@ -237,7 +238,7 @@ $list = array();
 
 
             array_push($list, $data);
-
+            $counter++;
          }
          continue;
       }
@@ -277,6 +278,8 @@ $list = array();
 
 
             array_push($list, $data);
+            $counter++;
+            echo "name in the list: " . $list[$counter]->$name . "<br>;"
       }
 
    }
