@@ -92,11 +92,10 @@ Please fill out the following to help our search for the perfect
          <input type="number" name="hair"  min = "1" max = "5">
 
          <br>
-         Size:
+
+         Size (1-3) Smallest-Large:
          <br>
-         <input type="radio" name="size" value = "1">Small<br>
-         <input type="radio" name="size" value = "2">Medium<br>
-         <input type="radio" name="size" value = "3">Large<br>
+          <input type="number" name="hair"  min = "1" max = "3">
           <br>
          Hyperallergenic:
          <br>
