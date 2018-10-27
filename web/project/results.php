@@ -42,18 +42,21 @@ class compare{
       $maxcost = $nMaxCost;
       $pDiff = $diff;
    }
-   //function __constr
-   // public $pDiff;
-   // public $description;
-   // public $professionalRating;
-   // public $name;
-   // public $size;
-   // public $hair;
-   // public $exercise;
-   // public $temperment;
-   // public $allergy;
-   // public $mincost;
-   // public $maxcost;
+   // function __construct()
+   // {
+
+   // }
+   public $pDiff;
+   public $description;
+   public $professionalRating;
+   public $name;
+   public $size;
+   public $hair;
+   public $exercise;
+   public $temperment;
+   public $allergy;
+   public $mincost;
+   public $maxcost;
    function setName($nName)
    {
       $name = $nName;
