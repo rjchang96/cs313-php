@@ -146,9 +146,9 @@ function evaluate($list, $dogs)
 //lower
 function cmp($a, $b)
 {
-   if($a.$pDiff == $b.$pDiff)
+   if($a->$pDiff == $b->$pDiff)
       return 0;
-   return ($a.$pDiff < $b.$pDiff) ? -1 : 1;
+   return ($a->$pDiff < $b->$pDiff) ? -1 : 1;
 }
 
 $list = array();
@@ -162,9 +162,9 @@ $list = array();
       //echo "in the begining of evaluate<br>";
       $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
 
-      echo"user input total: $uTot<br>";
+     // echo"user input total: $uTot<br>";
    foreach ($dogs as $breeds) {
-   echo "in the begining of for each loop<br>";
+   //echo "in the begining of for each loop<br>";
       $dallergy = $breeds['hyperallergenic'];
       $dtemperment = $breeds['p_temperment'];
       $dexercise = $breeds['p_exercise'];
@@ -175,11 +175,11 @@ $list = array();
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalRating'];
-      echo "in for each $dname<br>";
+      //echo "in for each $dname<br>";
 
       $data = new compare();
       $data->$name = $dname;
-      echo "assignment of compare obj: " . $data->$name ."<br>";
+     // echo "assignment of compare obj: " . $data->$name ."<br>";
       $data->$allergy = $dallergy;
       $data->$description = $ddescription;
       $data->$temperment = $dtemperment;
@@ -189,13 +189,13 @@ $list = array();
       $data->$maxcost = $dmax;
       $data->$mincost = $dmin;
 
-            echo "User cost: $ucost<br>";
+           // echo "User cost: $ucost<br>";
       if($allergy == true)
       {
          if($uhyperallergenic.value == 'yes')
          {
             $costVal = costEvaluate($dmin, $dmax);
-            echo "cost evaluate result $costVal <br>";
+           // echo "cost evaluate result $costVal <br>";
             // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
             // echo "the cost result: " . $cresult . "<br>";
             // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
@@ -204,20 +204,20 @@ $list = array();
             // $sresult = (1-(($usize - $size)/$usize))*$s_weight;
             // $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
             $cresult = $costVal*$c_weight;
-            echo "the cost result: " . $cresult . "<br>";
+           // echo "the cost result: " . $cresult . "<br>";
             $hresult = $dhair*$h_weight;
-            echo "the hair result: " . $hresult . "<br>";
+            //echo "the hair result: " . $hresult . "<br>";
             $tresult = $dtemperment*$t_weight;
-            echo "the temperment result: " . $tresult . "<br>";
+            //echo "the temperment result: " . $tresult . "<br>";
             $eresult = $dexercise*$e_weight;
-            echo "the exercise result: " . $eresult . "<br>";
+            //echo "the exercise result: " . $eresult . "<br>";
             $sresult = $dsize*$s_weight;
-            echo "the size result: " . $sresult . "<br>";
+            //echo "the size result: " . $sresult . "<br>";
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
-            echo "overall dog result: $result <br>";
+            //echo "overall dog result: $result <br>";
 
             $tot = abs((($uTot - $result)/$uTot)) * 100;
-            echo "the percent difference: $tot <br>";
+            //echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
 
 
@@ -241,19 +241,19 @@ $list = array();
         // echo "else the percent difference: $tot <br>";
         // array_push($list, $data);
             $cresult = $costVal*$c_weight;
-            echo "the cost result: " . $cresult . "<br>";
+            //echo "the cost result: " . $cresult . "<br>";
             $hresult = $dhair*$h_weight;
-            echo "the hair result: " . $hresult . "<br>";
+           // echo "the hair result: " . $hresult . "<br>";
             $tresult = $dtemperment*$t_weight;
-            echo "the temperment result: " . $tresult . "<br>";
+           // echo "the temperment result: " . $tresult . "<br>";
             $eresult = $dexercise*$e_weight;
-            echo "the exercise result: " . $eresult . "<br>";
+            //echo "the exercise result: " . $eresult . "<br>";
             $sresult = $dsize*$s_weight;
-            echo "the size result: " . $sresult . "<br>";
+            //echo "the size result: " . $sresult . "<br>";
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
-            echo "overall dog result: $result <br>";
+            //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
-            echo "the percent difference: $tot <br>";
+            //echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
 
 
@@ -266,6 +266,10 @@ $list = array();
 
 ///////////////////////////////////////////////////////////////////
 
+foreach ($list as $key) {
+   echo "stuff in list: $key->name<br>";
+   # code...
+}
 usort($list, "cmp");
 
 foreach ($list as $key) {
