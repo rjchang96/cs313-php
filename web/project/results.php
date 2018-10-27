@@ -144,7 +144,6 @@ function evaluate($list, $dogs)
 //psql changes everythings to lowercase when stored so
 //when trying to access in php have to change it to all
 //lower
-echo "in this block of php\n";
 function cmp($a, $b)
 {
    if($a.$pDiff == $b.$pDiff)
@@ -160,10 +159,10 @@ $list = array();
       $h_weight = 3;
       $e_weight = 2;
       $c_weight = 4;
-      echo "in the begining of evaluate<br>";
+      //echo "in the begining of evaluate<br>";
       $uTot = $uhair + $usize + $uexercise + $utemperment + $ucost;
 
-
+      echo"user input total: $uTot<br>";
    foreach ($dogs as $breeds) {
    echo "in the begining of for each loop<br>";
       $dallergy = $breeds['hyperallergenic'];
@@ -216,6 +215,7 @@ $list = array();
             echo "the size result: " . $sresult . "<br>";
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             echo "overall dog result: $result <br>";
+
             $tot = (($uTot - $result)/$uTot) * 100;
             echo "the percent difference: $tot <br>";
             $data->$pDiff = $tot;
