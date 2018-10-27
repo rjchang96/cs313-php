@@ -133,7 +133,8 @@ function costEvaluate($mincost, $maxcost)
         <a href = "homepage.html">Home</a>
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
-      <a href = "results.php"  style="margin-left: 10px;">Doggos</a>
+    <!--   <a href = "results.php"  style="margin-left: 10px;">Search Results</a> -->
+      <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
 
     </div>
      <!--  <br>
@@ -325,19 +326,21 @@ foreach ($dogs as $key) {
    $name = $key['name'];
    $description = $key['description'];
    $temper = $key['p_temperment'];
-   echo "<img src = '$name.jpg' alt = 'dog'><br>";
-   echo "<li><p>$name <br> HyperAllergenic: ";
+   echo "<img src = '$name.jpg' alt = 'dog'><br> ";
+   echo "<li><p><h2>$name</h2> <h3>Description</h3> <br> HyperAllergenic: ";
    if($hyperallergenic == true)
    echo "Yes<br>";
    else
    echo "No<br>";
    echo "Temperment: $temper<br>";
    echo "Minium Cost $" . $key['mincost'] . " Maximum Cost $" . $key['maxcost'] . "<br>";
-   echo "Shedding Lvl: " . $key['hair'] . "<br>";
-   echo "Exercise Lvl: " . $key['exercise'] . "<br>";
+   echo "Shedding Lvl: " . $key['p_hair'] . "<br>";
+   echo "Exercise Lvl: " . $key['p_exercise'] . "<br>";
    echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
          temperment<br>";
-   echo "<h2>Description</h2> <br> $description <br></p></li>";
+   echo " <br> $description <br></p>";
+   echo "</li><br>";
+
 
 }
 
