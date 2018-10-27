@@ -27,7 +27,7 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($dogs);
 
 class compare{
-   compare($nName, $nDescript, $nSize, $nH, $nT, $nA,
+   function __contruct($nName, $nDescript, $nSize, $nH, $nT, $nA,
       $nMinCost, $nMaxCost, $nE, $nPR, $diff)
    {
       $name = $nName;
@@ -42,17 +42,17 @@ class compare{
       $maxcost = $nMaxCost;
       $pDiff = $diff;
    }
-   public $pDiff;
-   public $description;
-   public $professionalRating;
-   public $name;
-   public $size;
-   public $hair;
-   public $exercise;
-   public $temperment;
-   public $allergy;
-   public $mincost;
-   public $maxcost;
+   // public $pDiff;
+   // public $description;
+   // public $professionalRating;
+   // public $name;
+   // public $size;
+   // public $hair;
+   // public $exercise;
+   // public $temperment;
+   // public $allergy;
+   // public $mincost;
+   // public $maxcost;
    function setName($nName)
    {
       $name = $nName;
