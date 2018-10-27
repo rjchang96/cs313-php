@@ -27,23 +27,23 @@ $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($dogs);
 
 class compare{
-   // function __construct($nName, $nDescript, $nSize, $nH, $nT, $nA,
-   //    $nMinCost, $nMaxCost, $nE, $nPR, $diff)
-   // {
-   //    $name = $nName;
-   //    $description = $nDescript;
-   //    $professionalRating = $nPR;
-   //    $size = $nSize;
-   //    $hair = $nH;
-   //    $exercise = $nE;
-   //    $temperment = $nT;
-   //    $allergy = $nA;
-   //    $mincost = $nMinCost;
-   //    $maxcost = $nMaxCost;
-   //    $pDiff = $diff;
-   // }
+   function __construct2($nName, $nDescript, $nSize, $nH, $nT, $nA,
+      $nMinCost, $nMaxCost, $nE, $nPR, $diff)
+   {
+      $name = $nName;
+      $description = $nDescript;
+      $professionalRating = $nPR;
+      $size = $nSize;
+      $hair = $nH;
+      $exercise = $nE;
+      $temperment = $nT;
+      $allergy = $nA;
+      $mincost = $nMinCost;
+      $maxcost = $nMaxCost;
+      $pDiff = $diff;
+   }
 
-   function __construct()
+   function __construct1()
    {
       $name = "";
       $description ="";
@@ -201,14 +201,6 @@ $list = array();
          if($uhyperallergenic.value == 'yes')
          {
             $costVal = costEvaluate($dmin, $dmax);
-           // echo "cost evaluate result $costVal <br>";
-            // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
-            // echo "the cost result: " . $cresult . "<br>";
-            // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
-            // $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
-            // $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
-            // $sresult = (1-(($usize - $size)/$usize))*$s_weight;
-            // $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
             $cresult = $costVal*$c_weight;
            // echo "the cost result: " . $cresult . "<br>";
             $hresult = $dhair*$h_weight;
@@ -252,16 +244,6 @@ $list = array();
       else
       {
          $costVal = costEvaluate($dmin, $dmax);
-        //  echo "in else the cost result: " . $cresult . "<br>";
-        // $cresult = (1-(($ucost - $costVal)/$ucost))*$c_weight;
-        // $hresult = (1-(($uhair - $hair)/$uhair))*$h_weight;
-        // $tresult = (1-(($utemperment - $temperment)/$utemperment))*$t_weight;
-        // $eresult = (1-(($uexercise - $exercise)/$uexercise))*$e_weight;
-        // $sresult = (1-(($usize - $size)/$usize))*$s_weight;
-        // $tot = (($sresult+$cresult+$hresult+$tresult+$eresult)-1) * 100;
-        // $data->setPercentDifference($tot);
-        // echo "else the percent difference: $tot <br>";
-        // array_push($list, $data);
             $cresult = $costVal*$c_weight;
             //echo "the cost result: " . $cresult . "<br>";
             $hresult = $dhair*$h_weight;
