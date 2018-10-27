@@ -193,7 +193,7 @@ $list = array();
       $PR = $breeds['professionalRating'];
       //echo "in for each $dname<br>";
 
-       $data = new compare();
+      // $data = new compare();
 
            // echo "User cost: $ucost<br>";
       if($allergy == true)
@@ -219,20 +219,20 @@ $list = array();
 
 
              //$data = new compare();
-            $data->$name = $dname;
-            // echo "assignment of compare obj: " . $data->$name ."<br>";
-            $data->$allergy = $dallergy;
-            $data->$description = $ddescription;
-            $data->$temperment = $dtemperment;
-            $data->$size = $dsize;
-            $data->$hair = $dhair;
-            $data->$exercise = $dexercise;
-            $data->$maxcost = $dmax;
-            $data->$mincost = $dmin;
-            $data->$pDiff = $tot;
-             // $data = new compare($dname, $ddescription,
-             //   $dsize, $dhair, $dtemperment, $dallergy,
-             //   $dmin, $dmax, $dexercise, $PR, $tot);
+            // $data->$name = $dname;
+            // // echo "assignment of compare obj: " . $data->$name ."<br>";
+            // $data->$allergy = $dallergy;
+            // $data->$description = $ddescription;
+            // $data->$temperment = $dtemperment;
+            // $data->$size = $dsize;
+            // $data->$hair = $dhair;
+            // $data->$exercise = $dexercise;
+            // $data->$maxcost = $dmax;
+            // $data->$mincost = $dmin;
+            // $data->$pDiff = $tot;
+             $data = new compare($dname, $ddescription,
+               $dsize, $dhair, $dtemperment, $dallergy,
+               $dmin, $dmax, $dexercise, $PR, $tot);
 
 
 
@@ -258,20 +258,21 @@ $list = array();
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
             //echo "the percent difference: $tot <br>";
-             // $data = new compare($dname, $ddescription,
-             //   $dsize, $dhair, $dtemperment, $dallergy,
-             //   $dmin, $dmax, $dexercise, $PR, $tot);
-           $data->$pDiff = $tot;
-      $data->$name = $dname;
-     // echo "assignment of compare obj: " . $data->$name ."<br>";
-      $data->$allergy = $dallergy;
-      $data->$description = $ddescription;
-      $data->$temperment = $dtemperment;
-      $data->$size = $dsize;
-      $data->$hair = $dhair;
-      $data->$exercise = $dexercise;
-      $data->$maxcost = $dmax;
-      $data->$mincost = $dmin;
+             $data = new compare($dname, $ddescription,
+               $dsize, $dhair, $dtemperment, $dallergy,
+               $dmin, $dmax, $dexercise, $PR, $tot);
+             echo "datas name: $dname <br>";
+     //       $data->$pDiff = $tot;
+     //  $data->$name = $dname;
+     // // echo "assignment of compare obj: " . $data->$name ."<br>";
+     //  $data->$allergy = $dallergy;
+     //  $data->$description = $ddescription;
+     //  $data->$temperment = $dtemperment;
+     //  $data->$size = $dsize;
+     //  $data->$hair = $dhair;
+     //  $data->$exercise = $dexercise;
+     //  $data->$maxcost = $dmax;
+     //  $data->$mincost = $dmin;
 
 
 
