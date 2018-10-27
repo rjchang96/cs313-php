@@ -9,17 +9,17 @@ $db = get_db();
 // $stmt->execute();
 // $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $uhyperallergenic = $_POST['Hyperallergenic'];
-echo "user input of hyperallergenic: $uhyperallergenic \n";
+//echo "user input of hyperallergenic: $uhyperallergenic \n";
 $ucost = $_POST['cost'];
-echo "user input of cost: $ucost \n";
+//echo "user input of cost: $ucost \n";
 $uexercise = $_POST['exercise'];
-echo "user input of exercise: $uexercise \n";
+//echo "user input of exercise: $uexercise \n";
 $usize = $_POST['size'];
-echo "user input of size: $usize \n";
+//echo "user input of size: $usize \n";
 $utemperment = $_POST['temperment'];
-echo "user input of temperment: $utemperment \n";
+//echo "user input of temperment: $utemperment \n";
 $uhair = $_POST['hair'];
-echo "user input of hair: $uhair \n";
+//echo "user input of hair: $uhair \n";
 
 $stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating, sizeRange FROM breeds');
 $stmt->execute();
@@ -265,7 +265,7 @@ $list = array();
 
 
 ///////////////////////////////////////////////////////////////////
-
+var_dump($list);
 foreach ($list as $data) {
    echo "stuff in list: " . $data->name. "<br>";
    # code...
