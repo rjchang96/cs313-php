@@ -42,10 +42,20 @@ class compare{
       $maxcost = $nMaxCost;
       $pDiff = $diff;
    }
-   // function __construct()
-   // {
-
-   // }
+   function __construct()
+   {
+      $name = "";
+      $description ="";
+      $professionalRating = 0;
+      $size =  0;
+      $hair =  0;
+      $exercise =  0;
+      $temperment =  0;
+      $allergy =  0;
+      $mincost =  0;
+      $maxcost =  0;
+      $pDiff =  0;
+   }
    public $pDiff;
    public $description;
    public $professionalRating;
