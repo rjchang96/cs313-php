@@ -44,6 +44,7 @@ Please fill out the following to help our search for the perfect
      <!--  <input type="text" name="dog_name"><br> -->
 
 <label>Dog Names:</label>
+<br>
 
      <?php
 try
