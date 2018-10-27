@@ -95,7 +95,7 @@ Please fill out the following to help our search for the perfect
 
          Size (1-3) Smallest-Large:
          <br>
-          <input type="number" name="hair"  min = "1" max = "3">
+          <input type="number" name="size"  min = "1" max = "3">
           <br>
          Hyperallergenic:
          <br>
