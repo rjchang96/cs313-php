@@ -267,7 +267,7 @@ $list = array();
 ///////////////////////////////////////////////////////////////////
 
 foreach ($list as $key) {
-   echo "stuff in list: $key->getName()<br>";
+   echo "stuff in list: " . $key->name. "<br>";
    # code...
 }
 usort($list, "cmp");
