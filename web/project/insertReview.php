@@ -20,10 +20,10 @@ require("dbConnect.php");
 $db = get_db();
 try
 {
-   // Add the Scripture
+
    // We do this by preparing the query with placeholder values
-   $query = 'INSERT INTO audienceRating(temperment, breeds_id, exercise, cost,
-   hair) VALUES(:temperment, :breeds_id, :exercise, :cost, :hair)';
+   $query = 'INSERT INTO audienceRating(temperment, exercise, cost,
+   hair) VALUES(:temperment, :exercise, :cost, :hair)';
    $statement = $db->prepare($query);
    // Now we bind the values to the placeholders. This does some nice things
    // including sanitizing the input with regard to sql commands.
@@ -38,14 +38,14 @@ try
    // get the new id
    $audienceRatingId = $db->lastInsertId("audienceRating_id_seq");
    // Now go through each topic id in the list from the user's checkboxes
-   foreach ($breedIds as $dogId)
+   foreach ($breedIds as $breeds_id)
    {
-      echo "audienceRatingId: $audienceRatingId, DogId: $dogId";
+      echo "audienceRatingId: $audienceRatingId, DogId: $breeds_id";
       // Again, first prepare the statement
-      $statement = $db->prepare('INSERT INTO audienceRating(audienceRatingId, dogId) VALUES(:audienceRatingId, :dogId)');
+      $statement = $db->prepare('INSERT INTO audienceRating(audienceRatingId, breeds_id) VALUES(:audienceRatingId, :breeds_id)');
       // Then, bind the values
       $statement->bindValue(':audienceRatingId', $audienceRatingId);
-      $statement->bindValue(':dogId', $dogId);
+      $statement->bindValue(':breeds_id', $breeds_id);
       $statement->execute();
    }
 }
