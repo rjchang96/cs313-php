@@ -1,7 +1,7 @@
 <?php
 $breedIds = $_POST['chkBreeds'];
-echo "check breeds variable: $breedIds <br>";
-
+echo "check breeds variable: ".$breedIds[0]. "<br>";
+$breed = $breedIds[0];
 // get the data from the POST
 
 //echo "user input of hyperallergenic: $uhyperallergenic \n";
@@ -23,13 +23,13 @@ try
 
    // We do this by preparing the query with placeholder values
    $query = 'INSERT INTO audienceRating(temperment, exercise, cost,
-   hair) VALUES(:temperment, :exercise, :cost, :hair)';
+   hair, breeds_id) VALUES(:temperment, :exercise, :cost, :hair, :breeds_id)';
    $statement = $db->prepare($query);
    // Now we bind the values to the placeholders. This does some nice things
    // including sanitizing the input with regard to sql commands.
    $statement->bindValue(':temperment', $temperment);
     //$statement->bindValue(':name', $name);
-  // $statement->bindValue(':breeds_id', $breeds_id);
+   $statement->bindValue(':breeds_id', $breed);
    $statement->bindValue(':exercise', $exercise);
    $statement->bindValue(':cost', $cost);
    $statement->bindValue(':hair', $hair);
@@ -38,16 +38,16 @@ try
    // get the new id
    $audienceRatingId = $db->lastInsertId("audienceRating_id_seq");
    // Now go through each topic id in the list from the user's checkboxes
-   foreach ($breedIds as $breeds_id)
-   {
-      echo "audienceRatingId: $audienceRatingId, DogId: $breeds_id";
-      // Again, first prepare the statement
-      $statement = $db->prepare('INSERT INTO audienceRating(audienceRatingId, breeds_id) VALUES(:audienceRatingId, :breeds_id)');
-      // Then, bind the values
-      $statement->bindValue(':audienceRatingId', $audienceRatingId);
-      $statement->bindValue(':breeds_id', $breeds_id);
-      $statement->execute();
-   }
+   // foreach ($breedIds as $breeds_id)
+   // {
+   //    echo "audienceRatingId: $audienceRatingId, DogId: $breeds_id";
+   //    // Again, first prepare the statement
+   //    $statement = $db->prepare('INSERT INTO audienceRating(audienceRatingId, breeds_id) VALUES(:audienceRatingId, :breeds_id)');
+   //    // Then, bind the values
+   //    $statement->bindValue(':audienceRatingId', $audienceRatingId);
+   //    $statement->bindValue(':breeds_id', $breeds_id);
+   //    $statement->execute();
+   // }
 }
 catch (Exception $ex)
 {
