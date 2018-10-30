@@ -252,9 +252,9 @@ function cmp($a, $b)
 //      //  $data->$maxcost = $dmax;
 //      //  $data->$mincost = $dmin;
 //             // array_push($list, $data);
-//              $list[$counter] = $data;
-//             echo "name in the list: " . $list[$counter]->$name . "<br>";
-//             $counter++;
+//              $list[] = $data;
+//             echo "name in the list: " . $list[]->$name . "<br>";
+//
 //       }
 //    }
 // ///////////////////////////////////////////////////////////////////

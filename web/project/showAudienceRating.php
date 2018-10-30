@@ -33,7 +33,8 @@ $db = get_db();
 
     </div>
 <p style="text-align: center;">
-  <h2>Audience Reviews</h2>
+  <h2 style = "text-align: center">Audience Reviews</h2>
+
   <?php
 try
 {
@@ -51,8 +52,9 @@ try
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
     $name = $row['name'];
-    echo '<p>';
+    echo '<p style = "text-align:center;">';
     echo "<h1>" . $row['name'] . "</h1>";
+
     echo "<img src = '$name.jpg' alt = 'dog'><br> ";
     echo "Temperment Lvl scale 1-10: " . $row['P_temperment'] . "<br>";
     echo  "Exercise Lvl scale 1-5: ". $row['P_exercise'] . "<br>";
