@@ -73,7 +73,7 @@ try
     {
      // $name = $audienceRow['name'];
       echo "<h4>" . $audienceRow['name'] . "</h4>";
-      echo "<li>"
+      echo "<li>";
       echo "<b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
       echo  "<b>Exercise</b> Lvl scale 1-5: ". $audienceRow['P_exercise'] . "<br>";
       echo "<b>Shedding</b> Lvl scale 1-5: ". $audienceRow['P_hair'] . '<br>';
