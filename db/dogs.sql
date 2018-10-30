@@ -42,6 +42,16 @@ CREATE TABLE userRating
    , hair INT NOT NULL
 
 );
+CREATE TABLE audienceRating
+(
+   id SERIAL PRIMARY KEY
+   , breeds_id INT NOT NULL REFERENCES breeds(id)
+   , temperment INT NOT NULL
+   , exercise INT NOT NULL
+   , cost INT NOT NULL
+   , hair INT NOT NULL
+
+);
 
 INSERT INTO breeds (name, description, P_temperment,
    hyperAllergenic, minCost, maxCost, size, P_exercise, P_hair,
@@ -65,3 +75,15 @@ INSERT INTO breeds (name, description, P_temperment,
     5, 5, 8, 3);
 
    SELECT name, P_temperment, professionalRating FROM breeds;
+
+   SELECT userRating.breeds_id, userRating.user_id, breeds.id, users.id
+   FROM userRating
+   INNER JOIN breeds
+   ON userRating.breeds_id=breeds.id
+   INNER JOIN users
+   ON userRating.user_id=users.id;
+
+   SELECT audienceRating.breeds_id, breeds.id
+   FROM audienceRating
+   INNER JOIN breeds
+   ON audienceRating.breeds_id=breeds.id;
