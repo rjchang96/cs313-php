@@ -56,12 +56,12 @@ try
     echo "<h1>" . $row['name'] . "</h1>";
 
     echo "<img src = '$name.jpg' alt = 'dog'><br> ";
-    echo "Temperment Lvl scale 1-10: " . $row['P_temperment'] . "<br>";
-    echo  "Exercise Lvl scale 1-5: ". $row['P_exercise'] . "<br>";
-    echo "Shedding Lvl scale 1-5: ". $row['P_hair'] . '<br>';
-    echo "<h2>Description</h2><br>" . $row['description'] . "<br>";
+    echo "<b>Temperment:</b> Lvl scale 1-10: " . $row['P_temperment'] . "<br>";
+    echo  "<b>Exercise:</b> Lvl scale 1-5: ". $row['P_exercise'] . "<br>";
+    echo "<b>Shedding:</b> Lvl scale 1-5: ". $row['P_hair'] . '<br>';
+    echo "<b>Description</b><br>" . $row['description'] . "<br>";
     echo '<br />';
-    echo '<h2>Audience Reviews: </h2>';
+    echo '<h3>Audience Reviews: </h3>';
     // get the topics now for this scripture
     $stmtTopics = $db->prepare('SELECT temperment, exercise, cost, hair FROM audienceRating'
       . ' INNER JOIN breeds ON audienceRating.breeds_id = breeds.id'
@@ -72,12 +72,13 @@ try
     while ($audienceRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
     {
      // $name = $audienceRow['name'];
-      echo "<h3>" . $audienceRow['name'] . "</h3>";
-      echo "Temperment Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
-      echo  "Exercise Lvl scale 1-5: ". $audienceRow['P_exercise'] . "<br>";
-      echo "Shedding Lvl scale 1-5: ". $audienceRow['P_hair'] . '<br>';
-      echo "<h2>Description</h2><br>" . $audienceRow['description'] . "<br>";
-      echo '<br />';
+      echo "<h4>" . $audienceRow['name'] . "</h4>";
+      echo "<li>"
+      echo "<b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
+      echo  "<b>Exercise</b> Lvl scale 1-5: ". $audienceRow['P_exercise'] . "<br>";
+      echo "<b>Shedding</b> Lvl scale 1-5: ". $audienceRow['P_hair'] . '<br>';
+     // echo "<h2>Description</h2><br>" . $audienceRow['description'] . "<br>";
+      echo '<br/></li>';
     }
     echo '</p>';
   }
