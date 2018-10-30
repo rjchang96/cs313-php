@@ -15,22 +15,6 @@ $db = get_db();
 
 </head>
 <body>
-   <div id = "grid-container">
-
-      <div class="head">
-         <img src = "logo1.png" alt= "pet logo"
-    class = "logo" style="float:left" >
-      <header><h1>Perfect Dog 4 U</h1></header>
-      </div>
-
- <div class="menu">
-      <div style="background-color: skyblue;">
-        <a href = "homepage.html">Home</a>
-
-      <a href= "form.php" style="margin-left: 10px;">Search </a>
-      <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
-
-    </div>
 
  <div id = "grid-container">
 
@@ -66,15 +50,16 @@ try
   // Go through each result
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
+    $name = $row['name'];
     echo '<p>';
     echo "<h1>" . $row['name'] . "</h1>";
-    echo "<img src = '". $row['name'] ."'.jpg' alt = 'dog'><br> ";
+    echo "<img src = '$name.jpg' alt = 'dog'><br> ";
     echo "Temperment Lvl scale 1-10: " . $row['P_temperment'] . "<br>";
     echo  "Exercise Lvl scale 1-5: ". $row['P_exercise'] . "<br>";
     echo "Shedding Lvl scale 1-5: ". $row['P_hair'] . '<br>';
     echo "<h2>Description</h2><br>" . $row['description'] . "<br>";
     echo '<br />';
-    echo 'Audience Reviews: ';
+    echo '<h2>Audience Reviews: </h2>';
     // get the topics now for this scripture
     $stmtTopics = $db->prepare('SELECT temperment, exercise, cost, hair FROM audienceRating'
       . ' INNER JOIN breeds ON audienceRating.breeds_id = breeds.id'
@@ -84,7 +69,8 @@ try
     // Go through each topic in the result
     while ($audienceRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
     {
-      echo "<h1>" . $audienceRow['name'] . "</h1>";
+     // $name = $audienceRow['name'];
+      echo "<h3>" . $audienceRow['name'] . "</h3>";
       echo "Temperment Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
       echo  "Exercise Lvl scale 1-5: ". $audienceRow['P_exercise'] . "<br>";
       echo "Shedding Lvl scale 1-5: ". $audienceRow['P_hair'] . '<br>';
