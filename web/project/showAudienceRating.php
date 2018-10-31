@@ -10,6 +10,12 @@ $db = get_db();
    <link rel = "styleSheet" type="text/css" href="dogStyleSheet.css">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <style type="text/css">
+   .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
    </style>
 
 
