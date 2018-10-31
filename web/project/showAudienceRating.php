@@ -62,7 +62,7 @@ try
     // echo "<b>Cost:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
     echo "<b>Description</b><br>" . $row['description'] . "<br>";
     echo '<br /></div>';
-    echo '<h3 style = "text-align:center;">Audience Reviews: </h3>';
+    echo '<h3 style = "text-align:center;">Audience Reviews of $name: </h3>';
     // get the topics now for this scripture
     $stmtTopics = $db->prepare('SELECT temperment, exercise, cost, hair FROM audienceRating'
       . ' INNER JOIN breeds ON audienceRating.breeds_id = breeds.id'
@@ -74,13 +74,13 @@ try
     {
      // $name = $audienceRow['name'];
       echo "<h4 style = 'text-align:center;'>" . $audienceRow['name'] . "</h4>";
-      echo "<li>";
+     // echo "<li>";
       echo "<div style = 'text-align:center;'><b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
       echo  "<b>Exercise</b> Lvl scale 1-5: ". $audienceRow['exercise'] . "<br>";
       echo "<b>Cost</b> Lvl scale 1-5: " . $audienceRow['cost'] . "<br>";
       echo "<b>Shedding</b> Lvl scale 1-5: ". $audienceRow['hair'] . '<br>';
      // echo "<h2>Description</h2><br>" . $audienceRow['description'] . "<br>";
-      echo '<br/></li></div>';
+      echo '<br/></div>';
     }
     echo '</p>';
   }
