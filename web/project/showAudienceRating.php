@@ -55,7 +55,7 @@ try
     echo '<p style = "text-align:center;">';
     echo "<h1  style = 'text-align:center;'>" . $row['name'] . "</h1>";
 
-    echo "<img src = '$name.jpg' alt = 'dog' style = 'text-align:center;'><br> ";
+    echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br> ";
     echo "<div style = 'text-align:center;'><b>Temperment:</b> Lvl scale 1-10: " . $row['p_temperment'] . "<br>";
     echo  "<b>Exercise:</b> Lvl scale 1-5: ". $row['p_exercise'] . "<br>";
     echo "<b>Shedding:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
