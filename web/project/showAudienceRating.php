@@ -56,9 +56,10 @@ try
     echo "<h1>" . $row['name'] . "</h1>";
 
     echo "<img src = '$name.jpg' alt = 'dog'><br> ";
-    echo "<b>Temperment:</b> Lvl scale 1-10: " . $row['P_temperment'] . "<br>";
-    echo  "<b>Exercise:</b> Lvl scale 1-5: ". $row['P_exercise'] . "<br>";
-    echo "<b>Shedding:</b> Lvl scale 1-5: ". $row['P_hair'] . '<br>';
+    echo "<b>Temperment:</b> Lvl scale 1-10: " . $row['p_temperment'] . "<br>";
+    echo  "<b>Exercise:</b> Lvl scale 1-5: ". $row['p_exercise'] . "<br>";
+    echo "<b>Shedding:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
+    // echo "<b>Cost:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
     echo "<b>Description</b><br>" . $row['description'] . "<br>";
     echo '<br />';
     echo '<h3>Audience Reviews: </h3>';
@@ -75,8 +76,9 @@ try
       echo "<h4>" . $audienceRow['name'] . "</h4>";
       echo "<li>";
       echo "<b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
-      echo  "<b>Exercise</b> Lvl scale 1-5: ". $audienceRow['P_exercise'] . "<br>";
-      echo "<b>Shedding</b> Lvl scale 1-5: ". $audienceRow['P_hair'] . '<br>';
+      echo  "<b>Exercise</b> Lvl scale 1-5: ". $audienceRow['exercise'] . "<br>";
+      echo "<b>Cost</b> Lvl scale 1-5: " . $audienceRow['cost'] . "<br>";
+      echo "<b>Shedding</b> Lvl scale 1-5: ". $audienceRow['hair'] . '<br>';
      // echo "<h2>Description</h2><br>" . $audienceRow['description'] . "<br>";
       echo '<br/></li>';
     }
