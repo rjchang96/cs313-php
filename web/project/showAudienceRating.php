@@ -57,18 +57,20 @@ try
   // Go through each result
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
+    //<div style = 'text-align:center;'>
     $name = $row['name'];
-    echo '<p style = "text-align:center;">';
+    echo '<div class "main">';
     echo "<h1  style = 'text-align:center;'>" . $row['name'] . "</h1>";
 
     echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br> ";
-    echo "<div style = 'text-align:center;'><b>Temperment:</b> Lvl scale 1-10: " . $row['p_temperment'] . "<br>";
+    echo "<b>Temperment:</b> Lvl scale 1-10: " . $row['p_temperment'] . "<br>";
     echo  "<b>Exercise:</b> Lvl scale 1-5: ". $row['p_exercise'] . "<br>";
     echo "<b>Shedding:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
     // echo "<b>Cost:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
     echo "<b>Description</b><br>" . $row['description'] . "<br>";
     echo '<br /></div>';
-    echo '<h3 style = "text-align:center;">Audience Reviews of $name: </h3>';
+    echo '<h3 style = "text-align:center;">Audience Reviews of '
+    . $row['name'].': </h3>';
     // get the topics now for this scripture
     $stmtTopics = $db->prepare('SELECT temperment, exercise, cost, hair FROM audienceRating'
       . ' INNER JOIN breeds ON audienceRating.breeds_id = breeds.id'
@@ -81,7 +83,7 @@ try
      // $name = $audienceRow['name'];
       echo "<h4 style = 'text-align:center;'>" . $audienceRow['name'] . "</h4>";
      // echo "<li>";
-      echo "<div style = 'text-align:center;'><b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
+      echo "<div class = 'main'><b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
       echo  "<b>Exercise</b> Lvl scale 1-5: ". $audienceRow['exercise'] . "<br>";
       echo "<b>Cost</b> Lvl scale 1-5: " . $audienceRow['cost'] . "<br>";
       echo "<b>Shedding</b> Lvl scale 1-5: ". $audienceRow['hair'] . '<br>';
