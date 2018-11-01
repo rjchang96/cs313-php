@@ -91,9 +91,10 @@ function costEvaluate($mincost, $maxcost)
       $costVal = 5;
    return $costVal;
 }
-// function evaluate($list, $dogs)
-// {
-// }
+function evaluate($list, $dogs)
+{
+
+}
 // go through each movie in the result and display it
 ?>
 <!DOCTYPE html>
@@ -172,12 +173,13 @@ $list = array();
       $dtemperment = $breeds['p_temperment'];
       $dexercise = $breeds['p_exercise'];
       $dhair = $breeds['p_hair'];
-      $dsize = $breeds['sizeRange'];
+      $dsize = $breeds['sizerange'];
+
       $dname = $breeds['name'];
       $ddescription = $breeds['description'];
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
-      $PR = $breeds['professionalRating'];
+      $PR = $breeds['professionalrating'];
       //echo "in for each $dname<br>";
       // $data = new compare();
            // echo "User cost: $ucost<br>";
@@ -237,7 +239,7 @@ $list = array();
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
-            //echo "the percent difference: $tot <br>";
+            echo "the name: $dname <br>";
              $data = new compare($dname, $ddescription,
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
@@ -263,7 +265,7 @@ $list = array();
    }
 ///////////////////////////////////////////////////////////////////
 var_dump($list);
-evaluate($list, $dogs, $ucost);
+//evaluate($list, $dogs, $ucost);
 foreach ($list as $data) {
    echo "stuff in list: " . $data->name. "<br>";
    # code...
