@@ -253,7 +253,7 @@ $list = array();
      //  $data->$exercise = $dexercise;
      //  $data->$maxcost = $dmax;
      //  $data->$mincost = $dmin;
-             echo "datas name: " . $data->getName() . "<br>";
+             echo "datas name: " . $data->$name . "<br>";
             array_push($list, $data);
             // $list[] = $data;
             //echo "name in the list: " . $list[0]->$name . "<br>";
