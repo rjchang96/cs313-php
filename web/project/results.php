@@ -120,7 +120,7 @@ function costEvaluate($mincost, $maxcost)
         <a href = "homepage.html">Home</a>
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
-      <a href = "results.php"  style="margin-left: 10px;">Doggos</a>
+      <a href = "results.php"  style="margin-left: 10px;">Results</a>
       <a href = "showAudienceRating.php"  style="margin-left: 10px;">Audience Reviews</a>
 
     </div>
@@ -155,7 +155,7 @@ function cmp($a, $b)
    return ($a->$pDiff < $b->$pDiff) ? -1 : 1;
 }
 $list = array();
-evaluate($list, $dogs, $ucost);
+//
 //////////////////////////////////////////////////////////////////
       $s_wieght = 5;
       $t_weight = 6;
@@ -232,7 +232,7 @@ evaluate($list, $dogs, $ucost);
             $eresult = $dexercise*$e_weight;
             //echo "the exercise result: " . $eresult . "<br>";
             $sresult = $dsize*$s_weight;
-            //echo "the size result: " . $sresult . "<br>";
+            echo "the size result: " . $sresult . "<br>";
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
@@ -241,7 +241,8 @@ evaluate($list, $dogs, $ucost);
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
              echo "datas name: $dname <br>";
-     //       $data->$pDiff = $tot;
+             echo "datas temperment: $dtemperment<br>";
+           //$data->$pDiff = $tot;
      //  $data->$name = $dname;
      // // echo "assignment of compare obj: " . $data->$name ."<br>";
      //  $data->$allergy = $dallergy;
@@ -260,6 +261,7 @@ evaluate($list, $dogs, $ucost);
    }
 ///////////////////////////////////////////////////////////////////
 var_dump($list);
+evaluate($list, $dogs, $ucost);
 foreach ($list as $data) {
    echo "stuff in list: " . $data->name. "<br>";
    # code...
