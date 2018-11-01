@@ -57,13 +57,12 @@ try
   // Go through each result
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
-    //<div style = 'text-align:center;'>
     $name = $row['name'];
     echo '<div class "main">';
     echo "<h1  style = 'text-align:center;'>" . $row['name'] . "</h1>";
 
     echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br> ";
-    echo "<b>Temperment:</b> Lvl scale 1-10: " . $row['p_temperment'] . "<br>";
+    echo "<div style = 'text-align:center;'><b>Temperment:</b> Lvl scale 1-10: " . $row['p_temperment'] . "<br>";
     echo  "<b>Exercise:</b> Lvl scale 1-5: ". $row['p_exercise'] . "<br>";
     echo "<b>Shedding:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
     // echo "<b>Cost:</b> Lvl scale 1-5: ". $row['p_hair'] . '<br>';
@@ -83,7 +82,7 @@ try
      // $name = $audienceRow['name'];
       echo "<h4 style = 'text-align:center;'>" . $audienceRow['name'] . "</h4>";
      // echo "<li>";
-      echo "<div class = 'main'><b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
+      echo "<div style = 'text-align:center;'><b>Temperment</b> Lvl scale 1-10: " . $audienceRow['temperment'] . "<br>";
       echo  "<b>Exercise</b> Lvl scale 1-5: ". $audienceRow['exercise'] . "<br>";
       echo "<b>Cost</b> Lvl scale 1-5: " . $audienceRow['cost'] . "<br>";
       echo "<b>Shedding</b> Lvl scale 1-5: ". $audienceRow['hair'] . '<br>';
