@@ -240,8 +240,8 @@ $list = array();
              $data = new compare($dname, $ddescription,
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
-             echo "datas name: $dname <br>";
-             echo "datas temperment: $dtemperment<br>";
+             echo "datas name: $data->$name <br>";
+             echo "datas temperment: $data->$temperment<br>";
            //$data->$pDiff = $tot;
      //  $data->$name = $dname;
      // // echo "assignment of compare obj: " . $data->$name ."<br>";
