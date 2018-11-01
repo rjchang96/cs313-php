@@ -36,7 +36,7 @@ $db = get_db();
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
       <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
-
+      <a href = "showAudienceRating.php"  style="margin-left: 10px;">Audience Reviews</a>
     </div>
 <p style="text-align: center;">
   <h2 style = "text-align: center">Audience Reviews</h2>
