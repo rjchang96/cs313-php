@@ -28,7 +28,9 @@ class compare{
    function __construct2($nName, $nDescript, $nSize, $nH, $nT, $nA,
       $nMinCost, $nMaxCost, $nE, $nPR, $diff)
    {
+    echo "starting __construct2<br>";
       $name = $nName;
+      echo "the name in constructor: $name <br>";
       $description = $nDescript;
       $professionalRating = $nPR;
       $size = $nSize;
