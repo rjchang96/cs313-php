@@ -241,6 +241,7 @@ $list = array();
              //   $dsize, $dhair, $dtemperment, $dallergy,
              //   $dmin, $dmax, $dexercise, $PR, $tot);
             // echo "datas temperment: $data->$temperment<br>";
+            $data = new compare();
            $data->$pDiff = $tot;
       $data->$name = $dname;
      // echo "assignment of compare obj: " . $data->$name ."<br>";
