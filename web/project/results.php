@@ -232,6 +232,7 @@ $list = array();
             $eresult = $dexercise*$e_weight;
             //echo "the exercise result: " . $eresult . "<br>";
             $sresult = $dsize*$s_weight;
+            echo "size: " . $dsize . "<br>";
             echo "the size result: " . $sresult . "<br>";
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             //echo "overall dog result: $result <br>";
