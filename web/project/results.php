@@ -254,7 +254,7 @@ evaluate($list, $dogs, $ucost);
      //  $data->$mincost = $dmin;
             // array_push($list, $data);
              $list[] = $data;
-            echo "name in the list: " . $list[]->$name . "<br>";
+            //echo "name in the list: " . $list[0]->$name . "<br>";
 
       }
    }
