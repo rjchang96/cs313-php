@@ -241,7 +241,7 @@ $list = array();
              //   $dsize, $dhair, $dtemperment, $dallergy,
              //   $dmin, $dmax, $dexercise, $PR, $tot);
             // echo "datas temperment: $data->$temperment<br>";
-            $data = compare();
+            $data = new compare();
            $data->$pDiff = $tot;
       $data->$name = $dname;
      // echo "assignment of compare obj: " . $data->$name ."<br>";
@@ -253,7 +253,7 @@ $list = array();
       $data->$exercise = $dexercise;
       $data->$maxcost = $dmax;
       $data->$mincost = $dmin;
-             echo "datas name: " . $data.getName() . "<br>";
+             echo "datas name: " . $data->getName() . "<br>";
             array_push($list, $data);
             // $list[] = $data;
             //echo "name in the list: " . $list[0]->$name . "<br>";
