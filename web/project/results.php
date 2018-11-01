@@ -257,6 +257,7 @@ $list = array();
      //  $data->$maxcost = $dmax;
      //  $data->$mincost = $dmin;
              echo "datas name: " . $data->$name . "<br>";
+             var_dump($data);
             array_push($list, $data);
             // $list[] = $data;
             //echo "name in the list: " . $list[0]->$name . "<br>";
