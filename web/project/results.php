@@ -69,7 +69,7 @@ class compare{
    public $maxcost;
    function setName($nName)
    {
-      $name = $nName;
+      $this->$name = $nName;
    }
    function getName()
    {
@@ -77,7 +77,7 @@ class compare{
    }
    function setPercentDifference($pDifference)
    {
-      $pDiff= $pDifference;
+      $this->$pDiff= $pDifference;
    }
 }
 function costEvaluate($mincost, $maxcost)

@@ -21,12 +21,12 @@ $db = get_db();
 
 class food
 {
-   function __construct1()
-   {
-      $this->$name = "";
-      $this->$category = "";
-      $this->$recipe = "";
-   }
+   // function __construct1()
+   // {
+   //    $this->$name = "";
+   //    $this->$category = "";
+   //    $this->$recipe = "";
+   // }
    private $category;
    private $name;
    private $recipe;
@@ -40,7 +40,7 @@ class food
    }
    function getCategory()
    {
-      return $this -> $category;
+      return $this->$category;
    }
    function setCategory($categoryr)
    {
@@ -48,7 +48,7 @@ class food
    }
    function getRecipe()
    {
-      return $this -> $recipe;
+      return $this->$recipe;
    }
    function setRecipe($reciper)
    {
