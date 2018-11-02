@@ -78,6 +78,7 @@ class food
 
 function putStuffIn()
 {
+     $list = array();
    echo "<h1>in the begining</h1><br>";
    $stuff = new food();
    //$stuff->$category = "fat";
@@ -93,6 +94,19 @@ function putStuffIn()
    echo "stuf name: ". $stuff->getName() . " <br>";
     echo "stuf recipe: ". $stuff->getRecipe() . " <br>";
      echo "stuf category: ". $stuff->getCategory() . " <br>";
+     $list[] = $stuff;
+     echo "things in the list name " . $list[]->getName() . "<br>";
+     $stuff2 = new food();
+     $stuff2->setName("jerky");
+   $stuff2->setCategory("meaat");
+   $stuff2->setRecipe("make tasty");
+  // echo "Stuff: " . $stuff->$name . " <br>";
+   //echo "stuff recipe: " . $stuff->$recipe . "<br>";
+   echo "stuf name: ". $stuff2->getName() . " <br>";
+    echo "stuf recipe: ". $stuff2->getRecipe() . " <br>";
+     echo "stuf category: ". $stuff2->getCategory() . " <br>";
+
+
 
 }
 ?>
