@@ -27,9 +27,9 @@ class food
       $this->$category = "";
       $this->$recipe = "";
    }
-   private $category;
-   private $name;
-   private $recipe;
+   public $category;
+   public $name;
+   public $recipe;
    // function setName($namer)
    // {
    //    $this->$name = $namer;
