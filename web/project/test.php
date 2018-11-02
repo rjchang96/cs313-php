@@ -23,9 +23,15 @@ class food
 {
    function __construct1()
    {
-      $this->$name = "";
-      $this->$category = "";
-      $this->$recipe = "";
+      $this->name = "";
+      $this->category = "";
+      $this->recipe = "";
+   }
+   function __construct2($namer, $categoryr, $reciper)
+   {
+      $this->name = $namer;
+      $this->category = $categoryr;
+      $this->recipe = $reciper;
    }
    public $category;
    public $name;
@@ -80,15 +86,15 @@ function putStuffIn()
 {
      $list = array();
    echo "<h1>in the begining</h1><br>";
-   $stuff = new food();
+   $stuff = new food("pizza", "fat", "make beautifulness");
    //$stuff->$category = "fat";
   // $stuff->$name = "pizza";
    //$stuff->$recipe = "make beautifulness";
    // $stuff->__set($name, "pizza");
    // echo "name: " . $stuff->__get($name);
-   $stuff->setName("pizza");
-   $stuff->setCategory("fat");
-   $stuff->setRecipe("make beautifulness");
+   // $stuff->setName("pizza");
+   // $stuff->setCategory("fat");
+   // $stuff->setRecipe("make beautifulness");
   // echo "Stuff: " . $stuff->$name . " <br>";
    //echo "stuff recipe: " . $stuff->$recipe . "<br>";
    echo "stuf name: ". $stuff->getName() . " <br>";

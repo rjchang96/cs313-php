@@ -29,32 +29,31 @@ class compare{
       $nMinCost, $nMaxCost, $nE, $nPR, $diff)
    {
     echo "starting __construct2<br>";
-      $name = $nName;
-      echo "the name in constructor: $name <br>";
-      $description = $nDescript;
-      $professionalRating = $nPR;
-      $size = $nSize;
-      $hair = $nH;
-      $exercise = $nE;
-      $temperment = $nT;
-      $allergy = $nA;
-      $mincost = $nMinCost;
-      $maxcost = $nMaxCost;
-      $pDiff = $diff;
+     $this->name = $nName;
+      $this->description = $nDescript;
+      $this->professionalRating = $nPR;
+      $this->size = $nSize;
+      $this->hair = $nH;
+      $this->exercise = $nE;
+      $this->temperment = $nT;
+      $this->allergy = $nA;
+      $this->mincost = $nMinCost;
+      $this->maxcost = $nMaxCost;
+      $this->pDiff = $diff;
    }
    function __construct1()
    {
-      $name = "";
-      $description ="";
-      $professionalRating = 0;
-      $size =  0;
-      $hair =  0;
-      $exercise =  0;
-      $temperment =  0;
-      $allergy =  0;
-      $mincost =  0;
-      $maxcost =  0;
-      $pDiff =  0;
+      $this->name = "";
+      $this->description ="";
+      $this->professionalRating = 0;
+      $this->size =  0;
+      $this->hair =  0;
+      $this->exercise =  0;
+      $this->temperment =  0;
+      $this->allergy =  0;
+      $this->mincost =  0;
+      $this->maxcost =  0;
+      $this->pDiff =  0;
    }
    public $pDiff;
    public $description;
@@ -67,17 +66,91 @@ class compare{
    public $allergy;
    public $mincost;
    public $maxcost;
+    function setMaxcost($maxcostr)
+   {
+      $this->maxcost = $maxcostr;
+   }
+   function getMaxcost()
+   {
+      return $this->maxcost;
+   }
+    function setMincost($mincostr)
+   {
+      $this->mincost = $mincostr;
+   }
+   function getMincost()
+   {
+      return $this->mincost;
+   }
+    function setAllergy($allergyr)
+   {
+      $this->allergy = $allergyr;
+   }
+   function getAllergy()
+   {
+      return $this->allergy;
+   }
+    function setTemperment($temper)
+   {
+      $this->temperment = $temper;
+   }
+   function getTemperment()
+   {
+      return $this->temperment;
+   }
+    function setSize($exerciser)
+   {
+      $this->exercise = $exerciser;
+   }
+   function getSize()
+   {
+      return $this->exercise;
+   }
+    function setHair($hairr)
+   {
+      $this->hair = $hairr;
+   }
+   function getHair()
+   {
+      return $this->hair;
+   }
+   function setSize($sizer)
+   {
+      $this->size = $sizer;
+   }
+   function getSize()
+   {
+      return $this->size;
+   }
    function setName($nName)
    {
-      $this->$name = $nName;
+      $this->name = $nName;
    }
    function getName()
    {
-      return $name;
+      return $this->name;
    }
+    function setDescription($descriptionr)
+   {
+      $this->description = $descriptionr;
+   }
+   function getDescription()
+   {
+      return $this->description;
+   }
+    function setPR($PRr)
+   {
+      $this->professionalRating = $PRr;
+   }
+   function getPR()
+   {
+      return $this->professionalRating;
+   }
+
+
    function setPercentDifference($pDifference)
    {
-      $this->$pDiff= $pDifference;
+      $this->pDiff= $pDifference;
    }
 }
 function costEvaluate($mincost, $maxcost)
