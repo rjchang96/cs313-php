@@ -339,19 +339,20 @@ foreach ($list as $key) {
    $description = $key->getDescription();
    $temper = $key->getTemperment();
    echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
-   echo "<li><p><h2 style = 'text-align:center;'>$name </h2><br>
-   <div style = 'text-align:center;'><b>HyperAllergenic:</b> ";
+   echo "<li><p><h2 style = 'text-align:center;'>$name </h2><br>";
+   echo "Scoring scale 1-5 except temperment is 1-10<br>";
+   echo "<div style = 'text-align:center;'><b>HyperAllergenic:</b> ";
    if($hyperallergenic == true)
    echo "Yes<br>";
    else
    echo "No<br>";
    echo "<b>Temperment:</b> $temper<br>";
-   echo "<b>Minium Cost</b> $" . $key->getMincost() . "<br> Maximum Cost $"
+   echo "<b>Minium Cost</b> $" . $key->getMincost()
+   . "<br> <b>Maximum Cost</b> $"
    . $key->getMaxcost() . "<br>";
-   echo "<b>Shedding Lvl:</b> " . $key->getHair() . "<br>";
-   echo "<b>Exercise Lvl:</b> " . $key->getExercise() . "<br>";
-   echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
-         temperment<br>";
+   echo "<b>Shedding Lvl least to most:</b> " . $key->getHair() . "<br>";
+   echo "<b>Exercise Lvl least to most:</b> " . $key->getExercise() . "<br>";
+
    echo "<b>Description</b> <br> $description <br></p></div></li>";
 }
 
