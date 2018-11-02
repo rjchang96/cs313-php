@@ -30,6 +30,14 @@ class food
    public $category;
    public $name;
    public $recipe;
+   function setName($namer)
+   {
+      $name = $namer;
+   }
+   function getName()
+   {
+      return $name;
+   }
 
 
    // function output($stuff)
@@ -43,11 +51,13 @@ class food
 
 function putStuffIn()
 {
+   echo "<h1>in the begining</h1><br>"
    $stuff = new food();
    $stuff->$category = "fat";
    $stuff->$name = "pizza";
    $stuff->$recipe = "make beautifulness";
    echo "Stuff: $stuff->$name <br>";
+   echo "stuf 2: $stuff->getName() <br>";
 
 }
 ?>
@@ -63,6 +73,7 @@ function putStuffIn()
 </head>
 <body>
    <?php
+   echo "putting things into put stuff in<br>";
    putStuffIn();
    ?>
 
