@@ -25,22 +25,6 @@ $stmt->execute();
 $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($dogs);
 class compare{
-   // function __construct2($nName, $nDescript, $nSize, $nH, $nT, $nA,
-   //    $nMinCost, $nMaxCost, $nE, $nPR, $diff)
-   // {
-   //  echo "starting __construct2<br>";
-   //   $this->name = $nName;
-   //    $this->description = $nDescript;
-   //    $this->professionalRating = $nPR;
-   //    $this->size = $nSize;
-   //    $this->hair = $nH;
-   //    $this->exercise = $nE;
-   //    $this->temperment = $nT;
-   //    $this->allergy = $nA;
-   //    $this->mincost = $nMinCost;
-   //    $this->maxcost = $nMaxCost;
-   //    $this->pDiff = $diff;
-   // }
    function __construct1()
    {
       $this->name = "";
@@ -185,6 +169,51 @@ function evaluate($list, $dogs)
 {
 
 }
+function calculate($breeds, $list)
+{
+    $s_wieght = 5;
+    $t_weight = 6;
+    $h_weight = 3;
+    $e_weight = 2;
+    $c_weight = 4;
+   $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
+
+
+
+      $dallergy = $breeds['hyperallergenic'];
+      $dtemperment = $breeds['p_temperment'];
+      $dexercise = $breeds['p_exercise'];
+      $dhair = $breeds['p_hair'];
+      $dsize = $breeds['sizerange'];
+
+      $dname = $breeds['name'];
+      $ddescription = $breeds['description'];
+      $dmax = $breeds['mincost'];
+      $dmin = $breeds['maxcost'];
+      $PR = $breeds['professionalrating'];
+
+      $costVal = costEvaluate($dmin, $dmax);
+            $cresult = $costVal*$c_weight;
+           // echo "the cost result: " . $cresult . "<br>";
+            $hresult = $dhair*$h_weight;
+            //echo "the hair result: " . $hresult . "<br>";
+            $tresult = $dtemperment*$t_weight;
+            //echo "the temperment result: " . $tresult . "<br>";
+            $eresult = $dexercise*$e_weight;
+            //echo "the exercise result: " . $eresult . "<br>";
+            $sresult = $dsize*$s_weight;
+            //echo "the size result: " . $sresult . "<br>";
+            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
+            //echo "overall dog result: $result <br>";
+            $tot = abs((($uTot - $result)/$uTot)) * 100;
+             $data = new compare();
+
+             $data->setAll($dname, $ddescription,
+               $dsize, $dhair, $dtemperment, $dallergy,
+               $dmin, $dmax, $dexercise, $PR, $tot);
+            $list[] = $data;
+
+}
 // go through each movie in the result and display it
 ?>
 <!DOCTYPE html>
@@ -194,6 +223,14 @@ function evaluate($list, $dogs)
    <link rel = "styleSheet" type="text/css" href="dogStyleSheet.css">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Results</title>
+   <style type="text/css">
+     .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+   </style>
 </head>
 <body>
 
@@ -248,28 +285,13 @@ function cmp($a, $b)
 $list = array();
 //
 //////////////////////////////////////////////////////////////////
-      $s_wieght = 5;
-      $t_weight = 6;
-      $h_weight = 3;
-      $e_weight = 2;
-      $c_weight = 4;
-      $counter = 0;
+
       //echo "in the begining of evaluate<br>";
-      $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
+
      // echo"user input total: $uTot<br>";
    foreach ($dogs as $breeds) {
    //echo "in the begining of for each loop<br>";
-      $dallergy = $breeds['hyperallergenic'];
-      $dtemperment = $breeds['p_temperment'];
-      $dexercise = $breeds['p_exercise'];
-      $dhair = $breeds['p_hair'];
-      $dsize = $breeds['sizerange'];
 
-      $dname = $breeds['name'];
-      $ddescription = $breeds['description'];
-      $dmax = $breeds['mincost'];
-      $dmin = $breeds['maxcost'];
-      $PR = $breeds['professionalrating'];
       //echo "in for each $dname<br>";
       // $data = new compare();
            // echo "User cost: $ucost<br>";
@@ -277,56 +299,38 @@ $list = array();
       {
          if($uhyperallergenic.value == 'yes')
          {
-            $costVal = costEvaluate($dmin, $dmax);
-            $cresult = $costVal*$c_weight;
-           // echo "the cost result: " . $cresult . "<br>";
-            $hresult = $dhair*$h_weight;
-            //echo "the hair result: " . $hresult . "<br>";
-            $tresult = $dtemperment*$t_weight;
-            //echo "the temperment result: " . $tresult . "<br>";
-            $eresult = $dexercise*$e_weight;
-            //echo "the exercise result: " . $eresult . "<br>";
-            $sresult = $dsize*$s_weight;
-            //echo "the size result: " . $sresult . "<br>";
-            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
-            //echo "overall dog result: $result <br>";
-            $tot = abs((($uTot - $result)/$uTot)) * 100;
-             $data = new compare();
-
-             $data->setAll($dname, $ddescription,
-               $dsize, $dhair, $dtemperment, $dallergy,
-               $dmin, $dmax, $dexercise, $PR, $tot);
-            $list[] = $data;
+           calculate($breeds, $list);
             //$counter++;
          }
          continue;
       }
       else
       {
-         $costVal = costEvaluate($dmin, $dmax);
-            $cresult = $costVal*$c_weight;
-            //echo "the cost result: " . $cresult . "<br>";
-            $hresult = $dhair*$h_weight;
-           // echo "the hair result: " . $hresult . "<br>";
-            $tresult = $dtemperment*$t_weight;
-           // echo "the temperment result: " . $tresult . "<br>";
-            $eresult = $dexercise*$e_weight;
-            //echo "the exercise result: " . $eresult . "<br>";
-            $sresult = $dsize*$s_weight;
-            echo "size: " . $dsize . "<br>";
-            echo "the size result: " . $sresult . "<br>";
-            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
-            //echo "overall dog result: $result <br>";
-            $tot = abs((($uTot - $result)/$uTot)) * 100;
-            //echo "the name: $dname <br>";
-            $data = new compare();
+        calculate($breeds, $list);
+         // $costVal = costEvaluate($dmin, $dmax);
+         //    $cresult = $costVal*$c_weight;
+         //    //echo "the cost result: " . $cresult . "<br>";
+         //    $hresult = $dhair*$h_weight;
+         //   // echo "the hair result: " . $hresult . "<br>";
+         //    $tresult = $dtemperment*$t_weight;
+         //   // echo "the temperment result: " . $tresult . "<br>";
+         //    $eresult = $dexercise*$e_weight;
+         //    //echo "the exercise result: " . $eresult . "<br>";
+         //    $sresult = $dsize*$s_weight;
+         //    echo "size: " . $dsize . "<br>";
+         //    echo "the size result: " . $sresult . "<br>";
+         //    $result = $sresult+$cresult+$hresult+$tresult+$eresult;
+         //    //echo "overall dog result: $result <br>";
+         //    $tot = abs((($uTot - $result)/$uTot)) * 100;
+         //    //echo "the name: $dname <br>";
+         //    $data = new compare();
 
-             $data->setAll($dname, $ddescription,
-               $dsize, $dhair, $dtemperment, $dallergy,
-               $dmin, $dmax, $dexercise, $PR, $tot);
-            // echo "datas name: " . $data->getName() . "<br>";
-            // var_dump($data);
-            array_push($list, $data);
+         //     $data->setAll($dname, $ddescription,
+         //       $dsize, $dhair, $dtemperment, $dallergy,
+         //       $dmin, $dmax, $dexercise, $PR, $tot);
+         //    // echo "datas name: " . $data->getName() . "<br>";
+         //    // var_dump($data);
+         //    array_push($list, $data);
             // $list[] = $data;
             //echo "name in the list: " . $list[0]->$name . "<br>";
 
@@ -346,20 +350,21 @@ foreach ($list as $key) {
    $name = $key->getName();
    $description = $key->getDescription();
    $temper = $key->getTemperment();
-   echo "<img src = '$name.jpg' alt = 'dog'><br>";
-   echo "<li><p>$name <br> HyperAllergenic: ";
+   echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
+   echo "<li><p><h2 style = 'text-align:center;'>$name </h2><br>
+   <div style = 'text-align:center;'><b>HyperAllergenic:</b> ";
    if($hyperallergenic == true)
    echo "Yes<br>";
    else
    echo "No<br>";
-   echo "Temperment: $temper<br>";
-   echo "Minium Cost $" . $key->getMincost(). " Maximum Cost $"
+   echo "<b>Temperment:</b> $temper<br>";
+   echo "<b>Minium Cost</b> $" . $key->getMincost() . "<br> Maximum Cost $"
    . $key->getMaxcost() . "<br>";
-   echo "Shedding Lvl: " . $key->getHair() . "<br>";
-   echo "Exercise Lvl: " . $key->getExercise() . "<br>";
+   echo "<b>Shedding Lvl:</b> " . $key->getHair() . "<br>";
+   echo "<b>Exercise Lvl:</b> " . $key->getExercise() . "<br>";
    echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
          temperment<br>";
-   echo "<h2>Description</h2> <br> $description <br></p></li>";
+   echo "<b>Description</b> <br> $description <br></p></div></li>";
 }
 
 
