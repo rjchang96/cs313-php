@@ -95,7 +95,7 @@ function putStuffIn()
     echo "stuf recipe: ". $stuff->getRecipe() . " <br>";
      echo "stuf category: ". $stuff->getCategory() . " <br>";
      $list[] = $stuff;
-     echo "things in the list name " . $list[]->getName() . "<br>";
+     echo "things in the list name " . $list[0]->getName() . "<br>";
      $stuff2 = new food();
      $stuff2->setName("jerky");
    $stuff2->setCategory("meaat");
