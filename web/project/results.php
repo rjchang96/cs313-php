@@ -72,12 +72,14 @@ class compare{
     $this->setMaxcost($nMaxCost);
     $this->setMincost($nMinCost);
     $this->setName($nName);
-    $this->setMaxcost($nMaxCost);
-    $this->setMaxcost($nMaxCost);
-    $this->setMaxcost($nMaxCost);
-    $this->setMaxcost($nMaxCost);
-    $this->setMaxcost($nMaxCost);
-
+    $this->setDescription($nDescript);
+    $this->setSize($nSize);
+    $this->setHair($nH);
+    $this->setTemperment($nT);
+    $this->setAllergy($nA);
+    $this->setExercise($nE);
+    $this->setPR($nPR);
+    $this->setPercentDifference($diff);
    }
     function setMaxcost($maxcostr)
    {
@@ -111,11 +113,11 @@ class compare{
    {
       return $this->temperment;
    }
-    function setSize($exerciser)
+    function setExercise($exerciser)
    {
       $this->exercise = $exerciser;
    }
-   function getSize()
+   function getExercise()
    {
       return $this->exercise;
    }
@@ -289,20 +291,9 @@ $list = array();
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
-            //echo "the percent difference: $tot <br>";
-             //$data = new compare();
-            // $data->$name = $dname;
-            // // echo "assignment of compare obj: " . $data->$name ."<br>";
-            // $data->$allergy = $dallergy;
-            // $data->$description = $ddescription;
-            // $data->$temperment = $dtemperment;
-            // $data->$size = $dsize;
-            // $data->$hair = $dhair;
-            // $data->$exercise = $dexercise;
-            // $data->$maxcost = $dmax;
-            // $data->$mincost = $dmin;
-            // $data->$pDiff = $tot;
-             $data = new compare($dname, $ddescription,
+             $data = new compare();
+
+             $data->setAll($dname, $ddescription,
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
             $list[] = $data;
@@ -333,18 +324,11 @@ $list = array();
              //   $dmin, $dmax, $dexercise, $PR, $tot);
            // echo "datas temperment: $data->$temperment<br>";
             $data = new compare();
-           $data->$pDiff = $tot;
-      $data->$name = $dname;
-     // echo "assignment of compare obj: " . $data->$name ."<br>";
-      $data->$allergy = $dallergy;
-      $data->$description = $ddescription;
-      $data->$temperment = $dtemperment;
-      $data->$size = $dsize;
-      $data->$hair = $dhair;
-      $data->$exercise = $dexercise;
-      $data->$maxcost = $dmax;
-      $data->$mincost = $dmin;
-             echo "datas name: " . $data->$name . "<br>";
+
+             $data->setAll($dname, $ddescription,
+               $dsize, $dhair, $dtemperment, $dallergy,
+               $dmin, $dmax, $dexercise, $PR, $tot);
+             echo "datas name: " . $data->getName() . "<br>";
              var_dump($data);
             array_push($list, $data);
             // $list[] = $data;
@@ -355,10 +339,10 @@ $list = array();
 ///////////////////////////////////////////////////////////////////
 var_dump($list);
 //evaluate($list, $dogs, $ucost);
-foreach ($list as $data) {
-   echo "stuff in list: " . $data->name. "<br>";
-   # code...
-}
+// foreach ($list as $data) {
+//    echo "stuff in list: " . $data->name. "<br>";
+//    # code...
+// }
 usort($list, "cmp");
 foreach ($list as $key) {
    // var_dump($breeds);
