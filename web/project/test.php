@@ -21,12 +21,12 @@ $db = get_db();
 
 class food
 {
-   // function __construct1()
-   // {
-   //    $this->$name = "";
-   //    $this->$category = "";
-   //    $this->$recipe = "";
-   // }
+   function __construct1()
+   {
+      $this->$name = "";
+      $this->$category = "";
+      $this->$recipe = "";
+   }
    private $category;
    private $name;
    private $recipe;
@@ -61,6 +61,7 @@ class food
 public function __set($property, $value){
       if (property_exists($this, $value))
          $this->$property = $value;
+      return $this;
    }
 
    // function output($stuff)
