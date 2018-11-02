@@ -229,7 +229,7 @@ function mult($weight, $value)
   <div style = "font-size: 20px;">
  </div> <br>
  <h2 style="margin:auto;text-align:center;">
- Results</h2>
+ Highest Percent Match Results</h2>
 
    <ul>
 <?php
@@ -336,9 +336,10 @@ $list = array();
 //    echo "stuff in list: " . $data->name. "<br>";
 //    # code...
 // }
-//usort($list, "cmp");
+usort($list, "cmp");
 foreach ($list as $key) {
    // var_dump($breeds);
+  //echo "<h1 style = 'text-align:center'></h1>"
    $hyperallergenic = $key->getAllergy();
    $name = $key->getName();
    $description = $key->getDescription();
