@@ -54,8 +54,9 @@ function putStuffIn()
    echo "<h1>in the begining</h1><br>";
    $stuff = new food();
    //$stuff->$category = "fat";
-   $stuff->$name = "pizza";
+  // $stuff->$name = "pizza";
    $stuff->$recipe = "make beautifulness";
+   $stuff->setName("pizza");
    echo "Stuff: " . $stuff->$name . " <br>";
    echo "stuff recipe: " . $stuff->$recipe . "<br>";
    echo "stuf 2: ". $stuff->getName() . " <br>";
