@@ -246,6 +246,37 @@ function cmp($a, $b)
       return 0;
    return ($a->getPercentDifference() < $b->getPercentDifference()) ? -1 : 1;
 }
+function display($list)
+{
+  foreach ($list as $key) {
+   // var_dump($breeds);
+  //echo "<h1 style = 'text-align:center'></h1>"
+   $hyperallergenic = $key->getAllergy();
+   $name = $key->getName();
+   $description = $key->getDescription();
+   $temper = $key->getTemperment();
+   echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
+   echo "<li><p><h2 style = 'text-align:center;'>$name </h2><br>";
+   echo "<div style = 'text-align:center;'>
+    Scoring scale 1-5 except temperment is 1-10<br>";
+   echo "<b>HyperAllergenic:</b> ";
+   if($hyperallergenic == true)
+   echo "Yes<br>";
+   else
+   echo "No<br>";
+   echo "<b>Temperment:</b> $temper<br>";
+   echo "<b>Minium Cost</b> $" . $key->getMincost()
+   . "<br> <b>Maximum Cost</b> $"
+   . $key->getMaxcost() . "<br>";
+   echo "<b>Shedding Lvl least to most:</b> " . $key->getHair() . "<br>";
+   echo "<b>Exercise Lvl least to most:</b> " . $key->getExercise() . "<br>";
+
+   echo "<b>Description</b> <br> $description <br></p></div></li>";
+}
+}
+
+
+
 $list = array();
 //
 //////////////////////////////////////////////////////////////////
@@ -341,31 +372,8 @@ $list = array();
 //    # code...
 // }
 usort($list, "cmp");
-foreach ($list as $key) {
-   // var_dump($breeds);
-  //echo "<h1 style = 'text-align:center'></h1>"
-   $hyperallergenic = $key->getAllergy();
-   $name = $key->getName();
-   $description = $key->getDescription();
-   $temper = $key->getTemperment();
-   echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
-   echo "<li><p><h2 style = 'text-align:center;'>$name </h2><br>";
-   echo "<div style = 'text-align:center;'>
-    Scoring scale 1-5 except temperment is 1-10<br>";
-   echo "<b>HyperAllergenic:</b> ";
-   if($hyperallergenic == true)
-   echo "Yes<br>";
-   else
-   echo "No<br>";
-   echo "<b>Temperment:</b> $temper<br>";
-   echo "<b>Minium Cost</b> $" . $key->getMincost()
-   . "<br> <b>Maximum Cost</b> $"
-   . $key->getMaxcost() . "<br>";
-   echo "<b>Shedding Lvl least to most:</b> " . $key->getHair() . "<br>";
-   echo "<b>Exercise Lvl least to most:</b> " . $key->getExercise() . "<br>";
+display($list);
 
-   echo "<b>Description</b> <br> $description <br></p></div></li>";
-}
 
 
 
