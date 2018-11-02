@@ -105,6 +105,15 @@ function putStuffIn()
    echo "stuf name: ". $stuff2->getName() . " <br>";
     echo "stuf recipe: ". $stuff2->getRecipe() . " <br>";
      echo "stuf category: ". $stuff2->getCategory() . " <br>";
+     $list[] = $stuff2;
+      echo "things in the list name " . $list[1]->getName() . "<br>";
+     foreach ($list as $key) {
+      echo "da name: " . $key->getName() . "<br>";
+      echo "da recipe: " . $key->getRecipe() . "<br>";
+      echo "da category: " . $key->getCategory() . "<br>";
+
+        # code...
+     }
 
 
 
