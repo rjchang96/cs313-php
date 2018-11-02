@@ -32,29 +32,29 @@ class food
    public $recipe;
    function setName($namer)
    {
-      $this->$name = $namer;
+      $this->name = $namer;
    }
    function getName()
    {
-      return $this -> $name;
+      return $this->name;
    }
    function getCategory()
    {
-      return $this->$category;
+      return $this->category;
    }
    function setCategory($categoryr)
    {
-      $this->$category = $categoryr;
+      $this->category = $categoryr;
       return $this;
    }
    function getRecipe()
    {
-      return $this->$recipe;
-      return $this;
+      return $this->recipe;
+     // return $this;
    }
    function setRecipe($reciper)
    {
-      $this->$recipe = $reciper;
+      $this->recipe = $reciper;
        return $this;
    }
 //    public function __get($property){
