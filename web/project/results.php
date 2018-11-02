@@ -169,6 +169,14 @@ function costEvaluate($mincost, $maxcost)
       $costVal = 5;
    return $costVal;
 }
+
+function cmp($a, $b)
+{
+   if($a->getPercentDifference() == $b->getPercentDifference())
+      return 0;
+   return ($a->getPercentDifference() < $b->getPercentDifference()) ? -1 : 1;
+}
+
 function evaluate($list, $dogs)
 {
 
@@ -177,6 +185,33 @@ function evaluate($list, $dogs)
 function mult($weight, $value)
 {
   return $value * $weight;
+}
+
+function display($list)
+{
+  foreach ($list as $key) {
+    $hyperallergenic = $key->getAllergy();
+    $name = $key->getName();
+    $description = $key->getDescription();
+    $temper = $key->getTemperment();
+    echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
+    echo "<p><h2 style = 'text-align:center;'>$name </h2><br>";
+    echo "<div style = 'text-align:center;'>
+      Scoring scale 1-5 except temperment is 1-10<br>";
+    echo "<b>HyperAllergenic:</b> ";
+    if($hyperallergenic == true)
+      echo "Yes<br>";
+    else
+      echo "No<br>";
+    echo "<b>Temperment:</b> $temper<br>";
+    echo "<b>Minium Cost</b> $" . $key->getMincost()
+    . "<br> <b>Maximum Cost</b> $"
+    . $key->getMaxcost() . "<br>";
+    echo "<b>Shedding Lvl least to most:</b> " . $key->getHair() . "<br>";
+    echo "<b>Exercise Lvl least to most:</b> " . $key->getExercise() . "<br>";
+
+     echo "<b>Description</b> <br> $description <br></p></div>";
+  }
 }
 // go through each movie in the result and display it
 ?>
@@ -240,43 +275,6 @@ function mult($weight, $value)
 //psql changes everythings to lowercase when stored so
 //when trying to access in php have to change it to all
 //lower
-function cmp($a, $b)
-{
-   if($a->getPercentDifference() == $b->getPercentDifference())
-      return 0;
-   return ($a->getPercentDifference() < $b->getPercentDifference()) ? -1 : 1;
-}
-function display($list)
-{
-  foreach ($list as $key) {
-   // var_dump($breeds);
-  //echo "<h1 style = 'text-align:center'></h1>"
-   $hyperallergenic = $key->getAllergy();
-   $name = $key->getName();
-   $description = $key->getDescription();
-   $temper = $key->getTemperment();
-   echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
-   echo "<li><p><h2 style = 'text-align:center;'>$name </h2><br>";
-   echo "<div style = 'text-align:center;'>
-    Scoring scale 1-5 except temperment is 1-10<br>";
-   echo "<b>HyperAllergenic:</b> ";
-   if($hyperallergenic == true)
-   echo "Yes<br>";
-   else
-   echo "No<br>";
-   echo "<b>Temperment:</b> $temper<br>";
-   echo "<b>Minium Cost</b> $" . $key->getMincost()
-   . "<br> <b>Maximum Cost</b> $"
-   . $key->getMaxcost() . "<br>";
-   echo "<b>Shedding Lvl least to most:</b> " . $key->getHair() . "<br>";
-   echo "<b>Exercise Lvl least to most:</b> " . $key->getExercise() . "<br>";
-
-   echo "<b>Description</b> <br> $description <br></p></div></li>";
-}
-}
-
-
-
 $list = array();
 //
 //////////////////////////////////////////////////////////////////
@@ -285,7 +283,6 @@ $list = array();
       $h_weight = 3;
       $e_weight = 2;
       $c_weight = 4;
-      $counter = 0;
       //echo "in the begining of evaluate<br>";
       $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
      // echo"user input total: $uTot<br>";
@@ -311,15 +308,10 @@ $list = array();
          {
             $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
-           // echo "the cost result: " . $cresult . "<br>";
             $hresult = $dhair*$h_weight;
-            //echo "the hair result: " . $hresult . "<br>";
             $tresult = $dtemperment*$t_weight;
-            //echo "the temperment result: " . $tresult . "<br>";
             $eresult = $dexercise*$e_weight;
-            //echo "the exercise result: " . $eresult . "<br>";
             $sresult = $dsize*$s_weight;
-            //echo "the size result: " . $sresult . "<br>";
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
@@ -328,8 +320,7 @@ $list = array();
              $data->setAll($dname, $ddescription,
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
-            $list[] = $data;
-            //$counter++;
+            array_push($list, $data);
          }
          continue;
       }
