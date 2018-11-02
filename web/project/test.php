@@ -23,20 +23,20 @@ class food
 {
    function __construct1()
    {
-      $name = "";
-      $category = "";
-      $recipe = "";
+      $this->$name = "";
+      $this->$category = "";
+      $this->$recipe = "";
    }
-   public $category;
-   public $name;
-   public $recipe;
+   private $category;
+   private $name;
+   private $recipe;
    function setName($namer)
    {
-      $name = $namer;
+      $this->$name = $namer;
    }
    function getName()
    {
-      return $name;
+      return $this -> $name;
    }
 
 
