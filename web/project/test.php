@@ -55,10 +55,10 @@ function putStuffIn()
    $stuff = new food();
    //$stuff->$category = "fat";
   // $stuff->$name = "pizza";
-   $stuff->$recipe = "make beautifulness";
+   //$stuff->$recipe = "make beautifulness";
    $stuff->setName("pizza");
-   echo "Stuff: " . $stuff->$name . " <br>";
-   echo "stuff recipe: " . $stuff->$recipe . "<br>";
+  // echo "Stuff: " . $stuff->$name . " <br>";
+   //echo "stuff recipe: " . $stuff->$recipe . "<br>";
    echo "stuf 2: ". $stuff->getName() . " <br>";
 
 }
