@@ -169,47 +169,6 @@ function evaluate($list, $dogs)
 {
 
 }
-function calculate($breeds, $list, $uTot, $s_wieght,
-            $t_weight, $h_weight, $e_weight, $c_weight)
-{
-
-
-
-
-      $dallergy = $breeds['hyperallergenic'];
-      $dtemperment = $breeds['p_temperment'];
-      $dexercise = $breeds['p_exercise'];
-      $dhair = $breeds['p_hair'];
-      $dsize = $breeds['sizerange'];
-
-      $dname = $breeds['name'];
-      $ddescription = $breeds['description'];
-      $dmax = $breeds['mincost'];
-      $dmin = $breeds['maxcost'];
-      $PR = $breeds['professionalrating'];
-
-      $costVal = costEvaluate($dmin, $dmax);
-            $cresult = $costVal*$c_weight;
-           // echo "the cost result: " . $cresult . "<br>";
-            $hresult = $dhair*$h_weight;
-            //echo "the hair result: " . $hresult . "<br>";
-            $tresult = $dtemperment*$t_weight;
-            //echo "the temperment result: " . $tresult . "<br>";
-            $eresult = $dexercise*$e_weight;
-            //echo "the exercise result: " . $eresult . "<br>";
-            $sresult = $dsize*$s_weight;
-            //echo "the size result: " . $sresult . "<br>";
-            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
-            //echo "overall dog result: $result <br>";
-            $tot = abs((($uTot - $result)/$uTot)) * 100;
-             $data = new compare();
-
-             $data->setAll($dname, $ddescription,
-               $dsize, $dhair, $dtemperment, $dallergy,
-               $dmin, $dmax, $dexercise, $PR, $tot);
-            $list[] = $data;
-
-}
 // go through each movie in the result and display it
 ?>
 <!DOCTYPE html>
@@ -281,29 +240,18 @@ function cmp($a, $b)
 $list = array();
 //
 //////////////////////////////////////////////////////////////////
-
+      $s_wieght = 5;
+      $t_weight = 6;
+      $h_weight = 3;
+      $e_weight = 2;
+      $c_weight = 4;
+      $counter = 0;
       //echo "in the begining of evaluate<br>";
-
+      $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
      // echo"user input total: $uTot<br>";
-    $s_wieght = 5;
-    $t_weight = 6;
-    $h_weight = 3;
-    $e_weight = 2;
-    $c_weight = 4;
-   $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
    foreach ($dogs as $breeds) {
    //echo "in the begining of for each loop<br>";
-
-      //echo "in for each $dname<br>";
-      // $data = new compare();
-           // echo "User cost: $ucost<br>";
-      if($allergy == true)
-      {
-         if($uhyperallergenic.value == 'yes')
-         {
-           // calculate($breeds, $list, $uTot, $s_wieght,
-           //  $t_weight, $h_weight, $e_weight, $c_weight);
-           $dallergy = $breeds['hyperallergenic'];
+      $dallergy = $breeds['hyperallergenic'];
       $dtemperment = $breeds['p_temperment'];
       $dexercise = $breeds['p_exercise'];
       $dhair = $breeds['p_hair'];
@@ -314,8 +262,14 @@ $list = array();
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalrating'];
-
-      $costVal = costEvaluate($dmin, $dmax);
+      //echo "in for each $dname<br>";
+      // $data = new compare();
+           // echo "User cost: $ucost<br>";
+      if($allergy == true)
+      {
+         if($uhyperallergenic.value == 'yes')
+         {
+            $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
            // echo "the cost result: " . $cresult . "<br>";
             $hresult = $dhair*$h_weight;
@@ -334,15 +288,13 @@ $list = array();
              $data->setAll($dname, $ddescription,
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
-             array_push($list, $data);
+            $list[] = $data;
             //$counter++;
          }
          continue;
       }
       else
       {
-        // calculate($breeds, $list, $uTot, $s_wieght,
-        //     $t_weight, $h_weight, $e_weight, $c_weight);
          $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
             //echo "the cost result: " . $cresult . "<br>";
@@ -369,7 +321,6 @@ $list = array();
             array_push($list, $data);
             // $list[] = $data;
             //echo "name in the list: " . $list[0]->$name . "<br>";
-
 
       }
    }
