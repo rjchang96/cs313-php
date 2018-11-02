@@ -63,6 +63,12 @@ class food
       $this->recipe = $reciper;
        return $this;
    }
+   function setAll($nName, $ncat, $nrec)
+   {
+      $this->setRecipe($nrec);
+      $this->setCategory($ncat);
+      $this->setName($nName);
+   }
 //    public function __get($property){
 //       if (property_exists($this, $property))
 //          return $this->$property;
@@ -86,7 +92,8 @@ function putStuffIn()
 {
      $list = array();
    echo "<h1>in the begining</h1><br>";
-   $stuff = new food("pizza", "fat", "make beautifulness");
+   $stuff = new food();
+   $stuff->setALL("pizza", "fat", "make beautifulness");
    //$stuff->$category = "fat";
   // $stuff->$name = "pizza";
    //$stuff->$recipe = "make beautifulness";

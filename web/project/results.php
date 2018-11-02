@@ -25,22 +25,22 @@ $stmt->execute();
 $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($dogs);
 class compare{
-   function __construct2($nName, $nDescript, $nSize, $nH, $nT, $nA,
-      $nMinCost, $nMaxCost, $nE, $nPR, $diff)
-   {
-    echo "starting __construct2<br>";
-     $this->name = $nName;
-      $this->description = $nDescript;
-      $this->professionalRating = $nPR;
-      $this->size = $nSize;
-      $this->hair = $nH;
-      $this->exercise = $nE;
-      $this->temperment = $nT;
-      $this->allergy = $nA;
-      $this->mincost = $nMinCost;
-      $this->maxcost = $nMaxCost;
-      $this->pDiff = $diff;
-   }
+   // function __construct2($nName, $nDescript, $nSize, $nH, $nT, $nA,
+   //    $nMinCost, $nMaxCost, $nE, $nPR, $diff)
+   // {
+   //  echo "starting __construct2<br>";
+   //   $this->name = $nName;
+   //    $this->description = $nDescript;
+   //    $this->professionalRating = $nPR;
+   //    $this->size = $nSize;
+   //    $this->hair = $nH;
+   //    $this->exercise = $nE;
+   //    $this->temperment = $nT;
+   //    $this->allergy = $nA;
+   //    $this->mincost = $nMinCost;
+   //    $this->maxcost = $nMaxCost;
+   //    $this->pDiff = $diff;
+   // }
    function __construct1()
    {
       $this->name = "";
@@ -66,6 +66,19 @@ class compare{
    public $allergy;
    public $mincost;
    public $maxcost;
+   function setAll($nName, $nDescript, $nSize, $nH, $nT, $nA,
+      $nMinCost, $nMaxCost, $nE, $nPR, $diff)
+   {
+    $this->setMaxcost($nMaxCost);
+    $this->setMincost($nMinCost);
+    $this->setName($nName);
+    $this->setMaxcost($nMaxCost);
+    $this->setMaxcost($nMaxCost);
+    $this->setMaxcost($nMaxCost);
+    $this->setMaxcost($nMaxCost);
+    $this->setMaxcost($nMaxCost);
+
+   }
     function setMaxcost($maxcostr)
    {
       $this->maxcost = $maxcostr;
