@@ -51,7 +51,7 @@ class food
 
 function putStuffIn()
 {
-   echo "<h1>in the begining</h1><br>"
+   echo "<h1>in the begining</h1><br>";
    $stuff = new food();
    $stuff->$category = "fat";
    $stuff->$name = "pizza";
