@@ -169,14 +169,10 @@ function evaluate($list, $dogs)
 {
 
 }
-function calculate($breeds, $list)
+function calculate($breeds, $list, $uTot, $s_wieght,
+            $t_weight, $h_weight, $e_weight, $c_weight)
 {
-    $s_wieght = 5;
-    $t_weight = 6;
-    $h_weight = 3;
-    $e_weight = 2;
-    $c_weight = 4;
-   $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
+
 
 
 
@@ -289,6 +285,12 @@ $list = array();
       //echo "in the begining of evaluate<br>";
 
      // echo"user input total: $uTot<br>";
+    $s_wieght = 5;
+    $t_weight = 6;
+    $h_weight = 3;
+    $e_weight = 2;
+    $c_weight = 4;
+   $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
    foreach ($dogs as $breeds) {
    //echo "in the begining of for each loop<br>";
 
@@ -299,14 +301,16 @@ $list = array();
       {
          if($uhyperallergenic.value == 'yes')
          {
-           calculate($breeds, $list);
+           calculate($breeds, $list, $uTot, $s_wieght,
+            $t_weight, $h_weight, $e_weight, $c_weight);
             //$counter++;
          }
          continue;
       }
       else
       {
-        calculate($breeds, $list);
+        calculate($breeds, $list, $uTot, $s_wieght,
+            $t_weight, $h_weight, $e_weight, $c_weight);
          // $costVal = costEvaluate($dmin, $dmax);
          //    $cresult = $costVal*$c_weight;
          //    //echo "the cost result: " . $cresult . "<br>";
