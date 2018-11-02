@@ -38,6 +38,22 @@ class food
    {
       return $this -> $name;
    }
+   function getCategory()
+   {
+      return $this -> $category;
+   }
+   function setCategory($categoryr)
+   {
+      $this->$category = $categoryr;
+   }
+   function getRecipe()
+   {
+      return $this -> $recipe;
+   }
+   function setRecipe($reciper)
+   {
+      $this->$recipe = $reciper;
+   }
 
 
    // function output($stuff)
@@ -57,9 +73,13 @@ function putStuffIn()
   // $stuff->$name = "pizza";
    //$stuff->$recipe = "make beautifulness";
    $stuff->setName("pizza");
+   $stuff->setCategory("fat");
+   $stuff->setRecipe("make beautifulness");
   // echo "Stuff: " . $stuff->$name . " <br>";
    //echo "stuff recipe: " . $stuff->$recipe . "<br>";
-   echo "stuf 2: ". $stuff->getName() . " <br>";
+   echo "stuf name: ". $stuff->getName() . " <br>";
+    echo "stuf recipe: ". $stuff->getRecipe() . " <br>";
+     echo "stuf category: ". $stuff->getCategory() . " <br>";
 
 }
 ?>
