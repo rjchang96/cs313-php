@@ -318,18 +318,14 @@ $list = array();
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
-            echo "the name: $dname <br>";
-             // $data = new compare($dname, $ddescription,
-             //   $dsize, $dhair, $dtemperment, $dallergy,
-             //   $dmin, $dmax, $dexercise, $PR, $tot);
-           // echo "datas temperment: $data->$temperment<br>";
+            //echo "the name: $dname <br>";
             $data = new compare();
 
              $data->setAll($dname, $ddescription,
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
-             echo "datas name: " . $data->getName() . "<br>";
-             var_dump($data);
+            // echo "datas name: " . $data->getName() . "<br>";
+            // var_dump($data);
             array_push($list, $data);
             // $list[] = $data;
             //echo "name in the list: " . $list[0]->$name . "<br>";
@@ -337,28 +333,30 @@ $list = array();
       }
    }
 ///////////////////////////////////////////////////////////////////
-var_dump($list);
+//var_dump($list);
 //evaluate($list, $dogs, $ucost);
 // foreach ($list as $data) {
 //    echo "stuff in list: " . $data->name. "<br>";
 //    # code...
 // }
-usort($list, "cmp");
+//usort($list, "cmp");
 foreach ($list as $key) {
    // var_dump($breeds);
-   $hyperallergenic = $key['hyperallergenic'];
-   $name = $key['name'];
-   $description = $key['description'];
-   $temper = $key['p_temperment'];
+   $hyperallergenic = $key->getAllergy();
+   $name = $key->getName();
+   $description = $key->getDescription();
+   $temper = $key->getTemperment();
+   echo "<img src = '$name.jpg' alt = 'dog'><br>";
    echo "<li><p>$name <br> HyperAllergenic: ";
    if($hyperallergenic == true)
    echo "Yes<br>";
    else
    echo "No<br>";
    echo "Temperment: $temper<br>";
-   echo "Minium Cost $" . $key['mincost'] . " Maximum Cost $" . $key['maxcost'] . "<br>";
-   echo "Shedding Lvl: " . $key['hair'] . "<br>";
-   echo "Exercise Lvl: " . $key['exercise'] . "<br>";
+   echo "Minium Cost $" . $key->getMincost(). " Maximum Cost $"
+   . $key->getMaxcost() . "<br>";
+   echo "Shedding Lvl: " . $key->getHair() . "<br>";
+   echo "Exercise Lvl: " . $key->getExercise() . "<br>";
    echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
          temperment<br>";
    echo "<h2>Description</h2> <br> $description <br></p></li>";
@@ -370,26 +368,26 @@ foreach ($list as $key) {
 
 
 /////////////////////////////////////regular lazy output ////////////////////
-foreach ($dogs as $key) {
-   // var_dump($breeds);
-   $hyperallergenic = $key['hyperallergenic'];
-   $name = $key['name'];
-   $description = $key['description'];
-   $temper = $key['p_temperment'];
-   echo "<img src = '$name.jpg' alt = 'dog'><br>";
-   echo "<li><p>$name <br> HyperAllergenic: ";
-   if($hyperallergenic == true)
-   echo "Yes<br>";
-   else
-   echo "No<br>";
-   echo "Temperment: $temper<br>";
-   echo "Minium Cost $" . $key['mincost'] . " Maximum Cost $" . $key['maxcost'] . "<br>";
-   echo "Shedding Lvl: " . $key['hair'] . "<br>";
-   echo "Exercise Lvl: " . $key['exercise'] . "<br>";
-   echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
-         temperment<br>";
-   echo "<h2>Description</h2> <br> $description <br></p></li>";
-}
+// foreach ($dogs as $key) {
+//    // var_dump($breeds);
+//    $hyperallergenic = $key['hyperallergenic'];
+//    $name = $key['name'];
+//    $description = $key['description'];
+//    $temper = $key['p_temperment'];
+//    echo "<img src = '$name.jpg' alt = 'dog'><br>";
+//    echo "<li><p>$name <br> HyperAllergenic: ";
+//    if($hyperallergenic == true)
+//    echo "Yes<br>";
+//    else
+//    echo "No<br>";
+//    echo "Temperment: $temper<br>";
+//    echo "Minium Cost $" . $key['mincost'] . " Maximum Cost $" . $key['maxcost'] . "<br>";
+//    echo "Shedding Lvl: " . $key['hair'] . "<br>";
+//    echo "Exercise Lvl: " . $key['exercise'] . "<br>";
+//    echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
+//          temperment<br>";
+//    echo "<h2>Description</h2> <br> $description <br></p></li>";
+// }
 ?>
    </ul>
 
