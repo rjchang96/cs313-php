@@ -30,31 +30,38 @@ class food
    private $category;
    private $name;
    private $recipe;
-   function setName($namer)
-   {
-      $this->$name = $namer;
+   // function setName($namer)
+   // {
+   //    $this->$name = $namer;
+   // }
+   // function getName()
+   // {
+   //    return $this -> $name;
+   // }
+   // function getCategory()
+   // {
+   //    return $this->$category;
+   // }
+   // function setCategory($categoryr)
+   // {
+   //    $this->$category = $categoryr;
+   // }
+   // function getRecipe()
+   // {
+   //    return $this->$recipe;
+   // }
+   // function setRecipe($reciper)
+   // {
+   //    $this->$recipe = $reciper;
+   // }
+   public function __get($property){
+      if (property_exists($this, $property))
+         return $this->$property;
    }
-   function getName()
-   {
-      return $this -> $name;
+public function __set($property, $value){
+      if (property_exists($this, $value))
+         $this->$property = $value;
    }
-   function getCategory()
-   {
-      return $this->$category;
-   }
-   function setCategory($categoryr)
-   {
-      $this->$category = $categoryr;
-   }
-   function getRecipe()
-   {
-      return $this->$recipe;
-   }
-   function setRecipe($reciper)
-   {
-      $this->$recipe = $reciper;
-   }
-
 
    // function output($stuff)
    // {
@@ -72,14 +79,16 @@ function putStuffIn()
    //$stuff->$category = "fat";
   // $stuff->$name = "pizza";
    //$stuff->$recipe = "make beautifulness";
-   $stuff->setName("pizza");
-   $stuff->setCategory("fat");
-   $stuff->setRecipe("make beautifulness");
+   $stuff->__set($name, "pizza");
+   echo "name: " . $stuff->__get($name);
+   // $stuff->setName("pizza");
+   // $stuff->setCategory("fat");
+   // $stuff->setRecipe("make beautifulness");
   // echo "Stuff: " . $stuff->$name . " <br>";
    //echo "stuff recipe: " . $stuff->$recipe . "<br>";
-   echo "stuf name: ". $stuff->getName() . " <br>";
-    echo "stuf recipe: ". $stuff->getRecipe() . " <br>";
-     echo "stuf category: ". $stuff->getCategory() . " <br>";
+   // echo "stuf name: ". $stuff->getName() . " <br>";
+   //  echo "stuf recipe: ". $stuff->getRecipe() . " <br>";
+   //   echo "stuf category: ". $stuff->getCategory() . " <br>";
 
 }
 ?>
