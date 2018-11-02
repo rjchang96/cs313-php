@@ -56,8 +56,8 @@ function putStuffIn()
    $stuff->$category = "fat";
    $stuff->$name = "pizza";
    $stuff->$recipe = "make beautifulness";
-   echo "Stuff: $stuff->$name <br>";
-   echo "stuf 2: $stuff->getName() <br>";
+   echo "Stuff: " . $stuff->$name . " <br>";
+   echo "stuf 2: ". $stuff->getName() . " <br>";
 
 }
 ?>
