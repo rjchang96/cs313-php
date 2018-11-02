@@ -151,6 +151,10 @@ class compare{
    {
       $this->pDiff= $pDifference;
    }
+  function getPercentDifference()
+   {
+      return $this->pDiff;
+   }
 }
 function costEvaluate($mincost, $maxcost)
 {
@@ -238,9 +242,9 @@ function mult($weight, $value)
 //lower
 function cmp($a, $b)
 {
-   if($a->$pDiff == $b->$pDiff)
+   if($a->getPercentDifference() == $b->getPercentDifference())
       return 0;
-   return ($a->$pDiff < $b->$pDiff) ? -1 : 1;
+   return ($a->getPercentDifference() < $b->getPercentDifference()) ? -1 : 1;
 }
 $list = array();
 //
