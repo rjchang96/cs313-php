@@ -169,6 +169,11 @@ function evaluate($list, $dogs)
 {
 
 }
+
+function mult($weight, $value)
+{
+  return $value * $weight;
+}
 // go through each movie in the result and display it
 ?>
 <!DOCTYPE html>
@@ -305,8 +310,8 @@ $list = array();
             $eresult = $dexercise*$e_weight;
             //echo "the exercise result: " . $eresult . "<br>";
             $sresult = $dsize*$s_weight;
-            echo "size: " . $dsize . "<br>";
-            echo "the size result: " . $sresult . "<br>";
+           // echo "size: " . $dsize . "<br>";
+            //echo "the size result: " . $sresult . "<br>";
             $result = $sresult+$cresult+$hresult+$tresult+$eresult;
             //echo "overall dog result: $result <br>";
             $tot = abs((($uTot - $result)/$uTot)) * 100;
@@ -340,8 +345,9 @@ foreach ($list as $key) {
    $temper = $key->getTemperment();
    echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
    echo "<li><p><h2 style = 'text-align:center;'>$name </h2><br>";
-   echo "Scoring scale 1-5 except temperment is 1-10<br>";
-   echo "<div style = 'text-align:center;'><b>HyperAllergenic:</b> ";
+   echo "<div style = 'text-align:center;'>
+    Scoring scale 1-5 except temperment is 1-10<br>";
+   echo "<b>HyperAllergenic:</b> ";
    if($hyperallergenic == true)
    echo "Yes<br>";
    else
