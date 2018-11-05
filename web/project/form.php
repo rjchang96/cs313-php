@@ -114,11 +114,11 @@ Please fill out the following to help our search for the perfect
   <?php
   session_start();
   if(isset($_POST['Submit'])){
-    $_SESSION['Hyperallergenic'] = $_POST['Hyperallergenic'];
+    $_SESSION['cost'] = $_POST['cost'];
   }
 
-  echo "session input Hyperallergenic: "
-  . $_SESSION['Hyperallergenic'] . "<br>";
+  echo "session input cost: "
+  . $_SESSION['cost'] . "<br>";
   ?>
 
 
