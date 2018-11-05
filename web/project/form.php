@@ -107,10 +107,20 @@ Please fill out the following to help our search for the perfect
           <br>
 
 
-         <input type="submit" value="Submit">
+         <input type="submit" name = "Submit" value="Submit">
        </p>
 
   </form>
+  <?php
+  session_start();
+  if(isset($_POST['Submit'])){
+    $_SESSION['Hyperallergenic'] = $_POST['Hyperallergenic'];
+  }
+
+  echo "session input Hyperallergenic: "
+  . $_SESSION['Hyperallergenic'] . "<br>";
+  ?>
+
 
   <br> <br>
  </p>
