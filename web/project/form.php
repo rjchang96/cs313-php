@@ -113,12 +113,21 @@ Please fill out the following to help our search for the perfect
   </form>
   <?php
   session_start();
-  if(isset($_POST['Submit'])){
-    $_SESSION['cost'] = $_POST['cost'];
-  }
+  $_SESSION['cost'] = $_POST['cost'];
+  $_SESSION['temperment'] = $_POST['temperment'];
+  $_SESSION['called'] = true;
+  $_SESSION['results'] = true;
+  $_SESSION['exercise'] = $_POST['exercise'];
+  $_SESSION['hair'] = $_POST['hair'];
+  $_SESSION['size'] = $_POST['size'];
+  $_SESSION['Hyperallergenic'] = $_POST['Hyperallergenic'];
 
-  echo "session input cost: "
-  . $_SESSION['cost'] . "<br>";
+  // if(isset($_POST['Submit'])){
+  //   $_SESSION['cost'] = $_POST['cost'];
+  // }
+
+  // echo "session input cost: "
+  // . $_SESSION['cost'] . "<br>";
   ?>
 
 

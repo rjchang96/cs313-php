@@ -5,23 +5,29 @@ session_start();
 
 require('dbConnect.php');
 $db = get_db();
-// query for all movies
-// $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
-// $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-// $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-// $stmt->execute();
-// $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$uhyperallergenic = $_POST['Hyperallergenic'];
+//&& $_SESSION['called'] == true
+if(isset($_SESSION['results']) )
+{
+ // $uhyperallergenic = $_POST['Hyperallergenic'];
+$uhyperallergenic = $_SESSION['Hyperallergenic'];
 //echo "user input of hyperallergenic: $uhyperallergenic \n";
-$ucost = $_POST['cost'];
+//$ucost = $_POST['cost'];
+$ucost =  $_SESSION['cost'];
 //echo "user input of cost: $ucost \n";
-$uexercise = $_POST['exercise'];
+//$uexercise = $_POST['exercise'];
+$uexercise =  $_SESSION['exercise'];
 //echo "user input of exercise: $uexercise \n";
-$usize = $_POST['size'];
+//$usize = $_POST['size'];
+$usize =  $_SESSION['size'];
 //echo "user input of size: $usize \n";
-$utemperment = $_POST['temperment'];
+//$utemperment = $_POST['temperment'];
+$utemperment =  $_SESSION['temperment'];
 //echo "user input of temperment: $utemperment \n";
-$uhair = $_POST['hair'];
+//$uhair = $_POST['hair'];
+$uhair =  $_SESSION['hair'];
+
+}
+
 //echo "user input of hair: $uhair \n";
 $stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating, sizeRange FROM breeds');
 $stmt->execute();
