@@ -1,5 +1,8 @@
 <?php
 // connect to db
+session_start();
+// $_SESSION["results"] = true;
+
 require('dbConnect.php');
 $db = get_db();
 // query for all movies
@@ -348,6 +351,7 @@ function display($list)
 
    <ul>
 <?php
+
 //psql changes everythings to lowercase when stored so
 //when trying to access in php have to change it to all
 //lower
@@ -438,33 +442,6 @@ $list = array();
 usort($list, "cmp");
 display($list);
 
-
-
-
-
-
-
-/////////////////////////////////////regular lazy output ////////////////////
-// foreach ($dogs as $key) {
-//    // var_dump($breeds);
-//    $hyperallergenic = $key['hyperallergenic'];
-//    $name = $key['name'];
-//    $description = $key['description'];
-//    $temper = $key['p_temperment'];
-//    echo "<img src = '$name.jpg' alt = 'dog'><br>";
-//    echo "<li><p>$name <br> HyperAllergenic: ";
-//    if($hyperallergenic == true)
-//    echo "Yes<br>";
-//    else
-//    echo "No<br>";
-//    echo "Temperment: $temper<br>";
-//    echo "Minium Cost $" . $key['mincost'] . " Maximum Cost $" . $key['maxcost'] . "<br>";
-//    echo "Shedding Lvl: " . $key['hair'] . "<br>";
-//    echo "Exercise Lvl: " . $key['exercise'] . "<br>";
-//    echo "Scoring on a scale of 1-10, 1 being the toughest to easiest
-//          temperment<br>";
-//    echo "<h2>Description</h2> <br> $description <br></p></li>";
-// }
 ?>
    </ul>
 

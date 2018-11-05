@@ -24,6 +24,7 @@
         <a href = "homepage.html">Home</a>
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
+      <a href= "results.php" style="margin-left: 10px;">Results </a>
       <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
       <a href = "showAudienceRating.php"  style="margin-left: 10px;">Audience Reviews</a>
        <!-- <a href = "results.php"  style="margin-left: 10px;">Doggos</a> -->
