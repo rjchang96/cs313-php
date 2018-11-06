@@ -23,6 +23,7 @@ if(isset($_POST['size']) )
 {
   echo "in the if statement\n";
 $_SESSION['size'] = $_POST['size'];
+echo "in the first if " . $_SESSION['size']. "<br>";
  // $uhyperallergenic = $_POST['Hyperallergenic'];
   $_SESSION['hyperallergenic'] = $_POST['Hyperallergenic'];
 //$uhyperallergenic = $_SESSION['Hyperallergenic'];
@@ -47,6 +48,7 @@ $_SESSION = $_POST['hair'];
  $uhyperallergenic = $_SESSION['Hyperallergenic'];
   echo "hyperallergenic: $uhyperallergenic<br>";
   $ucost =  $_SESSION['cost'];
+  echo "cost session " . $_SESSION['cost'] . "<br>";
   $uexercise =  $_SESSION['exercise'];
   $usize =  $_SESSION['size'];
   $utemperment =  $_SESSION['temperment'];
