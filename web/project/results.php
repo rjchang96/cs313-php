@@ -25,7 +25,7 @@ $utemperment =  $_SESSION[$_POST['temperment']];
 echo "user input of temperment: $utemperment \n";
 //$uhair = $_POST['hair'];
 $uhair =  $_SESSION[$_POST['hair']];
-echo ""
+echo "user input for the hair $uhair\n";
 $_SESSION['result'] = true;
 
 }
