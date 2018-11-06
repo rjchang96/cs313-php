@@ -8,7 +8,8 @@ $db = get_db();
 //&& $_SESSION['called'] == true
 echo "outside session set if statement<br>";
 echo "value of sessions result: " . $_SESSION['result'] . "<br>";
-if($_SESSION['result'] == true)
+$_SESSION['testTemper'] = $_POST['temperment'];
+if($_SESSION['result'] == true && !(isset($_SESSION['testTemper'])))
 {
   echo "in the first if <br>";
   $uhyperallergenic = $_SESSION['Hyperallergenic'];
