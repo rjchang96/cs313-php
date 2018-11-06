@@ -221,9 +221,9 @@ function evaluate($list, $dogs)
 {
      $s_wieght = 5;
       $t_weight = 6;
-      $h_weight = 3;
-      $e_weight = 2;
-      $c_weight = 4;
+      $h_weight = 4;
+      $e_weight = 3;
+      $c_weight = 2;
       //echo "in the begining of evaluate<br>";
       $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
      // echo"user input total: $uTot<br>";
@@ -322,7 +322,7 @@ function display($list)
     else
       echo "No<br>";
     echo "<b>Temperment:</b> $temper<br>";
-    echo "<b>Minium Cost</b> $" . $key->getMincost()
+    echo "<b>Minimum Cost</b> $" . $key->getMincost()
     . "<br> <b>Maximum Cost</b> $"
     . $key->getMaxcost() . "<br>";
     echo "<b>Shedding Lvl least to most:</b> " . $key->getHair() . "<br>";
