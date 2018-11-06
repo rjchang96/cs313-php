@@ -314,7 +314,7 @@ function display($list)
     $temper = $key->getTemperment();
     echo "<img src = '$name.jpg' alt = 'dog' class = 'center'><br>";
     echo "<p><h2 style = 'text-align:center;'>$name </h2><br>";
-    echo "percent match: " . $key->getPercentDifference()
+   // echo "percent match: " . $key->getPercentDifference()
     . "%<br>";
     echo "<div style = 'text-align:center;'>
       Scoring scale 1-5 except temperment is 1-10<br>";
