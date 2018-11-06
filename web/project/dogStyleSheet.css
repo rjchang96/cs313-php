@@ -114,6 +114,7 @@ a:hover, a:active {
 {
   text-align: center;
   width: 100%;
+  height:200px;
 }
 .center {
     display: block;

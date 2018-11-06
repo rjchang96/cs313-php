@@ -29,7 +29,7 @@ session_start();
     <?php
     if($_SESSION['result'] == true)
     {
-      echo "stuff in sesion temperment " . $_SESSION['temperment'] . "<br>";
+      echo "stuff in session temperment " . $_SESSION['temperment'] . "<br>";
       echo "<a href= 'results.php' style='margin-left: 10px;'>Results </a>";
     }
 
