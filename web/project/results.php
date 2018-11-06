@@ -8,7 +8,7 @@ $db = get_db();
 //&& $_SESSION['called'] == true
 
 //echo "outside session set if statement<br>";
-if($_POST['Hyperallergenic'].value == "yes")
+if($_POST['Hyperallergenic'] == "yes")
   echo "it is true<br>";
 else
   echo "it is false<br>";
