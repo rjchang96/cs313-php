@@ -213,7 +213,7 @@ function evaluate($list, $dogs)
       // $data = new compare();
            // echo "User cost: $ucost<br>";
       echo "the allergy thing: $uhyperallergenic <br>";
-      if($uhyperallergenic == 'yes')
+      if($uhyperallergenic == "yes")
       {
         echo "in the first if<br>";
          if($dallergy == true)
