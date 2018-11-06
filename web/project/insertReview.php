@@ -1,4 +1,5 @@
 <?php
+//session_start();
 $breedIds = $_POST['chkBreeds'];
 echo "check breeds variable: ".$breedIds[0]. "<br>";
 $breed = $breedIds[0];

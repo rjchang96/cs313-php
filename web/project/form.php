@@ -1,4 +1,21 @@
 
+<?php
+  session_start();
+
+  //$_SESSION['called'] = true;
+  // $_SESSION['results'] = true;
+  // $_SESSION['exercise'] = $_POST['exercise'];
+  // $_SESSION['hair'] = $_POST['hair'];
+  // $_SESSION['size'] = $_POST['size'];
+  // $_SESSION['Hyperallergenic'] = $_POST['Hyperallergenic'];
+
+  // if(isset($_POST['Submit'])){
+  //   $_SESSION['cost'] = $_POST['cost'];
+  // }
+
+  // echo "session input cost: "
+  // . $_SESSION['cost'] . "<br>";
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,10 +38,16 @@
 
     <div class="menu">
       <div style="background-color: skyblue;">
-        <a href = "homepage.html">Home</a>
+        <a href = "homepage.php">Home</a>
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
-      <a href= "results.php" style="margin-left: 10px;">Results </a>
+        <?php
+    if(isset($_SESSION['result']))
+    {
+      echo "<a href= 'results.php' style='margin-left: 10px;'>Results </a>";
+    }
+
+      ?>
       <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
       <a href = "showAudienceRating.php"  style="margin-left: 10px;">Audience Reviews</a>
        <!-- <a href = "results.php"  style="margin-left: 10px;">Doggos</a> -->
@@ -111,24 +134,7 @@ Please fill out the following to help our search for the perfect
        </p>
 
   </form>
-  <?php
-  session_start();
-  $_SESSION['cost'] = $_POST['cost'];
-  $_SESSION['temperment'] = $_POST['temperment'];
-  $_SESSION['called'] = true;
-  $_SESSION['results'] = true;
-  $_SESSION['exercise'] = $_POST['exercise'];
-  $_SESSION['hair'] = $_POST['hair'];
-  $_SESSION['size'] = $_POST['size'];
-  $_SESSION['Hyperallergenic'] = $_POST['Hyperallergenic'];
 
-  // if(isset($_POST['Submit'])){
-  //   $_SESSION['cost'] = $_POST['cost'];
-  // }
-
-  // echo "session input cost: "
-  // . $_SESSION['cost'] . "<br>";
-  ?>
 
 
   <br> <br>

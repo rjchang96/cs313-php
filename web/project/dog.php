@@ -1,5 +1,7 @@
 <?php
 // connect to db
+session_start();
+
 require('dbConnect.php');
 $db = get_db();
 ?>
@@ -26,11 +28,18 @@ $db = get_db();
 
  <div class="menu">
       <div style="background-color: skyblue;">
-        <a href = "homepage.html">Home</a>
+        <a href = "homepage.php">Home</a>
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
-      <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
+        <?php
+    if(isset($_SESSION['result']))
+    {
+      echo "<a href= 'results.php' style='margin-left: 10px;'>Results </a>";
+    }
 
+      ?>
+      <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
+       <a href = "showAudienceRating.php"  style="margin-left: 10px;">Audience Reviews</a>
     </div>
 
  <form action="insertReview.php" method = "POST">
