@@ -296,8 +296,9 @@ function display($list)
     echo "<b>Minimum Cost</b> $" . $key->getMincost()
     . "<br> <b>Maximum Cost</b> $"
     . $key->getMaxcost() . "<br>";
-    echo "<b>Shedding Lvl least to most:</b> " . $key->getHair() . "<br>";
-    echo "<b>Exercise Lvl least to most:</b> " . $key->getExercise() . "<br>";
+    echo "Range of 1-5 least to most: <br>";
+    echo "<b>Shedding Lvl </b> " . $key->getHair() . "<br>";
+    echo "<b>Exercise Lvl </b> " . $key->getExercise() . "<br>";
 
      echo "<b>Description</b> <br> $description <br></p></div>";
   }
@@ -369,8 +370,8 @@ $list = array();
 //
 //evaluate($list);
 //////////////////////////////////////////////////////////////////
-      $s_wieght = 5;
-      $t_weight = 6;
+      $s_wieght = 6;
+      $t_weight = 5;
       $h_weight = 4;
       $e_weight = 2;
       $c_weight = 3;
