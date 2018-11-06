@@ -370,8 +370,8 @@ $list = array();
 //
 //evaluate($list);
 //////////////////////////////////////////////////////////////////
-      $s_wieght = 6;
-      $t_weight = 3;
+      $s_wieght = 8;
+      $t_weight = 1;
       $h_weight = 5;
       $e_weight = 3;
       $c_weight = 2;
