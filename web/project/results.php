@@ -207,7 +207,8 @@ function evaluate($list, $dogs)
       //echo "in for each $dname<br>";
       // $data = new compare();
            // echo "User cost: $ucost<br>";
-      if($uhyperallergenic.value == 'yes')
+      echo "the allergy thing: $uhyperallergenic <br>";
+      if($uhyperallergenic == 'yes')
       {
         echo "in the first if<br>";
          if($dallergy == true)
