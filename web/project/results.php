@@ -9,7 +9,7 @@ $db = get_db();
 echo "outside session set if statement<br>";
 echo "value of sessions result: " . $_SESSION['result'] . "<br>";
 $_SESSION['testTemper'] = $_POST['temperment'];
-if($_SESSION['result'] == true && !(isset($_SESSION['testTemper'])))
+if(isset($_SESSION['result']) && !(isset($_SESSION['testTemper'])))
 {
   echo "in the first if <br>";
   $uhyperallergenic = $_SESSION['Hyperallergenic'];
