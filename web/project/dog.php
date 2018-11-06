@@ -100,10 +100,10 @@ catch (PDOException $ex)
 
          <br>
 
-         Size (1-3) Smallest-Large:
+        <!--  Size (1-3) Smallest-Large:
          <br>
           <input type="number" name="size"  min = "1" max = "3">
-          <br>
+          <br> -->
 
 
           <input type="hidden" name="called" value = "true">
