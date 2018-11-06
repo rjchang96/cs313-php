@@ -10,21 +10,22 @@ if(isset($_SESSION[$_POST['size']]) )
 {
  // $uhyperallergenic = $_POST['Hyperallergenic'];
 $uhyperallergenic = $_SESSION[$_POST['HyperAllergenic']];
-//echo "user input of hyperallergenic: $uhyperallergenic \n";
+echo "user input of hyperallergenic: $uhyperallergenic \n";
 //$ucost = $_POST['cost'];
 $ucost =  $_SESSION[$_POST['cost']];
-//echo "user input of cost: $ucost \n";
+echo "user input of cost: $ucost \n";
 //$uexercise = $_POST['exercise'];
 $uexercise =  $_SESSION[$_POST['exercise']];
-//echo "user input of exercise: $uexercise \n";
+echo "user input of exercise: $uexercise \n";
 //$usize = $_POST['size'];
 $usize =  $_SESSION[$_POST['size']];
-//echo "user input of size: $usize \n";
+echo "user input of size: $usize \n";
 //$utemperment = $_POST['temperment'];
 $utemperment =  $_SESSION[$_POST['temperment']];
-//echo "user input of temperment: $utemperment \n";
+echo "user input of temperment: $utemperment \n";
 //$uhair = $_POST['hair'];
 $uhair =  $_SESSION[$_POST['hair']];
+echo ""
 $_SESSION['result'] = true;
 
 }
