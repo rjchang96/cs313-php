@@ -51,6 +51,7 @@ CREATE TABLE audienceRating
    , cost INT NOT NULL
    , hair INT NOT NULL
 
+
 );
 
 INSERT INTO breeds (name, description, P_temperment,
