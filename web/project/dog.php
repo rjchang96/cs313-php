@@ -52,7 +52,7 @@ $db = get_db();
 
 <label><b>Dog Names:</b></label>
 <br>
-
+<p style="margin-left: 350px;">
      <?php
 try
 {
@@ -109,6 +109,7 @@ catch (PDOException $ex)
           <input type="hidden" name="called" value = "true">
          <input type="submit" value="Submit">
        </p>
+     </p>
 
   </form>
 </div>
