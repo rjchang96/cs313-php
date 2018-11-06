@@ -10,11 +10,11 @@ $db = get_db();
 //echo "outside session set if statement<br>";
 
   $uhyperallergenic = $_SESSION['hyperallergenic'];
- echo "hyperallergenic: $uhyperallergenic<br>";
-if($uhyperallergenic == "yes")
-  echo "it is true<br>";
-else
-  echo "it is false<br>";
+ //echo "hyperallergenic: $uhyperallergenic<br>";
+// if($uhyperallergenic == "yes")
+//   echo "it is true<br>";
+// else
+//   echo "it is false<br>";
   $ucost =  $_SESSION['cost'];
   //echo "cost session " . $_SESSION['cost'] . "<br>";
   $uexercise =  $_SESSION['exercise'];
@@ -186,14 +186,14 @@ function cmp($a, $b)
    return ($a->getPercentDifference() < $b->getPercentDifference()) ? -1 : 1;
 }
 
-function evaluate($list, $dogs)
+function evaluate($list)
 {
      $s_wieght = 5;
       $t_weight = 6;
       $h_weight = 4;
       $e_weight = 3;
       $c_weight = 2;
-      echo "in the evaluate<br>";
+     // echo "in the evaluate<br>";
       //echo "in the begining of evaluate<br>";
       $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
      // echo"user input total: $uTot<br>";
@@ -213,13 +213,13 @@ function evaluate($list, $dogs)
       //echo "in for each $dname<br>";
       // $data = new compare();
            // echo "User cost: $ucost<br>";
-      echo "the allergy thing: $uhyperallergenic <br>";
+      //echo "the allergy thing: $uhyperallergenic <br>";
       if($uhyperallergenic == "yes")
       {
-        echo "in the first if<br>";
+        //echo "in the first if<br>";
          if($dallergy == true)
          {
-          echo "in the allergy true case <br>";
+         // echo "in the allergy true case <br>";
             $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
             $hresult = $dhair*$h_weight;
@@ -240,7 +240,7 @@ function evaluate($list, $dogs)
       }
       else
       {
-        echo "in evaluate else <br>";
+        //echo "in evaluate else <br>";
          $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
             //echo "the cost result: " . $cresult . "<br>";
@@ -370,85 +370,86 @@ function display($list)
 //lower
 $list = array();
 //
+evaluate($list);
 //////////////////////////////////////////////////////////////////
-      $s_wieght = 5;
-      $t_weight = 6;
-      $h_weight = 3;
-      $e_weight = 2;
-      $c_weight = 4;
-      //echo "in the begining of evaluate<br>";
-      $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
-     // echo"user input total: $uTot<br>";
-   foreach ($dogs as $breeds) {
-   //echo "in the begining of for each loop<br>";
-      $dallergy = $breeds['hyperallergenic'];
-      $dtemperment = $breeds['p_temperment'];
-      $dexercise = $breeds['p_exercise'];
-      $dhair = $breeds['p_hair'];
-      $dsize = $breeds['sizerange'];
+   //    $s_wieght = 5;
+   //    $t_weight = 6;
+   //    $h_weight = 3;
+   //    $e_weight = 2;
+   //    $c_weight = 4;
+   //    //echo "in the begining of evaluate<br>";
+   //    $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
+   //   // echo"user input total: $uTot<br>";
+   // foreach ($dogs as $breeds) {
+   // //echo "in the begining of for each loop<br>";
+   //    $dallergy = $breeds['hyperallergenic'];
+   //    $dtemperment = $breeds['p_temperment'];
+   //    $dexercise = $breeds['p_exercise'];
+   //    $dhair = $breeds['p_hair'];
+   //    $dsize = $breeds['sizerange'];
 
-      $dname = $breeds['name'];
-      $ddescription = $breeds['description'];
-      $dmax = $breeds['mincost'];
-      $dmin = $breeds['maxcost'];
-      $PR = $breeds['professionalrating'];
-      //echo "in for each $dname<br>";
-      // $data = new compare();
-           // echo "User cost: $ucost<br>";
-      if($uhyperallergenic == "yes")
-      {
-         if($dallergy == true)
-         {
-          echo "in the allergy<br>";
-            $costVal = costEvaluate($dmin, $dmax);
-            $cresult = $costVal*$c_weight;
-            $hresult = $dhair*$h_weight;
-            $tresult = $dtemperment*$t_weight;
-            $eresult = $dexercise*$e_weight;
-            $sresult = $dsize*$s_weight;
-            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
-            //echo "overall dog result: $result <br>";
-            $tot = abs((($uTot - $result)/$uTot)) * 100;
-             $data = new compare();
+   //    $dname = $breeds['name'];
+   //    $ddescription = $breeds['description'];
+   //    $dmax = $breeds['mincost'];
+   //    $dmin = $breeds['maxcost'];
+   //    $PR = $breeds['professionalrating'];
+   //    //echo "in for each $dname<br>";
+   //    // $data = new compare();
+   //         // echo "User cost: $ucost<br>";
+   //    if($uhyperallergenic == "yes")
+   //    {
+   //       if($dallergy == true)
+   //       {
+   //       // echo "in the allergy<br>";
+   //          $costVal = costEvaluate($dmin, $dmax);
+   //          $cresult = $costVal*$c_weight;
+   //          $hresult = $dhair*$h_weight;
+   //          $tresult = $dtemperment*$t_weight;
+   //          $eresult = $dexercise*$e_weight;
+   //          $sresult = $dsize*$s_weight;
+   //          $result = $sresult+$cresult+$hresult+$tresult+$eresult;
+   //          //echo "overall dog result: $result <br>";
+   //          $tot = abs((($uTot - $result)/$uTot)) * 100;
+   //           $data = new compare();
 
-             $data->setAll($dname, $ddescription,
-               $dsize, $dhair, $dtemperment, $dallergy,
-               $dmin, $dmax, $dexercise, $PR, $tot);
-            array_push($list, $data);
-         }
-         continue;
-      }
-      else
-      {
-         $costVal = costEvaluate($dmin, $dmax);
-            $cresult = $costVal*$c_weight;
-            //echo "the cost result: " . $cresult . "<br>";
-            $hresult = $dhair*$h_weight;
-           // echo "the hair result: " . $hresult . "<br>";
-            $tresult = $dtemperment*$t_weight;
-           // echo "the temperment result: " . $tresult . "<br>";
-            $eresult = $dexercise*$e_weight;
-            //echo "the exercise result: " . $eresult . "<br>";
-            $sresult = $dsize*$s_weight;
-           // echo "size: " . $dsize . "<br>";
-            //echo "the size result: " . $sresult . "<br>";
-            $result = $sresult+$cresult+$hresult+$tresult+$eresult;
-            //echo "overall dog result: $result <br>";
-            $tot = abs((($uTot - $result)/$uTot)) * 100;
-            //echo "the name: $dname <br>";
-            $data = new compare();
+   //           $data->setAll($dname, $ddescription,
+   //             $dsize, $dhair, $dtemperment, $dallergy,
+   //             $dmin, $dmax, $dexercise, $PR, $tot);
+   //          array_push($list, $data);
+   //       }
+   //       continue;
+   //    }
+   //    else
+   //    {
+   //       $costVal = costEvaluate($dmin, $dmax);
+   //          $cresult = $costVal*$c_weight;
+   //          //echo "the cost result: " . $cresult . "<br>";
+   //          $hresult = $dhair*$h_weight;
+   //         // echo "the hair result: " . $hresult . "<br>";
+   //          $tresult = $dtemperment*$t_weight;
+   //         // echo "the temperment result: " . $tresult . "<br>";
+   //          $eresult = $dexercise*$e_weight;
+   //          //echo "the exercise result: " . $eresult . "<br>";
+   //          $sresult = $dsize*$s_weight;
+   //         // echo "size: " . $dsize . "<br>";
+   //          //echo "the size result: " . $sresult . "<br>";
+   //          $result = $sresult+$cresult+$hresult+$tresult+$eresult;
+   //          //echo "overall dog result: $result <br>";
+   //          $tot = abs((($uTot - $result)/$uTot)) * 100;
+   //          //echo "the name: $dname <br>";
+   //          $data = new compare();
 
-             $data->setAll($dname, $ddescription,
-               $dsize, $dhair, $dtemperment, $dallergy,
-               $dmin, $dmax, $dexercise, $PR, $tot);
-            // echo "datas name: " . $data->getName() . "<br>";
-            // var_dump($data);
-            array_push($list, $data);
-            // $list[] = $data;
-            //echo "name in the list: " . $list[0]->$name . "<br>";
+   //           $data->setAll($dname, $ddescription,
+   //             $dsize, $dhair, $dtemperment, $dallergy,
+   //             $dmin, $dmax, $dexercise, $PR, $tot);
+   //          // echo "datas name: " . $data->getName() . "<br>";
+   //          // var_dump($data);
+   //          array_push($list, $data);
+   //          // $list[] = $data;
+   //          //echo "name in the list: " . $list[0]->$name . "<br>";
 
-      }
-   }
+   //    }
+   // }
 ///////////////////////////////////////////////////////////////////
 
 //evaluate($list, $dogs);
