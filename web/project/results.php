@@ -371,9 +371,9 @@ $list = array();
 //////////////////////////////////////////////////////////////////
       $s_wieght = 5;
       $t_weight = 6;
-      $h_weight = 3;
+      $h_weight = 4;
       $e_weight = 2;
-      $c_weight = 4;
+      $c_weight = 3;
       //echo "in the begining of evaluate<br>";
       $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
      // echo"user input total: $uTot<br>";
