@@ -7,7 +7,21 @@ require('dbConnect.php');
 $db = get_db();
 //&& $_SESSION['called'] == true
 echo "outside session set if statement<br>";
-$_SESSION['size'] = $_POST['size'];
+if(isset($_SESSION['result']) && $_SESSION['result'] == true)
+{
+  echo "in the first if <br>";
+  $uhyperallergenic = $_SESSION['Hyperallergenic'];
+  $ucost =  $_SESSION['cost'];
+  $uexercise =  $_SESSION['exercise'];
+  $usize =  $_SESSION['size'];
+  $utemperment =  $_SESSION['temperment'];
+  $uhair =  $_SESSION['hair'];
+
+
+}
+else
+{
+  $_SESSION['size'] = $_POST['size'];
 if(isset($_SESSION['size']) )
 {
   echo "in the if statement\n";
@@ -32,6 +46,9 @@ $uhair =  $_SESSION['hair'];
 echo "user input for the hair $uhair\n";
 
 }
+
+}
+
 $_SESSION['result'] = true;
 
 //echo "user input of hair: $uhair \n";
