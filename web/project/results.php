@@ -19,7 +19,7 @@ $db = get_db();
   $uhair =  $_SESSION['hair'];
 
 //}
-$_SESSION['result'] = $_POST['called'];
+//$_SESSION['result'] = $_POST['called'];
 //echo "session result after the if statements: "
 //. $_SESSION['result'] . "<br>";
 

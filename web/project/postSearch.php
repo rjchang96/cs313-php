@@ -22,6 +22,7 @@ $_SESSION['temperment'] = $_POST['temperment'];
 //$utemperment =  $_SESSION['temperment'];
 //echo "user input of temperment: $utemperment \n";
 $_SESSION['hair'] = $_POST['hair'];
+$_SESSION['result'] = $_POST['called'];
 //$uhair =  $_SESSION['hair'];
 //echo "user input for the hair $uhair\n";
 
