@@ -96,7 +96,7 @@
       }
    </script>
 
-  <form action="results.php" method = "POST">
+  <form action="postSearch.php" method = "POST">
 <p style="text-align: center;">
 Please fill out the following to help our search for the perfect
     dog for you.<br>
