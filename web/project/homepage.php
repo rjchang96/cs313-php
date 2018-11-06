@@ -71,8 +71,8 @@ session_start();
   <div style = "font-size: 20px;">
  </div> <br>
    Providing quality reviews and other pet owners opinions on the
-   best dog for you. Considering varying aspects such as children
-   ages, dog temperment, hyperallergenic needs, cost, and exercise
+   best dog for you. Considering varying aspects such as shedding levels,
+   dog temperment, hyperallergenic needs, cost, and exercise
    level. All helping you find your newest addition to your family
    that fits your current living circumstance.
   <br> <br>

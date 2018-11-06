@@ -104,7 +104,8 @@ catch (PDOException $ex)
          <br>
           <input type="number" name="size"  min = "1" max = "3">
           <br> -->
-
+         <!--  <textarea rows="4" cols="50" name="comment">
+            Enter your comment here...</textarea> -->
 
           <input type="hidden" name="called" value = "true">
          <input type="submit" value="Submit">

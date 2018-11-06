@@ -6,16 +6,17 @@ $breed = $breedIds[0];
 // get the data from the POST
 
 //echo "user input of hyperallergenic: $uhyperallergenic \n";
+//$comment = $_POST['comment'];
 $cost = $_POST['cost'];
-echo "user input of cost: $cost \n";
+//echo "user input of cost: $cost \n";
 $exercise = $_POST['exercise'];
-echo "user input of exercise: $exercise \n";
+//echo "user input of exercise: $exercise \n";
 $size = $_POST['size'];
-echo "user input of size: $size \n";
+//echo "user input of size: $size \n";
 $temperment = $_POST['temperment'];
-echo "user input of temperment: $temperment \n";
+//echo "user input of temperment: $temperment \n";
 $hair = $_POST['hair'];
-echo "user input of hair: $hair <br>";
+//echo "user input of hair: $hair <br>";
 
 require("dbConnect.php");
 $db = get_db();
