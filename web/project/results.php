@@ -209,8 +209,10 @@ function evaluate($list, $dogs)
            // echo "User cost: $ucost<br>";
       if($uhyperallergenic.value == 'yes')
       {
+        echo "in the first if<br>";
          if($dallergy == true)
          {
+          echo "in the allergy true case <br>";
             $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
             $hresult = $dhair*$h_weight;
