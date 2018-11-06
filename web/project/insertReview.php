@@ -34,21 +34,10 @@ try
    $statement->bindValue(':exercise', $exercise);
    $statement->bindValue(':cost', $cost);
    $statement->bindValue(':hair', $hair);
-   // $statement->bindValue(':cost', $cost);
+
    $statement->execute();
    // get the new id
    $audienceRatingId = $db->lastInsertId("audienceRating_id_seq");
-   // Now go through each topic id in the list from the user's checkboxes
-   // foreach ($breedIds as $breeds_id)
-   // {
-   //    echo "audienceRatingId: $audienceRatingId, DogId: $breeds_id";
-   //    // Again, first prepare the statement
-   //    $statement = $db->prepare('INSERT INTO audienceRating(audienceRatingId, breeds_id) VALUES(:audienceRatingId, :breeds_id)');
-   //    // Then, bind the values
-   //    $statement->bindValue(':audienceRatingId', $audienceRatingId);
-   //    $statement->bindValue(':breeds_id', $breeds_id);
-   //    $statement->execute();
-   // }
 }
 catch (Exception $ex)
 {

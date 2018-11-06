@@ -32,11 +32,11 @@ $db = get_db();
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
         <?php
-    if(isset($_SESSION['result']))
+    if(isset($_SESSION['result']) && $_SESSION['result'] == true)
     {
+      echo "stuff in session temperment " . $_SESSION['temperment'] . "<br>";
       echo "<a href= 'results.php' style='margin-left: 10px;'>Results </a>";
     }
-
       ?>
       <a href = "dog.php"  style="margin-left: 10px;">Insert a Breed Review</a>
        <a href = "showAudienceRating.php"  style="margin-left: 10px;">Audience Reviews</a>
