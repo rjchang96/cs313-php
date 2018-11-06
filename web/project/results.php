@@ -7,59 +7,21 @@ require('dbConnect.php');
 $db = get_db();
 //&& $_SESSION['called'] == true
 
-echo "outside session set if statement<br>";
-//echo "value of sessions result: " . $_SESSION['result'] . "<br>";
-//$_SESSION['testTemper'] = $_POST['temperment'];
-// if(isset($_SESSION['result']) && !(isset($_SESSION['testTemper'])))
-// {
-  //echo "in the first if <br>";
-
-
-
-// }
-// else
-// {
-// if(isset($_POST['size']) )
-// {
-//   echo "in the if statement\n";
-// $_SESSION['size'] = $_POST['size'];
-// echo "in the first if " . $_SESSION['size']. "<br>";
-//  // $uhyperallergenic = $_POST['Hyperallergenic'];
-//   $_SESSION['hyperallergenic'] = $_POST['Hyperallergenic'];
-// //$uhyperallergenic = $_SESSION['Hyperallergenic'];
-// //echo "user input of hyperallergenic: $uhyperallergenic \n";
-// $_SESSION= $_POST['cost'];
-// //$ucost =  $_SESSION['cost'];
-// //echo "user input of cost: $ucost \n";
-// $_SESSION = $_POST['exercise'];
-// //$uexercise =  $_SESSION['exercise'];
-// //echo "user input of exercise: $uexercise \n";
-// //$_SESSION = $_POST['size'];
-// //$usize =  $_SESSION['size'];
-// //echo "user input of size: $usize \n";
-// $_SESSION = $_POST['temperment'];
-// //$utemperment =  $_SESSION['temperment'];
-// //echo "user input of temperment: $utemperment \n";
-// $_SESSION = $_POST['hair'];
-// //$uhair =  $_SESSION['hair'];
-// //echo "user input for the hair $uhair\n";
-
-// }
-//$_SESSION['cost'] = $_POST['cost'];
+//echo "outside session set if statement<br>";
   $uhyperallergenic = $_SESSION['hyperallergenic'];
-  echo "hyperallergenic: $uhyperallergenic<br>";
+ // echo "hyperallergenic: $uhyperallergenic<br>";
   $ucost =  $_SESSION['cost'];
-  echo "cost session " . $_SESSION['cost'] . "<br>";
+  //echo "cost session " . $_SESSION['cost'] . "<br>";
   $uexercise =  $_SESSION['exercise'];
-  echo "exercise session " . $_SESSION['exercise'] . "<br>";
+  //echo "exercise session " . $_SESSION['exercise'] . "<br>";
   $usize =  $_SESSION['size'];
   $utemperment =  $_SESSION['temperment'];
   $uhair =  $_SESSION['hair'];
 
 //}
 $_SESSION['result'] = $_POST['called'];
-echo "session result after the if statements: "
-. $_SESSION['result'] . "<br>";
+//echo "session result after the if statements: "
+//. $_SESSION['result'] . "<br>";
 
 //echo "user input of hair: $uhair \n";
 $stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating, sizeRange FROM breeds');

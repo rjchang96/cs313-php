@@ -2,9 +2,9 @@
 session_start();
 //if(isset($_POST['size']) )
 //{
-  echo "in the postSeach php file\n";
+ // echo "in the postSeach php file\n";
 $_SESSION['size'] = $_POST['size'];
-echo "checking size: " . $_SESSION['size']. "<br>";
+//echo "checking size: " . $_SESSION['size']. "<br>";
  // $uhyperallergenic = $_POST['Hyperallergenic'];
   $_SESSION['hyperallergenic'] = $_POST['Hyperallergenic'];
 //$uhyperallergenic = $_SESSION['Hyperallergenic'];
