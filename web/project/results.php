@@ -45,11 +45,13 @@ $_SESSION = $_POST['hair'];
 //echo "user input for the hair $uhair\n";
 
 }
+$_SESSION['cost'] = $_POST['cost'];
  $uhyperallergenic = $_SESSION['Hyperallergenic'];
   echo "hyperallergenic: $uhyperallergenic<br>";
   $ucost =  $_SESSION['cost'];
   echo "cost session " . $_SESSION['cost'] . "<br>";
   $uexercise =  $_SESSION['exercise'];
+  echo "exercise session " . $_SESSION['exercise'] . "<br>";
   $usize =  $_SESSION['size'];
   $utemperment =  $_SESSION['temperment'];
   $uhair =  $_SESSION['hair'];
