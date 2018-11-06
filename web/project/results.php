@@ -30,9 +30,9 @@ echo "user input of temperment: $utemperment \n";
 $_SESSION = $_POST['hair'];
 $uhair =  $_SESSION['hair'];
 echo "user input for the hair $uhair\n";
-$_SESSION['result'] = true;
 
 }
+$_SESSION['result'] = true;
 
 //echo "user input of hair: $uhair \n";
 $stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating, sizeRange FROM breeds');

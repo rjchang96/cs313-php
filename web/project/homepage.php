@@ -27,7 +27,7 @@ session_start();
 
       <a href= "form.php" style="margin-left: 10px;">Search </a>
     <?php
-    if(isset($_SESSION['result']))
+    if(isset($_SESSION['result']) && $_SESSION['result'] == true)
     {
       echo "<a href= 'results.php' style='margin-left: 10px;'>Results </a>";
     }
