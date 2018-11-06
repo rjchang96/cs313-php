@@ -44,7 +44,7 @@ $db = get_db();
 
  <form action="insertReview.php" method = "POST">
 <p style="text-align: center;">
-<h1>Add your Breed Reviews</h1>
+<h1 style= "text-align: center;">Add your Breed Reviews</h1>
   </p>
     <br>
     <p style="margin-left: 350px;">
