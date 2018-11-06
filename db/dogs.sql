@@ -185,3 +185,33 @@ INSERT INTO breeds (name, description, P_temperment,
    and companion.',
     8, true, 400, 1600,'25.5-27.5 inches, 55-75 pounds',
     4, 3, 7, 2);
+
+   INSERT INTO breeds (name, description, P_temperment,
+   hyperAllergenic, minCost, maxCost, size, P_exercise, P_hair,
+   professionalRating, sizeRange) VALUES ('Portuguese Water Dog',
+   'The bright and biddable Portuguese Water Dog was bred to be an
+    all-around fisherman’s helper. The robust, medium-sized body
+    is covered by a coat of tight, low-shedding curls. PWDs are
+    eager and athletic companions built for water work.',
+    8, true, 1800, 2500,'20-23 inches, 35-50 pounds',
+    4, 3, 7, 2);
+
+   INSERT INTO breeds (name, description, P_temperment,
+   hyperAllergenic, minCost, maxCost, size, P_exercise, P_hair,
+   professionalRating, sizeRange) VALUES ('Samoyed',
+   'The Samoyed is a substantial but graceful dog standing
+   anywhere from 19 to a bit over 23 inches at the shoulder.
+   Powerful, tireless, with a thick all-white coat impervious
+   to cold—Sammies are perfectly beautiful but highly functional.
+    Even their most delightful feature, a perpetual smile,
+    has a practical function: The upturned corners of the
+    mouth keep Sammies from drooling, preventing icicles
+    from forming on the face. A Sammy sentenced to solitary
+    confinement in the yard is a miserable—and
+    destructive—creature. These are smart, social,
+    mischievous dogs who demand love and attention.
+    Sammies need a very firm but loving hand in training.
+     As pack animals, they must learn early who the alpha
+     dog is—and the alpha dog must be you.',
+    6, false, 600, 1500,'21-23.5 inches, 45-65 pounds',
+    4, 5, 7, 2);
