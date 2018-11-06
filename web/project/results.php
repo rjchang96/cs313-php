@@ -9,7 +9,7 @@ $db = get_db();
 
 //echo "outside session set if statement<br>";
   $uhyperallergenic = $_SESSION['hyperallergenic'];
- // echo "hyperallergenic: $uhyperallergenic<br>";
+ echo "hyperallergenic: $uhyperallergenic<br>";
   $ucost =  $_SESSION['cost'];
   //echo "cost session " . $_SESSION['cost'] . "<br>";
   $uexercise =  $_SESSION['exercise'];
