@@ -6,8 +6,11 @@ session_start();
 require('dbConnect.php');
 $db = get_db();
 //&& $_SESSION['called'] == true
-if(isset($_SESSION[$_POST['size']]) )
+echo "outside session set if statement<br>";
+$_SESSION['size'] = $_POST['size'];
+if(isset($_SESSION['size']) )
 {
+  echo "in the if statement\n";
  // $uhyperallergenic = $_POST['Hyperallergenic'];
 $uhyperallergenic = $_SESSION[$_POST['HyperAllergenic']];
 echo "user input of hyperallergenic: $uhyperallergenic \n";
@@ -18,7 +21,7 @@ echo "user input of cost: $ucost \n";
 $uexercise =  $_SESSION[$_POST['exercise']];
 echo "user input of exercise: $uexercise \n";
 //$usize = $_POST['size'];
-$usize =  $_SESSION[$_POST['size']];
+$usize =  $_SESSION['size'];
 echo "user input of size: $usize \n";
 //$utemperment = $_POST['temperment'];
 $utemperment =  $_SESSION[$_POST['temperment']];
