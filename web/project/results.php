@@ -7,6 +7,7 @@ require('dbConnect.php');
 $db = get_db();
 //&& $_SESSION['called'] == true
 echo "outside session set if statement<br>";
+echo "value of sessions result: " . $_SESSION['result'] . "<br>";
 if($_SESSION['result'] == true)
 {
   echo "in the first if <br>";
