@@ -193,6 +193,7 @@ function evaluate($list, $dogs)
       $h_weight = 4;
       $e_weight = 3;
       $c_weight = 2;
+      echo "in the evaluate<br>";
       //echo "in the begining of evaluate<br>";
       $uTot = ($uhair*$h_weight) + ($usize*$s_wieght) + ($uexercise * $e_weight) + ($utemperment * $t_weight) + ($ucost*$c_weight);
      // echo"user input total: $uTot<br>";
@@ -239,6 +240,7 @@ function evaluate($list, $dogs)
       }
       else
       {
+        echo "in evaluate else <br>";
          $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
             //echo "the cost result: " . $cresult . "<br>";
@@ -393,10 +395,11 @@ $list = array();
       //echo "in for each $dname<br>";
       // $data = new compare();
            // echo "User cost: $ucost<br>";
-      if($allergy == true)
+      if($uhyperallergenic == "yes")
       {
-         if($uhyperallergenic.value == 'yes')
+         if($dallergy == true)
          {
+          echo "in the allergy<br>";
             $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
             $hresult = $dhair*$h_weight;
