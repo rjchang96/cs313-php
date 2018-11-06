@@ -44,9 +44,7 @@ $db = get_db();
 
  <form action="insertReview.php" method = "POST">
 <p style="text-align: center;">
-Please fill out the following to help our search for the perfect
-    dog for you.<br>
-    The following inputs on a scale of 1-10, 1 being low and 10 high
+<h1>Add your Breed Reviews</h1>
   </p>
     <br>
     <p style="margin-left: 350px;">
@@ -89,6 +87,7 @@ catch (PDOException $ex)
          <input type="number" name="temperment" min = "1" max = "10">
          <br>
          <br>
+         Scale of 1-5 (least to greatest)<br>
           Cost:
          <input type="number" name="cost" min = "1" max = "5">
          <br>

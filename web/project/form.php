@@ -109,7 +109,7 @@ Please fill out the following to help our search for the perfect
          <input type="number" name="temperment" min = "1" max = "10">
          <br>
          <br>
-         Scale of 1-5 Least to greatest<br>
+         Scale of 1-5 (least to greatest)<br>
           Cost:
          <input type="number" name="cost" min = "1" max = "5">
          <br>
