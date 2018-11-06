@@ -53,6 +53,8 @@ echo "user input for the hair $uhair\n";
 }
 
 $_SESSION['result'] = true;
+echo "session result after the if statements: "
+. $_SESSION['result'] . "<br>";
 
 //echo "user input of hair: $uhair \n";
 $stmt = $db->prepare('SELECT id, name, description, hyperAllergenic, P_temperment, size, P_hair, P_exercise, minCost, maxCost, professionalRating, overallUserRating, sizeRange FROM breeds');
