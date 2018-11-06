@@ -19,10 +19,10 @@ echo "value of sessions result: " . $_SESSION['result'] . "<br>";
 // }
 // else
 // {
-  $_SESSION['size'] = $_POST['size'];
-if(isset($_SESSION['size']) )
+if(isset($_POST['size']) )
 {
   echo "in the if statement\n";
+$_SESSION['size'] = $_POST['size'];
  // $uhyperallergenic = $_POST['Hyperallergenic'];
   $_SESSION['hyperallergenic'] = $_POST['Hyperallergenic'];
 //$uhyperallergenic = $_SESSION['Hyperallergenic'];
