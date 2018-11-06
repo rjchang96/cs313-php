@@ -109,6 +109,7 @@ Please fill out the following to help our search for the perfect
          <input type="number" name="temperment" min = "1" max = "10">
          <br>
          <br>
+         Scale of 1-5 Least to greatest<br>
           Cost:
          <input type="number" name="cost" min = "1" max = "5">
          <br>
@@ -124,7 +125,7 @@ Please fill out the following to help our search for the perfect
          <br>
           <input type="number" name="size"  min = "1" max = "3">
           <br>
-         Hyperallergenic:
+         Hypoallergenic:
          <br>
          <input type="radio" name="Hyperallergenic" value = "yes">yes<br>
          <input type="radio" name="Hyperallergenic" value = "no">no<br>

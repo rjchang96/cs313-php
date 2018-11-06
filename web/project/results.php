@@ -210,10 +210,7 @@ function evaluate($list)
       $dmax = $breeds['mincost'];
       $dmin = $breeds['maxcost'];
       $PR = $breeds['professionalrating'];
-      //echo "in for each $dname<br>";
-      // $data = new compare();
-           // echo "User cost: $ucost<br>";
-      //echo "the allergy thing: $uhyperallergenic <br>";
+
       if($uhyperallergenic == "yes")
       {
         //echo "in the first if<br>";
@@ -240,7 +237,7 @@ function evaluate($list)
       }
       else
       {
-        //echo "in evaluate else <br>";
+
          $costVal = costEvaluate($dmin, $dmax);
             $cresult = $costVal*$c_weight;
             //echo "the cost result: " . $cresult . "<br>";
@@ -290,7 +287,7 @@ function display($list)
   //  . "%<br>";
     echo "<div style = 'text-align:center;'>
       Scoring scale 1-5 except temperment is 1-10<br>";
-    echo "<b>HyperAllergenic:</b> ";
+    echo "<b>HypoAllergenic:</b> ";
     if($hyperallergenic == true)
       echo "Yes<br>";
     else
@@ -390,8 +387,8 @@ $list = array();
 
       $dname = $breeds['name'];
       $ddescription = $breeds['description'];
-      $dmax = $breeds['mincost'];
-      $dmin = $breeds['maxcost'];
+      $dmax = $breeds['maxcost'];
+      $dmin = $breeds['mincost'];
       $PR = $breeds['professionalrating'];
       //echo "in for each $dname<br>";
       // $data = new compare();
@@ -436,12 +433,11 @@ $list = array();
              $data->setAll($dname, $ddescription,
                $dsize, $dhair, $dtemperment, $dallergy,
                $dmin, $dmax, $dexercise, $PR, $tot);
+
             array_push($list, $data);
       }
    }
 ///////////////////////////////////////////////////////////////////
-
-//evaluate($list, $dogs);
 
 usort($list, "cmp");
 display($list);
