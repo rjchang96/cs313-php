@@ -50,7 +50,7 @@ $db = get_db();
     <p style="margin-left: 350px;">
      <!--  <input type="text" name="dog_name"><br> -->
 
-<label>Dog Names:</label>
+<label><b>Dog Names:</b></label>
 <br>
 
      <?php
