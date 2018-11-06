@@ -12,22 +12,23 @@ if(isset($_SESSION['size']) )
 {
   echo "in the if statement\n";
  // $uhyperallergenic = $_POST['Hyperallergenic'];
-$uhyperallergenic = $_SESSION[$_POST['HyperAllergenic']];
+  $_SESSION['hyperallergenic'] = $_POST['Hyperallergenic'];
+$uhyperallergenic = $_SESSION['Hyperallergenic'];
 echo "user input of hyperallergenic: $uhyperallergenic \n";
-//$ucost = $_POST['cost'];
-$ucost =  $_SESSION[$_POST['cost']];
+$_SESSION= $_POST['cost'];
+$ucost =  $_SESSION['cost'];
 echo "user input of cost: $ucost \n";
-//$uexercise = $_POST['exercise'];
-$uexercise =  $_SESSION[$_POST['exercise']];
+$_SESSION = $_POST['exercise'];
+$uexercise =  $_SESSION['exercise'];
 echo "user input of exercise: $uexercise \n";
-//$usize = $_POST['size'];
+//$_SESSION = $_POST['size'];
 $usize =  $_SESSION['size'];
 echo "user input of size: $usize \n";
-//$utemperment = $_POST['temperment'];
-$utemperment =  $_SESSION[$_POST['temperment']];
+$_SESSION = $_POST['temperment'];
+$utemperment =  $_SESSION['temperment'];
 echo "user input of temperment: $utemperment \n";
-//$uhair = $_POST['hair'];
-$uhair =  $_SESSION[$_POST['hair']];
+$_SESSION = $_POST['hair'];
+$uhair =  $_SESSION['hair'];
 echo "user input for the hair $uhair\n";
 $_SESSION['result'] = true;
 
