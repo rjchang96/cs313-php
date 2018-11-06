@@ -106,7 +106,7 @@ catch (PDOException $ex)
           <br>
 
 
-
+          <input type="hidden" name="called" value = "true">
          <input type="submit" value="Submit">
        </p>
 

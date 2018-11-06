@@ -6,6 +6,7 @@ session_start();
 require('dbConnect.php');
 $db = get_db();
 //&& $_SESSION['called'] == true
+
 echo "outside session set if statement<br>";
 echo "value of sessions result: " . $_SESSION['result'] . "<br>";
 $_SESSION['testTemper'] = $_POST['temperment'];
@@ -51,8 +52,7 @@ echo "user input for the hair $uhair\n";
 }
 
 }
-
-$_SESSION['result'] = true;
+$_SESSION['result'] = $_POST['called'];
 echo "session result after the if statements: "
 . $_SESSION['result'] . "<br>";
 
